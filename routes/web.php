@@ -30,4 +30,8 @@ Route::get('/info', function () {
     return Inertia::render('Welcome');
 });
 
+Route::get('/noticias', function () {
+    return Inertia::render('News');
+});
+
 // Route::resource('/users', 'UserController');

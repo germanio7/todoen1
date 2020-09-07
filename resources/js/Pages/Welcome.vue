@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
         <layout>
             <div
                 class="text-center font-mono text-4xl md:text-6xl text-teal-700"
@@ -90,6 +90,20 @@
                         />
                         <div class="text-center md:text-left">
                             <h2 class="text-lg">Here Destination Weather</h2>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                >
+                    <div class="md:flex bg-white rounded-lg p-6 items-center">
+                        <img
+                            class="h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6"
+                            src="https://newsapi.org/images/n-logo-border.png"
+                            alt="no image"
+                        />
+                        <div class="text-center md:text-left">
+                            <h2 class="text-lg">News API</h2>
                         </div>
                     </div>
                 </div>

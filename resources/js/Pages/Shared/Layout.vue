@@ -65,6 +65,13 @@
                 </div>
                 <div class="text-sm ">
                     <inertia-link
+                        href="/noticias"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        >Noticias</inertia-link
+                    >
+                </div>
+                <div class="text-sm ">
+                    <inertia-link
                         href="/weather"
                         class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >Clima</inertia-link
@@ -93,18 +100,20 @@
         <article class="container mx-auto">
             <slot />
         </article>
+        <!-- <player></player> -->
     </div>
 </template>
 
 <script>
 import alert from "./Alert";
+import player from "./Player";
 export default {
     data() {
         return {
             menu: false
         };
     },
-    components: { alert },
+    components: { alert, player },
     mounted() {
         if (window.innerWidth >= 768) {
             this.mostrar();

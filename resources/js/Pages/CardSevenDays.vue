@@ -5,9 +5,11 @@
                 class="max-w-sm border bg-white rounded flex flex-col items-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             >
                 <div v-for="item in days" :key="item.id">
-                    <div class="flex items-center">
+                    <div class="flex justify-start items-center">
                         <div class="w-1/9 lg:w-3/12">{{ item.weekday }}</div>
-                        <div class="w-6/9 lg:w-6/12 flex items-center">
+                        <div
+                            class="w-6/9 lg:w-6/12 flex justify-start items-center"
+                        >
                             <img
                                 :src="item.iconLink + '?apiKey=' + api_key"
                                 alt=""
@@ -16,7 +18,9 @@
                                 {{ item.description }}
                             </div>
                         </div>
-                        <div class="w-2/9 lg:w-3/12 flex-wrap items-center">
+                        <div
+                            class="w-2/9 lg:w-3/12 flex-wrap justify-end items-center"
+                        >
                             <div class="flex">
                                 max {{ Math.round(item.highTemperature) }}ºC
                             </div>

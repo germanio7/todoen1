@@ -1968,6 +1968,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39217,31 +39221,40 @@ var render = function() {
         },
         _vm._l(_vm.days, function(item) {
           return _c("div", { key: item.id }, [
-            _c("div", { staticClass: "flex items-center" }, [
+            _c("div", { staticClass: "flex justify-start items-center" }, [
               _c("div", { staticClass: "w-1/9 lg:w-3/12" }, [
                 _vm._v(_vm._s(item.weekday))
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "w-6/9 lg:w-6/12 flex items-center" }, [
-                _c("img", {
-                  attrs: {
-                    src: item.iconLink + "?apiKey=" + _vm.api_key,
-                    alt: ""
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "hidden lg:block" }, [
-                  _vm._v(
-                    "\n                            " +
-                      _vm._s(item.description) +
-                      "\n                        "
-                  )
-                ])
-              ]),
+              _c(
+                "div",
+                {
+                  staticClass: "w-6/9 lg:w-6/12 flex justify-start items-center"
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src: item.iconLink + "?apiKey=" + _vm.api_key,
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "hidden lg:block" }, [
+                    _vm._v(
+                      "\n                            " +
+                        _vm._s(item.description) +
+                        "\n                        "
+                    )
+                  ])
+                ]
+              ),
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "w-2/9 lg:w-3/12 flex-wrap items-center" },
+                {
+                  staticClass:
+                    "w-2/9 lg:w-3/12 flex-wrap justify-end items-center"
+                },
                 [
                   _c("div", { staticClass: "flex" }, [
                     _vm._v(
@@ -40885,7 +40898,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "block lg:flex bg-teal-500 justify-center items-center rounded overflow-hidden shadow-lg m-4 p-4"
+                  "block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4"
               },
               [
                 _vm.selected

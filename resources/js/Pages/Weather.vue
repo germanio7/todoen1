@@ -71,7 +71,7 @@
 
             <div
                 v-if="selected"
-                class="block lg:flex bg-teal-500 justify-center items-center rounded overflow-hidden shadow-lg m-4 p-4"
+                class="block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4"
             >
                 <div v-if="selected">
                     <card-weather :res="selected"></card-weather>

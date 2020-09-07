@@ -39421,7 +39421,8 @@ var render = function() {
                 },
                 [
                   _c("img", {
-                    staticClass: "w-full",
+                    staticClass:
+                      "w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
                     attrs: { src: item.urlToImage, alt: "No Image" }
                   }),
                   _vm._v(" "),

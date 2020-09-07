@@ -7,7 +7,7 @@
                         class="max-w-sm rounded overflow-hidden shadow-lg m-2 p-2"
                     >
                         <img
-                            class="w-full"
+                            class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                             :src="item.urlToImage"
                             alt="No Image"
                         />

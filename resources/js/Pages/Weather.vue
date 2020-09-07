@@ -105,12 +105,7 @@ export default {
         searchCity() {
             setTimeout(() => {
                 axios
-                    .get(
-                        "https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" +
-                            this.api_key +
-                            "&product=observation&name=" +
-                            this.city
-                    )
+                    .post("api/search-city", { city: this.city })
                     .then(response => {
                         this.res = response.data.observations.location;
                     });
@@ -118,14 +113,10 @@ export default {
         },
         sevenDays() {
             axios
-                .get(
-                    "https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" +
-                        this.api_key +
-                        "&product=forecast_7days_simple&latitude=" +
-                        this.selected.latitude +
-                        "&longitude=" +
-                        this.selected.longitude
-                )
+                .post("api/seven-days", {
+                    latitude: this.selected.latitude,
+                    longitude: this.selected.longitude
+                })
                 .then(response => {
                     this.days =
                         response.data.dailyForecasts.forecastLocation.forecast;

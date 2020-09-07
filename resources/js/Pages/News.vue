@@ -63,9 +63,7 @@ export default {
     },
     methods: {
         setNews() {
-            var url =
-                "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=ar&apiKey=cb8bd5bfdb31449eba1b6c5870b5fe84";
-            axios.get(url).then(response => {
+            axios.get("api/news").then(response => {
                 this.news = response.data.articles;
             });
         }

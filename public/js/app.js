@@ -2117,8 +2117,7 @@ __webpack_require__.r(__webpack_exports__);
     setNews: function setNews() {
       var _this = this;
 
-      var url = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=ar&apiKey=cb8bd5bfdb31449eba1b6c5870b5fe84";
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/news").then(function (response) {
         _this.news = response.data.articles;
       });
     }
@@ -2990,7 +2989,9 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       setTimeout(function () {
-        axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" + _this.api_key + "&product=observation&name=" + _this.city).then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/search-city", {
+          city: _this.city
+        }).then(function (response) {
           _this.res = response.data.observations.location;
         });
       }, 1000);
@@ -2998,7 +2999,10 @@ __webpack_require__.r(__webpack_exports__);
     sevenDays: function sevenDays() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" + this.api_key + "&product=forecast_7days_simple&latitude=" + this.selected.latitude + "&longitude=" + this.selected.longitude).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/seven-days", {
+        latitude: this.selected.latitude,
+        longitude: this.selected.longitude
+      }).then(function (response) {
         _this2.days = response.data.dailyForecasts.forecastLocation.forecast;
       });
     }

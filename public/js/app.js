@@ -2093,12 +2093,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -39411,98 +39405,80 @@ var render = function() {
   return _c(
     "div",
     [
-      _c(
-        "layout",
-        _vm._l(_vm.news, function(item) {
-          return _c("div", { key: item.id }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "max-w-sm w-full lg:max-w-full lg:flex items-center border border-teal-500 shadow rounded m-4 p-2"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
-                      attrs: { src: item.urlToImage, alt: "No Image" }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal"
-                  },
-                  [
-                    _c("div", { staticClass: "mb-8" }, [
-                      _c(
-                        "div",
-                        { staticClass: "text-gray-900 font-bold text-xl mb-2" },
-                        [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s(item.title) +
-                              "\n                        "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "text-gray-700 text-base" }, [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(item.description) +
-                            "\n                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "text-blue-500 font-mono text-xs pt-4 no-underline hover:underline",
-                          attrs: { target: "_blank", href: item.url }
-                        },
-                        [_vm._v(_vm._s(item.url))]
+      _c("layout", [
+        _c(
+          "div",
+          {
+            staticClass: "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          },
+          _vm._l(_vm.news, function(item) {
+            return _c("div", { key: item.id }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "max-w-sm rounded overflow-hidden shadow-lg m-2 p-2"
+                },
+                [
+                  _c("img", {
+                    staticClass: "w-full",
+                    attrs: { src: item.urlToImage, alt: "No Image" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "px-6 py-4" }, [
+                    _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(item.title) +
+                          "\n                        "
                       )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "flex items-center" }, [
-                      _c("div", { staticClass: "text-sm" }, [
-                        _c("p", { staticClass: "text-gray-900 leading-none" }, [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(item.source.name) +
-                              "\n                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-gray-600" }, [
-                          _vm._v(
-                            "\n                                " +
-                              _vm._s(new Date(item.publishedAt)) +
-                              "\n                            "
-                          )
-                        ])
-                      ])
-                    ])
-                  ]
-                )
-              ]
-            )
-          ])
-        }),
-        0
-      )
+                    _c("p", { staticClass: "text-gray-700 text-base" }, [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(item.description) +
+                          "\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "text-blue-500 font-mono text-xs pt-4 no-underline hover:underline",
+                        attrs: { target: "_blank", href: item.url }
+                      },
+                      [_vm._v(_vm._s(item.url))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "px-6 pt-4 pb-2" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                      },
+                      [_vm._v(_vm._s(item.source.name))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass:
+                          "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                      },
+                      [_vm._v(_vm._s(new Date(item.publishedAt)))]
+                    )
+                  ])
+                ]
+              )
+            ])
+          }),
+          0
+        )
+      ])
     ],
     1
   )

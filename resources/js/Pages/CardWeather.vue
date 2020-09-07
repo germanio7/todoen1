@@ -40,25 +40,10 @@
 export default {
     data() {
         return {
-            api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs",
-            hoy: ""
+            api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs"
         };
     },
-    props: ["res"],
-    mounted() {
-        this.setHoy();
-    },
-    methods: {
-        setHoy() {
-            let now = new Date();
-            this.hoy =
-                now.getDate() +
-                "-" +
-                (now.getMonth() + 1) +
-                "-" +
-                now.getFullYear();
-        }
-    }
+    props: ["res"]
 };
 </script>
 

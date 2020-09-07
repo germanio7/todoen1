@@ -1925,6 +1925,60 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/CardSevenDays.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/CardSevenDays.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs"
+    };
+  },
+  props: ["days"]
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/CardWeather.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/CardWeather.vue?vue&type=script&lang=js& ***!
@@ -1975,20 +2029,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs",
-      hoy: ""
+      api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs"
     };
   },
-  props: ["res"],
-  mounted: function mounted() {
-    this.setHoy();
-  },
-  methods: {
-    setHoy: function setHoy() {
-      var now = new Date();
-      this.hoy = now.getDate() + "-" + (now.getMonth() + 1) + "-" + now.getFullYear();
-    }
-  }
+  props: ["res"]
 });
 
 /***/ }),
@@ -2709,8 +2753,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shared/Layout */ "./resources/js/Pages/Shared/Layout.vue");
 /* harmony import */ var _CardWeather__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CardWeather */ "./resources/js/Pages/CardWeather.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _CardSevenDays__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CardSevenDays */ "./resources/js/Pages/CardSevenDays.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 //
 //
 //
@@ -2766,6 +2811,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -2774,19 +2851,31 @@ __webpack_require__.r(__webpack_exports__);
     return {
       city: "",
       api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs",
-      res: null
+      selected: null,
+      res: null,
+      days: null
     };
   },
   components: {
     layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    CardWeather: _CardWeather__WEBPACK_IMPORTED_MODULE_1__["default"]
+    CardWeather: _CardWeather__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CardSevenDays: _CardSevenDays__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   methods: {
     searchCity: function searchCity() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" + this.api_key + "&product=observation&name=" + this.city).then(function (response) {
-        _this.res = response.data.observations.location[0].observation[0];
+      setTimeout(function () {
+        axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" + _this.api_key + "&product=observation&name=" + _this.city).then(function (response) {
+          _this.res = response.data.observations.location;
+        });
+      }, 1000);
+    },
+    sevenDays: function sevenDays() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("https://cors-anywhere.herokuapp.com/https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" + this.api_key + "&product=forecast_7days_simple&latitude=" + this.selected.latitude + "&longitude=" + this.selected.longitude).then(function (response) {
+        _this2.days = response.data.dailyForecasts.forecastLocation.forecast;
       });
     }
   }
@@ -38971,6 +39060,91 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/CardSevenDays.vue?vue&type=template&id=7342e3fb&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/CardSevenDays.vue?vue&type=template&id=7342e3fb& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "flex p-2" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "max-w-sm border bg-white rounded flex flex-col items-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+        },
+        _vm._l(_vm.days, function(item) {
+          return _c("div", { key: item.id }, [
+            _c("div", { staticClass: "flex items-center" }, [
+              _c("div", { staticClass: "w-1/9 lg:w-3/12" }, [
+                _vm._v(_vm._s(item.weekday))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "w-6/9 lg:w-6/12 flex items-center" }, [
+                _c("img", {
+                  attrs: {
+                    src: item.iconLink + "?apiKey=" + _vm.api_key,
+                    alt: ""
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "hidden lg:block" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(item.description) +
+                      "\n                        "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "w-2/9 lg:w-3/12 flex-wrap items-center" },
+                [
+                  _c("div", { staticClass: "flex" }, [
+                    _vm._v(
+                      "\n                            max " +
+                        _vm._s(Math.round(item.highTemperature)) +
+                        "ºC\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "flex" }, [
+                    _vm._v(
+                      "\n                            min " +
+                        _vm._s(Math.round(item.lowTemperature)) +
+                        "ºC\n                        "
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("hr")
+          ])
+        }),
+        0
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/CardWeather.vue?vue&type=template&id=421e99ab&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/CardWeather.vue?vue&type=template&id=421e99ab& ***!
@@ -40283,109 +40457,162 @@ var render = function() {
           [_vm._v("\n            Clima\n        ")]
         ),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "flex justify-center items-center rounded overflow-hidden shadow-lg m-4 p-4"
-          },
-          [
-            _c(
-              "form",
-              {
-                staticClass: "w-full max-w-sm",
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.searchCity()
+        _c("div", { staticClass: "flex justify-center items-center" }, [
+          _c(
+            "div",
+            {
+              staticClass: "flex-wrap rounded overflow-hidden shadow-lg m-4 p-4"
+            },
+            [
+              _c(
+                "form",
+                {
+                  staticClass: "w-full max-w-sm",
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.searchCity()
+                    }
                   }
-                }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "flex w-full items-center border-b border-teal-500 py-2"
-                  },
-                  [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.city,
-                          expression: "city"
-                        }
-                      ],
+                },
+                [
+                  _c(
+                    "div",
+                    {
                       staticClass:
-                        "appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none",
-                      attrs: {
-                        type: "text",
-                        placeholder: "Ingresar cuidad..."
-                      },
-                      domProps: { value: _vm.city },
-                      on: {
-                        keydown: function($event) {
-                          _vm.res = null
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                        "flex w-full items-center border-b border-teal-500 py-2"
+                    },
+                    [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.city,
+                            expression: "city"
                           }
-                          _vm.city = $event.target.value
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
+                        ],
                         staticClass:
-                          "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
-                        attrs: { type: "submit" }
+                          "appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none",
+                        attrs: {
+                          type: "text",
+                          placeholder: "Ingresar cuidad..."
+                        },
+                        domProps: { value: _vm.city },
+                        on: {
+                          keydown: function($event) {
+                            return _vm.searchCity()
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.city = $event.target.value
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                          attrs: { type: "submit" }
+                        },
+                        [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "w-4",
+                              attrs: {
+                                "aria-hidden": "true",
+                                "data-prefix": "fas",
+                                "data-icon": "search",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                viewBox: "0 0 512 512"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  fill: "currentColor",
+                                  d:
+                                    "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "max-w-sm" },
+                _vm._l(_vm.res, function(item) {
+                  return _c("div", { key: item.id }, [
+                    _c(
+                      "li",
+                      {
+                        staticClass: "cursor-pointer p-2",
+                        on: {
+                          click: function($event) {
+                            _vm.selected = item.observation[0]
+                            _vm.res = null
+                            _vm.city = ""
+                            _vm.sevenDays()
+                          }
+                        }
                       },
                       [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "w-4",
-                            attrs: {
-                              "aria-hidden": "true",
-                              "data-prefix": "fas",
-                              "data-icon": "search",
-                              xmlns: "http://www.w3.org/2000/svg",
-                              viewBox: "0 0 512 512"
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                fill: "currentColor",
-                                d:
-                                  "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                              }
-                            })
-                          ]
-                        )
+                        _c("pre", [
+                          _vm._v(
+                            _vm._s(item.city) +
+                              ", " +
+                              _vm._s(item.state) +
+                              ", " +
+                              _vm._s(item.country)
+                          )
+                        ])
                       ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
-        ),
+                    ),
+                    _vm._v(" "),
+                    _c("hr")
+                  ])
+                }),
+                0
+              )
+            ]
+          )
+        ]),
         _vm._v(" "),
-        _vm.res
+        _vm.selected
           ? _c(
               "div",
               {
                 staticClass:
-                  "flex bg-teal-500 justify-center items-center rounded overflow-hidden shadow-lg m-4 p-4"
+                  "block lg:flex bg-teal-500 justify-center items-center rounded overflow-hidden shadow-lg m-4 p-4"
               },
-              [_c("card-weather", { attrs: { res: _vm.res } })],
-              1
+              [
+                _vm.selected
+                  ? _c(
+                      "div",
+                      [_c("card-weather", { attrs: { res: _vm.selected } })],
+                      1
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.days
+                  ? _c(
+                      "div",
+                      [_c("card-seven-days", { attrs: { days: _vm.days } })],
+                      1
+                    )
+                  : _vm._e()
+              ]
             )
           : _vm._e()
       ])
@@ -52809,6 +53036,8 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./CardSevenDays": "./resources/js/Pages/CardSevenDays.vue",
+	"./CardSevenDays.vue": "./resources/js/Pages/CardSevenDays.vue",
 	"./CardWeather": "./resources/js/Pages/CardWeather.vue",
 	"./CardWeather.vue": "./resources/js/Pages/CardWeather.vue",
 	"./Radios": "./resources/js/Pages/Radios.vue",
@@ -52848,6 +53077,75 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./resources/js/Pages/CardSevenDays.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/Pages/CardSevenDays.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CardSevenDays_vue_vue_type_template_id_7342e3fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CardSevenDays.vue?vue&type=template&id=7342e3fb& */ "./resources/js/Pages/CardSevenDays.vue?vue&type=template&id=7342e3fb&");
+/* harmony import */ var _CardSevenDays_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CardSevenDays.vue?vue&type=script&lang=js& */ "./resources/js/Pages/CardSevenDays.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CardSevenDays_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CardSevenDays_vue_vue_type_template_id_7342e3fb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CardSevenDays_vue_vue_type_template_id_7342e3fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/CardSevenDays.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/CardSevenDays.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/Pages/CardSevenDays.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CardSevenDays_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CardSevenDays.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/CardSevenDays.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CardSevenDays_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/CardSevenDays.vue?vue&type=template&id=7342e3fb&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/Pages/CardSevenDays.vue?vue&type=template&id=7342e3fb& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardSevenDays_vue_vue_type_template_id_7342e3fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CardSevenDays.vue?vue&type=template&id=7342e3fb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/CardSevenDays.vue?vue&type=template&id=7342e3fb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardSevenDays_vue_vue_type_template_id_7342e3fb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardSevenDays_vue_vue_type_template_id_7342e3fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -53338,14 +53636,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./resources/js/Pages/Weather.vue ***!
   \****************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Weather_vue_vue_type_template_id_21ed134a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Weather.vue?vue&type=template&id=21ed134a& */ "./resources/js/Pages/Weather.vue?vue&type=template&id=21ed134a&");
 /* harmony import */ var _Weather_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Weather.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Weather.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Weather_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Weather_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -53375,7 +53674,7 @@ component.options.__file = "resources/js/Pages/Weather.vue"
 /*!*****************************************************************!*\
   !*** ./resources/js/Pages/Weather.vue?vue&type=script&lang=js& ***!
   \*****************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

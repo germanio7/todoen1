@@ -2961,6 +2961,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2999,6 +3007,9 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         _this2.days = response.data.dailyForecasts.forecastLocation.forecast;
       });
+    },
+    limpiar: function limpiar() {
+      this.res = null;
     }
   }
 });
@@ -39456,7 +39467,7 @@ var render = function() {
                       "a",
                       {
                         staticClass:
-                          "text-blue-500 font-mono text-xs pt-4 no-underline hover:underline",
+                          "text-blue-500 break-words font-mono text-xs pt-4 no-underline hover:underline",
                         attrs: { target: "_blank", href: item.url }
                       },
                       [_vm._v(_vm._s(item.url))]
@@ -40761,12 +40772,12 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex justify-center font-mono text-4xl md:text-6xl text-teal-700"
+              "flex justify-center font-mono text-4xl md:text-6xl text-teal-700 "
           },
           [_vm._v("\n            Clima\n        ")]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "flex justify-center items-center" }, [
+        _c("div", { staticClass: "flex justify-center items-center " }, [
           _c(
             "div",
             {
@@ -40809,6 +40820,9 @@ var render = function() {
                         },
                         domProps: { value: _vm.city },
                         on: {
+                          keydown: function($event) {
+                            return _vm.limpiar()
+                          },
                           input: function($event) {
                             if ($event.target.composing) {
                               return
@@ -40855,42 +40869,48 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "max-w-sm" },
-                _vm._l(_vm.res, function(item) {
-                  return _c("div", { key: item.id }, [
-                    _c(
-                      "li",
-                      {
-                        staticClass: "cursor-pointer p-2",
-                        on: {
-                          click: function($event) {
-                            _vm.selected = item.observation[0]
-                            _vm.res = null
-                            _vm.city = ""
-                            _vm.sevenDays()
-                          }
-                        }
-                      },
-                      [
-                        _c("pre", [
-                          _vm._v(
-                            _vm._s(item.city) +
-                              ", " +
-                              _vm._s(item.state) +
-                              ", " +
-                              _vm._s(item.country)
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("hr")
-                  ])
-                }),
-                0
-              )
+              _vm.city
+                ? _c(
+                    "ul",
+                    { staticClass: "max-w-sm absolute bg-gray-100 z-10 -ml-4" },
+                    _vm._l(_vm.res, function(item) {
+                      return _c(
+                        "div",
+                        { key: item.id, staticClass: "max-w-sm" },
+                        [
+                          _c(
+                            "li",
+                            {
+                              staticClass: "cursor-pointer p-2",
+                              on: {
+                                click: function($event) {
+                                  _vm.selected = item.observation[0]
+                                  _vm.res = null
+                                  _vm.city = ""
+                                  _vm.sevenDays()
+                                }
+                              }
+                            },
+                            [
+                              _c("pre", { staticClass: "truncate" }, [
+                                _vm._v(
+                                  _vm._s(item.city) +
+                                    ", " +
+                                    _vm._s(item.state) +
+                                    ", " +
+                                    _vm._s(item.country)
+                                )
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("hr")
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                : _vm._e()
             ]
           )
         ]),
@@ -40900,7 +40920,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4"
+                  "block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4 relative"
               },
               [
                 _vm.selected

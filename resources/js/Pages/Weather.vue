@@ -2,12 +2,12 @@
     <div>
         <layout>
             <div
-                class="flex justify-center font-mono text-4xl md:text-6xl text-teal-700"
+                class="flex justify-center font-mono text-4xl md:text-6xl text-teal-700 "
             >
                 Clima
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center ">
                 <div
                     class="flex-wrap rounded overflow-hidden shadow-lg m-4 p-4"
                 >
@@ -23,6 +23,7 @@
                                 class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                                 type="text"
                                 placeholder="Ingresar cuidad..."
+                                @keydown="limpiar()"
                             />
                             <button
                                 class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -45,8 +46,15 @@
                         </div>
                     </form>
 
-                    <ul class="max-w-sm">
-                        <div v-for="item in res" :key="item.id">
+                    <ul
+                        v-if="city"
+                        class="max-w-sm absolute bg-gray-100 z-10 -ml-4"
+                    >
+                        <div
+                            class="max-w-sm"
+                            v-for="item in res"
+                            :key="item.id"
+                        >
                             <li
                                 class="cursor-pointer p-2"
                                 @click="
@@ -56,7 +64,7 @@
                                     sevenDays();
                                 "
                             >
-                                <pre
+                                <pre class="truncate"
                                     >{{ item.city }}, {{ item.state }}, {{
                                         item.country
                                     }}</pre
@@ -70,7 +78,7 @@
 
             <div
                 v-if="selected"
-                class="block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4"
+                class="block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4 relative"
             >
                 <div v-if="selected">
                     <card-weather :res="selected"></card-weather>
@@ -118,6 +126,9 @@ export default {
                     this.days =
                         response.data.dailyForecasts.forecastLocation.forecast;
                 });
+        },
+        limpiar() {
+            this.res = null;
         }
     }
 };

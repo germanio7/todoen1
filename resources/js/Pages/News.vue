@@ -19,7 +19,7 @@
                                 {{ item.description }}
                             </p>
                             <a
-                                class="text-blue-500 font-mono text-xs pt-4 no-underline hover:underline"
+                                class="text-blue-500 break-words font-mono text-xs pt-4 no-underline hover:underline"
                                 target="_blank"
                                 :href="item.url"
                                 >{{ item.url }}</a

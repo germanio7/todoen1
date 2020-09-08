@@ -2,7 +2,7 @@
     <div>
         <!-- class="fixed" -->
         <nav
-            class="w-full flex items-center justify-between flex-wrap bg-teal-500 p-6"
+            class="fixed w-full flex items-center justify-between flex-wrap bg-teal-500 p-6 z-40 -mt-24"
         >
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <svg
@@ -97,10 +97,13 @@
             <alert :message="$page.flash.message"></alert>
         </div> -->
 
-        <article class="container mx-auto">
+        <!-- mb-48 para el footer -->
+        <article class="container mx-auto mt-24">
             <slot />
         </article>
-        <!-- <player></player> -->
+        <!-- <footer>
+            <player></player>
+        </footer> -->
     </div>
 </template>
 

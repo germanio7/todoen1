@@ -2386,6 +2386,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2958,7 +2961,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -2982,13 +2984,11 @@ __webpack_require__.r(__webpack_exports__);
     searchCity: function searchCity() {
       var _this = this;
 
-      setTimeout(function () {
-        axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/search-city", {
-          city: _this.city
-        }).then(function (response) {
-          _this.res = response.data.observations.location;
-        });
-      }, 1000);
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/search-city", {
+        city: this.city
+      }).then(function (response) {
+        _this.res = response.data.observations.location;
+      });
     },
     sevenDays: function sevenDays() {
       var _this2 = this;
@@ -39426,7 +39426,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "max-w-sm rounded overflow-hidden shadow-lg m-2 p-2"
+                    "max-w-sm rounded overflow-hidden shadow-lg m-2 p-2 h-full "
                 },
                 [
                   _c("img", {
@@ -39748,7 +39748,7 @@ var render = function() {
       "nav",
       {
         staticClass:
-          "w-full flex items-center justify-between flex-wrap bg-teal-500 p-6"
+          "fixed w-full flex items-center justify-between flex-wrap bg-teal-500 p-6 z-40 -mt-24"
       },
       [
         _c(
@@ -39934,7 +39934,12 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("article", { staticClass: "container mx-auto" }, [_vm._t("default")], 2)
+    _c(
+      "article",
+      { staticClass: "container mx-auto mt-24" },
+      [_vm._t("default")],
+      2
+    )
   ])
 }
 var staticRenderFns = []
@@ -40804,9 +40809,6 @@ var render = function() {
                         },
                         domProps: { value: _vm.city },
                         on: {
-                          keydown: function($event) {
-                            return _vm.searchCity()
-                          },
                           input: function($event) {
                             if ($event.target.composing) {
                               return

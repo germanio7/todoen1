@@ -23,7 +23,6 @@
                                 class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                                 type="text"
                                 placeholder="Ingresar cuidad..."
-                                @keydown="searchCity()"
                             />
                             <button
                                 class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -103,13 +102,11 @@ export default {
 
     methods: {
         searchCity() {
-            setTimeout(() => {
-                axios
-                    .post("api/search-city", { city: this.city })
-                    .then(response => {
-                        this.res = response.data.observations.location;
-                    });
-            }, 1000);
+            axios
+                .post("api/search-city", { city: this.city })
+                .then(response => {
+                    this.res = response.data.observations.location;
+                });
         },
         sevenDays() {
             axios

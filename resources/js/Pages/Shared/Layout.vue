@@ -97,26 +97,21 @@
             <alert :message="$page.flash.message"></alert>
         </div> -->
 
-        <!-- mb-48 para el footer -->
-        <article class="container mx-auto mt-24">
+        <article class="container mx-auto mt-24 mb-32">
             <slot />
         </article>
-        <!-- <footer>
-            <player></player>
-        </footer> -->
     </div>
 </template>
 
 <script>
 import alert from "./Alert";
-import player from "./Player";
 export default {
     data() {
         return {
             menu: false
         };
     },
-    components: { alert, player },
+    components: { alert },
     mounted() {
         if (window.innerWidth >= 768) {
             this.mostrar();

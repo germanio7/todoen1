@@ -10,4 +10,17 @@
   <body>
     @inertia
   </body>
+  <footer>
+    <div style="position: fixed; bottom: 0px; width: 100%; text-align: center;">
+      <iframe 
+            autoplay="true"
+            id="myIFrame" 
+            src="" 
+            style="width:100%; height:100px;"
+            scrolling="no"
+            frameborder="no"
+        >
+      </iframe>
+    </div>
+  </footer>
 </html>

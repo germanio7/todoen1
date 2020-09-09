@@ -2169,49 +2169,61 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      radios: [{
+        name: "Aspen 102.3",
+        url: "https://tunein.com/embed/player/s25905/",
+        img: "https://cdn-profiles.tunein.com/s25905/images/logog.jpg?t=159040"
+      }, {
+        name: "La 100",
+        url: "https://tunein.com/embed/player/s6984/",
+        img: "https://cdn-profiles.tunein.com/s6984/images/logog.jpg?t=636247"
+      }, {
+        name: "Radio La Red",
+        url: "https://tunein.com/embed/player/s13680/",
+        img: "https://cdn-radiotime-logos.tunein.com/s13680q.png"
+      }, {
+        name: "Radio Rivadavia",
+        url: "https://tunein.com/embed/player/s104261/",
+        img: "https://cdn-profiles.tunein.com/s104261/images/logoq.png?t=158172"
+      }, {
+        name: "Vorterix",
+        url: "https://tunein.com/embed/player/s156342/",
+        img: "https://cdn-radiotime-logos.tunein.com/s156342q.png"
+      }, {
+        name: "Los 40",
+        url: "https://tunein.com/embed/player/s24998/",
+        img: "https://cdn-profiles.tunein.com/s24998/images/logoq.png?t=155265"
+      }, {
+        name: "Radio Mitre",
+        url: "https://tunein.com/embed/player/s25151/",
+        img: "https://cdn-profiles.tunein.com/s25151/images/logoq.jpg?t=157556"
+      }, {
+        name: "Fm Rock and Pop 95.9",
+        url: "https://tunein.com/embed/player/s2560/",
+        img: "https://cdn-profiles.tunein.com/s2560/images/logoq.png?t=159346"
+      }, {
+        name: "Radio Continental",
+        url: "https://tunein.com/embed/player/s25844/",
+        img: "https://cdn-radiotime-logos.tunein.com/s25844q.png"
+      }, {
+        name: "Vale 97.5",
+        url: "https://tunein.com/embed/player/s135092/",
+        img: "https://cdn-profiles.tunein.com/s135092/images/logoq.png?t=153597"
+      }]
+    };
+  },
   components: {
     layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  methods: {
+    setRadio: function setRadio(radio) {
+      var ifm = document.getElementById("myIFrame");
+      ifm.setAttribute("src", radio.url);
+    }
   }
 });
 
@@ -2279,7 +2291,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert */ "./resources/js/Pages/Shared/Alert.vue");
-/* harmony import */ var _Player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Player */ "./resources/js/Pages/Shared/Player.vue");
 //
 //
 //
@@ -2385,11 +2396,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2398,8 +2404,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   components: {
-    alert: _Alert__WEBPACK_IMPORTED_MODULE_0__["default"],
-    player: _Player__WEBPACK_IMPORTED_MODULE_1__["default"]
+    alert: _Alert__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   mounted: function mounted() {
     if (window.innerWidth >= 768) {
@@ -2412,29 +2417,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Player.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/Player.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -3060,90 +3042,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      tecnos: [{
+        name: "Laravel",
+        img: "https://laravel.com/img/logomark.min.svg"
+      }, {
+        name: "Tailwind CSS",
+        img: "https://tailwindcss.com/_next/static/media/twitter-square.18b32c43e6fa4c8ee7db66330112a331.png"
+      }, {
+        name: "VueJS",
+        img: "https://vuejs.org/images/logo.png"
+      }, {
+        name: "InertiaJS",
+        img: "https://pbs.twimg.com/profile_images/1157690996823592960/TaroSwnp_400x400.jpg"
+      }, {
+        name: "Tune In",
+        img: "https://lh3.googleusercontent.com/KLI43egHmMQhCvDTH-EDWDdtxxPODJk6YO56Fa5cmmiYRd5LfBAXrVZmHcRCQ5j9_rZD=s360"
+      }, {
+        name: "Here Destination Weather",
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/HERE_logo.svg/1200px-HERE_logo.svg.png"
+      }, {
+        name: "News API",
+        img: "https://newsapi.org/images/n-logo-border.png"
+      }]
+    };
   },
   components: {
     layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -39532,115 +39457,56 @@ var render = function() {
               [_vm._v("\n                    Radios\n                ")]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "flex flex-wrap justify-center" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
-                  _c("iframe", {
-                    staticStyle: { width: "100%", height: "100px" },
-                    attrs: {
-                      src: "https://tunein.com/embed/player/s25905/",
-                      scrolling: "no",
-                      frameborder: "no"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
-                  _c("iframe", {
-                    staticStyle: { width: "100%", height: "100px" },
-                    attrs: {
-                      src: "https://tunein.com/embed/player/s6984/",
-                      scrolling: "no",
-                      frameborder: "no"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
-                  _c("iframe", {
-                    staticStyle: { width: "100%", height: "100px" },
-                    attrs: {
-                      src: "https://tunein.com/embed/player/s13680/",
-                      scrolling: "no",
-                      frameborder: "no"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
-                  _c("iframe", {
-                    staticStyle: { width: "100%", height: "100px" },
-                    attrs: {
-                      src: "https://tunein.com/embed/player/s104261/",
-                      scrolling: "no",
-                      frameborder: "no"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
-                  _c("iframe", {
-                    staticStyle: { width: "100%", height: "100px" },
-                    attrs: {
-                      src: "https://tunein.com/embed/player/s156342/",
-                      scrolling: "no",
-                      frameborder: "no"
-                    }
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
-                  _c("iframe", {
-                    staticStyle: { width: "100%", height: "100px" },
-                    attrs: {
-                      src: "https://tunein.com/embed/player/s24998/",
-                      scrolling: "no",
-                      frameborder: "no"
-                    }
-                  })
-                ]
-              )
-            ])
+            _c(
+              "div",
+              {
+                staticClass:
+                  "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
+              },
+              _vm._l(_vm.radios, function(item) {
+                return _c("div", { key: item.id }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "w-full cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                      on: {
+                        click: function($event) {
+                          return _vm.setRadio(item)
+                        }
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "md:flex bg-white rounded-lg p-6 items-center"
+                        },
+                        [
+                          _c("img", {
+                            staticClass:
+                              "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
+                            attrs: { src: item.img, alt: "no image" }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "text-center md:text-left" },
+                            [
+                              _c("h2", { staticClass: "text-lg" }, [
+                                _vm._v(_vm._s(item.name))
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ])
+              }),
+              0
+            )
           ])
         ])
       ])
@@ -39947,60 +39813,13 @@ var render = function() {
     _vm._v(" "),
     _c(
       "article",
-      { staticClass: "container mx-auto mt-24" },
+      { staticClass: "container mx-auto mt-24 mb-32" },
       [_vm._t("default")],
       2
     )
   ])
 }
 var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Player.vue?vue&type=template&id=3a44f8dc&":
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Shared/Player.vue?vue&type=template&id=3a44f8dc& ***!
-  \***********************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticStyle: {
-          position: "fixed",
-          bottom: "0",
-          width: "100%",
-          "text-align": "center"
-        }
-      },
-      [
-        _c("object", {
-          staticClass: "w-full",
-          attrs: { data: "https://tunein.com/embed/player/s25905/", type: "" }
-        })
-      ]
-    )
-  }
-]
 render._withStripped = true
 
 
@@ -40987,227 +40806,40 @@ var render = function() {
             staticClass:
               "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center"
           },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
+          _vm._l(_vm.tecnos, function(item) {
+            return _c("div", { key: item.id }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                },
+                [
+                  _c(
+                    "div",
+                    {
                       staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src: "https://laravel.com/img/logomark.min.svg",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [_vm._v("Laravel")])
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src:
-                          "https://tailwindcss.com/_next/static/media/twitter-square.18b32c43e6fa4c8ee7db66330112a331.png",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [
-                        _vm._v("Tailwind CSS")
+                        "md:flex bg-white rounded-lg p-6 items-center"
+                    },
+                    [
+                      _c("img", {
+                        staticClass:
+                          "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
+                        attrs: { src: item.img, alt: "no image" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "text-center md:text-left" }, [
+                        _c("h2", { staticClass: "text-lg" }, [
+                          _vm._v(_vm._s(item.name))
+                        ])
                       ])
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src: "https://vuejs.org/images/logo.png",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [_vm._v("VueJS")])
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src:
-                          "https://pbs.twimg.com/profile_images/1157690996823592960/TaroSwnp_400x400.jpg",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [
-                        _vm._v("InertiaJS")
-                      ])
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src:
-                          "https://lh3.googleusercontent.com/KLI43egHmMQhCvDTH-EDWDdtxxPODJk6YO56Fa5cmmiYRd5LfBAXrVZmHcRCQ5j9_rZD=s360",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [_vm._v("Tune In")])
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src:
-                          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/HERE_logo.svg/1200px-HERE_logo.svg.png",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [
-                        _vm._v("Here Destination Weather")
-                      ])
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "md:flex bg-white rounded-lg p-6 items-center"
-                  },
-                  [
-                    _c("img", {
-                      staticClass:
-                        "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                      attrs: {
-                        src: "https://newsapi.org/images/n-logo-border.png",
-                        alt: "no image"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "text-center md:text-left" }, [
-                      _c("h2", { staticClass: "text-lg" }, [_vm._v("News API")])
-                    ])
-                  ]
-                )
-              ]
-            )
-          ]
+                    ]
+                  )
+                ]
+              )
+            ])
+          }),
+          0
         )
       ])
     ],
@@ -53403,8 +53035,6 @@ var map = {
 	"./Shared/Alert.vue": "./resources/js/Pages/Shared/Alert.vue",
 	"./Shared/Layout": "./resources/js/Pages/Shared/Layout.vue",
 	"./Shared/Layout.vue": "./resources/js/Pages/Shared/Layout.vue",
-	"./Shared/Player": "./resources/js/Pages/Shared/Player.vue",
-	"./Shared/Player.vue": "./resources/js/Pages/Shared/Player.vue",
 	"./Users/Create": "./resources/js/Pages/Users/Create.vue",
 	"./Users/Create.vue": "./resources/js/Pages/Users/Create.vue",
 	"./Users/Edit": "./resources/js/Pages/Users/Edit.vue",
@@ -53853,75 +53483,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Shared/Player.vue":
-/*!**********************************************!*\
-  !*** ./resources/js/Pages/Shared/Player.vue ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Player_vue_vue_type_template_id_3a44f8dc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Player.vue?vue&type=template&id=3a44f8dc& */ "./resources/js/Pages/Shared/Player.vue?vue&type=template&id=3a44f8dc&");
-/* harmony import */ var _Player_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Player.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Shared/Player.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Player_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Player_vue_vue_type_template_id_3a44f8dc___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Player_vue_vue_type_template_id_3a44f8dc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/Pages/Shared/Player.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Shared/Player.vue?vue&type=script&lang=js&":
-/*!***********************************************************************!*\
-  !*** ./resources/js/Pages/Shared/Player.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Player_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Player.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Player.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Player_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Shared/Player.vue?vue&type=template&id=3a44f8dc&":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/Pages/Shared/Player.vue?vue&type=template&id=3a44f8dc& ***!
-  \*****************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Player_vue_vue_type_template_id_3a44f8dc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Player.vue?vue&type=template&id=3a44f8dc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Shared/Player.vue?vue&type=template&id=3a44f8dc&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Player_vue_vue_type_template_id_3a44f8dc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Player_vue_vue_type_template_id_3a44f8dc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/Pages/Users/Create.vue":
 /*!*********************************************!*\
   !*** ./resources/js/Pages/Users/Create.vue ***!
@@ -54364,8 +53925,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\testInertiaJS\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\testInertiaJS\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\radios-clima\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\radios-clima\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

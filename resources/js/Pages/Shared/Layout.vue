@@ -2,7 +2,7 @@
     <div>
         <!-- class="fixed" -->
         <nav
-            class="fixed w-full flex items-center justify-between flex-wrap bg-teal-500 p-6 z-40 -mt-24"
+            class="fixed w-full flex items-center justify-between flex-wrap bg-gray-900 p-6 z-40 -mt-24"
         >
             <div class="flex items-center flex-shrink-0 text-white mr-6">
                 <svg
@@ -39,7 +39,7 @@
             </div>
             <div class="block lg:hidden">
                 <button
-                    class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+                    class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
                     @click="mostrar()"
                 >
                     <svg
@@ -59,29 +59,29 @@
                 <div class="text-sm ">
                     <inertia-link
                         href="/radios"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >Radios</inertia-link
                     >
                 </div>
                 <div class="text-sm ">
                     <inertia-link
                         href="/noticias"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >Noticias</inertia-link
                     >
                 </div>
                 <div class="text-sm ">
                     <inertia-link
                         href="/weather"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >Clima</inertia-link
                     >
                 </div>
                 <div class="text-sm ">
                     <inertia-link
                         href="/info"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >Info</inertia-link
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        >Acerca de</inertia-link
                     >
                 </div>
                 <!-- <div>

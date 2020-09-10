@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <script src="{{ mix('/js/app.js') }}" defer></script>
   </head>
-  <body>
+  <body class="bg-gray-100">
     @inertia
   </body>
   <footer>

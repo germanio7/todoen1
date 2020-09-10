@@ -2,12 +2,12 @@
     <div>
         <layout>
             <div
-                class="text-center font-mono text-4xl md:text-6xl text-teal-700"
+                class="text-center font-mono text-4xl md:text-6xl text-gray-900"
             >
                 Tecnologías Utilizadas
             </div>
             <div
-                class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center"
+                class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center "
             >
                 <div v-for="item in tecnos" :key="item.id">
                     <div

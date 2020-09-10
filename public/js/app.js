@@ -1972,6 +1972,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1992,6 +2019,71 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2053,6 +2145,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shared/Layout */ "./resources/js/Pages/Shared/Layout.vue");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -39148,68 +39245,126 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "flex p-2" }, [
+    _c("div", { staticClass: "flex-1  justify-center p-2" }, [
       _c(
         "div",
         {
           staticClass:
-            "max-w-sm border bg-white rounded flex flex-col items-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            "w-full border bg-white rounded flex-wrap items-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
         },
         _vm._l(_vm.days, function(item) {
           return _c("div", { key: item.id }, [
-            _c("div", { staticClass: "flex justify-start items-center" }, [
-              _c("div", { staticClass: "w-1/9 lg:w-3/12" }, [
-                _vm._v(_vm._s(item.weekday))
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "w-6/9 lg:w-6/12 flex justify-start items-center"
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: item.iconLink + "?apiKey=" + _vm.api_key,
-                      alt: ""
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "hidden lg:block" }, [
-                    _vm._v(
-                      "\n                            " +
-                        _vm._s(item.description) +
-                        "\n                        "
+            _c(
+              "div",
+              { staticClass: "flex w-full justify-between items-center" },
+              [
+                _c("div", { staticClass: "w-1/9 lg:w-3/12" }, [
+                  _vm._v(_vm._s(item.weekday))
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-6/9 lg:w-6/12 flex justify-start items-center"
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "pr-2",
+                      attrs: {
+                        src: item.iconLink + "?apiKey=" + _vm.api_key,
+                        alt: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "hidden md:block" }, [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(item.description) +
+                          "\n                        "
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "w-2/9 lg:w-3/12 flex-wrap justify-end items-center"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "flex justify-end items-center" },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "w-8 pr-2",
+                            attrs: {
+                              "aria-hidden": "true",
+                              "data-prefix": "fas",
+                              "data-icon": "temperature-high",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              viewBox: "0 0 512 512"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                fill: "currentColor",
+                                d:
+                                  "M416 0c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm-160-16C256 50.1 205.9 0 144 0S32 50.1 32 112v166.5C12.3 303.2 0 334 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-34-12.3-64.9-32-89.5V112zM144 448c-44.1 0-80-35.9-80-80 0-25.5 12.2-48.9 32-63.8V112c0-26.5 21.5-48 48-48s48 21.5 48 48v192.2c19.8 14.8 32 38.3 32 63.8 0 44.1-35.9 80-80 80zm16-125.1V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v210.9c-18.6 6.6-32 24.2-32 45.1 0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.5-32-45.1z"
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(Math.round(item.highTemperature)) +
+                            "ºC\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "flex justify-end items-center" },
+                      [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "w-8 pr-2",
+                            attrs: {
+                              "aria-hidden": "true",
+                              "data-prefix": "fas",
+                              "data-icon": "temperature-low",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              viewBox: "0 0 512 512"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                fill: "currentColor",
+                                d:
+                                  "M416 0c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm-160-16C256 50.1 205.9 0 144 0S32 50.1 32 112v166.5C12.3 303.2 0 334 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-34-12.3-64.9-32-89.5V112zM144 448c-44.1 0-80-35.9-80-80 0-25.5 12.2-48.9 32-63.8V112c0-26.5 21.5-48 48-48s48 21.5 48 48v192.2c19.8 14.8 32 38.3 32 63.8 0 44.1-35.9 80-80 80zm16-125.1V304c0-8.8-7.2-16-16-16s-16 7.2-16 16v18.9c-18.6 6.6-32 24.2-32 45.1 0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.5-32-45.1z"
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(Math.round(item.lowTemperature)) +
+                            "ºC\n                        "
+                        )
+                      ]
                     )
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-2/9 lg:w-3/12 flex-wrap justify-end items-center"
-                },
-                [
-                  _c("div", { staticClass: "flex" }, [
-                    _vm._v(
-                      "\n                            max " +
-                        _vm._s(Math.round(item.highTemperature)) +
-                        "ºC\n                        "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "flex" }, [
-                    _vm._v(
-                      "\n                            min " +
-                        _vm._s(Math.round(item.lowTemperature)) +
-                        "ºC\n                        "
-                    )
-                  ])
-                ]
-              )
-            ]),
+                  ]
+                )
+              ]
+            ),
             _vm._v(" "),
             _c("hr")
           ])
@@ -39246,7 +39401,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "w-auto border bg-white rounded flex flex-col justify-center items-center text-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+          "w-auto border bg-white rounded flex flex-col justify-center items-center text-center p-6  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
       },
       [
         _c(
@@ -39276,26 +39431,99 @@ var render = function() {
           _vm._v(_vm._s(_vm.res.description))
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "text-3xl font-bold text-gray-900 mb-6" }, [
-          _vm._v(
-            "\n            " +
-              _vm._s(Math.round(_vm.res.temperature)) +
-              "ºC\n        "
-          )
-        ]),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex items-center text-3xl font-bold text-gray-900 mb-6"
+          },
+          [
+            _c(
+              "svg",
+              {
+                staticClass: "w-8 pr-2",
+                attrs: {
+                  "aria-hidden": "true",
+                  "data-prefix": "fas",
+                  "data-icon": "thermometer-half",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 256 512"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    fill: "currentColor",
+                    d:
+                      "M192 384c0 35.346-28.654 64-64 64s-64-28.654-64-64c0-23.685 12.876-44.349 32-55.417V224c0-17.673 14.327-32 32-32s32 14.327 32 32v104.583c19.124 11.068 32 31.732 32 55.417zm32-84.653c19.912 22.563 32 52.194 32 84.653 0 70.696-57.303 128-128 128-.299 0-.609-.001-.909-.003C56.789 511.509-.357 453.636.002 383.333.166 351.135 12.225 321.755 32 299.347V96c0-53.019 42.981-96 96-96s96 42.981 96 96v203.347zM208 384c0-34.339-19.37-52.19-32-66.502V96c0-26.467-21.533-48-48-48S80 69.533 80 96v221.498c-12.732 14.428-31.825 32.1-31.999 66.08-.224 43.876 35.563 80.116 79.423 80.42L128 464c44.112 0 80-35.888 80-80z"
+                  }
+                })
+              ]
+            ),
+            _vm._v(
+              "\n            " +
+                _vm._s(Math.round(_vm.res.temperature)) +
+                "ºC\n        "
+            )
+          ]
+        ),
         _vm._v(" "),
         _c("div", { staticClass: "flex justify-between w-full m-2" }, [
           _c("div", { staticClass: "flex items-center text-gray-700 px-2" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "w-8 pr-2",
+                attrs: {
+                  "aria-hidden": "true",
+                  "data-prefix": "fas",
+                  "data-icon": "temperature-high",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 512 512"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    fill: "currentColor",
+                    d:
+                      "M416 0c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm-160-16C256 50.1 205.9 0 144 0S32 50.1 32 112v166.5C12.3 303.2 0 334 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-34-12.3-64.9-32-89.5V112zM144 448c-44.1 0-80-35.9-80-80 0-25.5 12.2-48.9 32-63.8V112c0-26.5 21.5-48 48-48s48 21.5 48 48v192.2c19.8 14.8 32 38.3 32 63.8 0 44.1-35.9 80-80 80zm16-125.1V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v210.9c-18.6 6.6-32 24.2-32 45.1 0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.5-32-45.1z"
+                  }
+                })
+              ]
+            ),
             _vm._v(
-              "\n                max " +
+              "\n                " +
                 _vm._s(Math.round(_vm.res.highTemperature)) +
                 "ºC\n            "
             )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "flex items-center text-gray-700 px-2" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "w-8 pr-2",
+                attrs: {
+                  "aria-hidden": "true",
+                  "data-prefix": "fas",
+                  "data-icon": "temperature-low",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 512 512"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    fill: "currentColor",
+                    d:
+                      "M416 0c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm-160-16C256 50.1 205.9 0 144 0S32 50.1 32 112v166.5C12.3 303.2 0 334 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-34-12.3-64.9-32-89.5V112zM144 448c-44.1 0-80-35.9-80-80 0-25.5 12.2-48.9 32-63.8V112c0-26.5 21.5-48 48-48s48 21.5 48 48v192.2c19.8 14.8 32 38.3 32 63.8 0 44.1-35.9 80-80 80zm16-125.1V304c0-8.8-7.2-16-16-16s-16 7.2-16 16v18.9c-18.6 6.6-32 24.2-32 45.1 0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.5-32-45.1z"
+                  }
+                })
+              ]
+            ),
             _vm._v(
-              "\n                min " +
+              "\n                " +
                 _vm._s(Math.round(_vm.res.lowTemperature)) +
                 "ºC\n            "
             )
@@ -39304,16 +39532,60 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "flex justify-between w-full" }, [
           _c("div", { staticClass: "flex items-center text-gray-700 px-2" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "w-8 pr-2",
+                attrs: {
+                  "aria-hidden": "true",
+                  "data-prefix": "fas",
+                  "data-icon": "water",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 576 512"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    fill: "currentColor",
+                    d:
+                      "M562.1 383.9c-21.5-2.4-42.1-10.5-57.9-22.9-14.1-11.1-34.2-11.3-48.2 0-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3zm0-144c-21.5-2.4-42.1-10.5-57.9-22.9-14.1-11.1-34.2-11.3-48.2 0-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3zm0-144C540.6 93.4 520 85.4 504.2 73 490.1 61.9 470 61.7 456 73c-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3z"
+                  }
+                })
+              ]
+            ),
             _vm._v(
-              "\n                Humedad\n                " +
+              "\n                " +
                 _vm._s(_vm.res.humidity) +
                 "%\n            "
             )
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "flex items-center text-gray-700 px-2" }, [
+            _c(
+              "svg",
+              {
+                staticClass: "w-8 pr-2",
+                attrs: {
+                  "aria-hidden": "true",
+                  "data-prefix": "fas",
+                  "data-icon": "wind",
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 512 512"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    fill: "currentColor",
+                    d:
+                      "M156.7 256H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h142.2c15.9 0 30.8 10.9 33.4 26.6 3.3 20-12.1 37.4-31.6 37.4-14.1 0-26.1-9.2-30.4-21.9-2.1-6.3-8.6-10.1-15.2-10.1H81.6c-9.8 0-17.7 8.8-15.9 18.4 8.6 44.1 47.6 77.6 94.2 77.6 57.1 0 102.7-50.1 95.2-108.6C249 291 205.4 256 156.7 256zM16 224h336c59.7 0 106.8-54.8 93.8-116.7-7.6-36.2-36.9-65.5-73.1-73.1-55.4-11.6-105.1 24.9-114.9 75.5-1.9 9.6 6.1 18.3 15.8 18.3h32.8c6.7 0 13.1-3.8 15.2-10.1C325.9 105.2 337.9 96 352 96c19.4 0 34.9 17.4 31.6 37.4-2.6 15.7-17.4 26.6-33.4 26.6H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16zm384 32H243.7c19.3 16.6 33.2 38.8 39.8 64H400c26.5 0 48 21.5 48 48s-21.5 48-48 48c-17.9 0-33.3-9.9-41.6-24.4-2.9-5-8.7-7.6-14.5-7.6h-33.8c-10.9 0-19 10.8-15.3 21.1 17.8 50.6 70.5 84.8 129.4 72.3 41.2-8.7 75.1-41.6 84.7-82.7C526 321.5 470.5 256 400 256z"
+                  }
+                })
+              ]
+            ),
             _vm._v(
-              "\n                Viento\n                " +
+              "\n                " +
                 _vm._s(_vm.res.windDesc) +
                 "\n                " +
                 _vm._s(Math.round(_vm.res.windSpeed)) +
@@ -39354,7 +39626,16 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            staticClass:
+              "flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
+          },
+          [_vm._v("\n            Noticias\n        ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
           },
           _vm._l(_vm.news, function(item) {
             return _c("div", { key: item.id }, [
@@ -39362,7 +39643,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "max-w-sm rounded overflow-hidden shadow-lg m-2 p-2 h-full "
+                    "max-w-sm rounded bg-white overflow-hidden shadow-lg m-2 p-2 h-full "
                 },
                 [
                   _c("img", {
@@ -39452,7 +39733,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "flex justify-center font-mono text-4xl md:text-6xl text-teal-700"
+                  "flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
               },
               [_vm._v("\n                    Radios\n                ")]
             ),
@@ -39625,7 +39906,7 @@ var render = function() {
       "nav",
       {
         staticClass:
-          "fixed w-full flex items-center justify-between flex-wrap bg-teal-500 p-6 z-40 -mt-24"
+          "fixed w-full flex items-center justify-between flex-wrap bg-gray-900 p-6 z-40 -mt-24"
       },
       [
         _c(
@@ -39695,7 +39976,7 @@ var render = function() {
             "button",
             {
               staticClass:
-                "flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white",
+                "flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white",
               on: {
                 click: function($event) {
                   return _vm.mostrar()
@@ -39747,7 +40028,7 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                      "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
                     attrs: { href: "/radios" }
                   },
                   [_vm._v("Radios")]
@@ -39764,7 +40045,7 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                      "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
                     attrs: { href: "/noticias" }
                   },
                   [_vm._v("Noticias")]
@@ -39781,7 +40062,7 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                      "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
                     attrs: { href: "/weather" }
                   },
                   [_vm._v("Clima")]
@@ -39798,10 +40079,10 @@ var render = function() {
                   "inertia-link",
                   {
                     staticClass:
-                      "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                      "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
                     attrs: { href: "/info" }
                   },
-                  [_vm._v("Info")]
+                  [_vm._v("Acerca de")]
                 )
               ],
               1
@@ -40591,7 +40872,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex justify-center font-mono text-4xl md:text-6xl text-teal-700 "
+              "flex justify-center font-mono text-4xl md:text-6xl text-gray-900 "
           },
           [_vm._v("\n            Clima\n        ")]
         ),
@@ -40619,7 +40900,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "flex w-full items-center border-b border-teal-500 py-2"
+                        "flex w-full items-center border-b border-gray-900 py-2"
                     },
                     [
                       _c("input", {
@@ -40655,7 +40936,7 @@ var render = function() {
                         "button",
                         {
                           staticClass:
-                            "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                            "flex-shrink-0 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-900 ease-in-out transform hover:-translate-y-1 hover:scale-110",
                           attrs: { type: "submit" }
                         },
                         [
@@ -40691,7 +40972,7 @@ var render = function() {
               _vm.city
                 ? _c(
                     "ul",
-                    { staticClass: "max-w-sm absolute bg-gray-100 z-10 -ml-4" },
+                    { staticClass: "max-w-sm absolute bg-gray-200 z-10 -ml-4" },
                     _vm._l(_vm.res, function(item) {
                       return _c(
                         "div",
@@ -40739,7 +41020,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4 relative"
+                  "block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
               },
               [
                 _vm.selected
@@ -40795,7 +41076,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "text-center font-mono text-4xl md:text-6xl text-teal-700"
+              "text-center font-mono text-4xl md:text-6xl text-gray-900"
           },
           [_vm._v("\n            Tecnologías Utilizadas\n        ")]
         ),
@@ -40804,7 +41085,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center"
+              "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center "
           },
           _vm._l(_vm.tecnos, function(item) {
             return _c("div", { key: item.id }, [

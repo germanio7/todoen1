@@ -2,7 +2,7 @@
     <div>
         <layout>
             <div
-                class="flex justify-center font-mono text-4xl md:text-6xl text-teal-700 "
+                class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900 "
             >
                 Clima
             </div>
@@ -16,7 +16,7 @@
                         @submit.prevent="searchCity()"
                     >
                         <div
-                            class="flex w-full items-center border-b border-teal-500 py-2"
+                            class="flex w-full items-center border-b border-gray-900 py-2"
                         >
                             <input
                                 v-model="city"
@@ -26,7 +26,7 @@
                                 @keydown="limpiar()"
                             />
                             <button
-                                class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                                class="flex-shrink-0 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-900 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                                 type="submit"
                             >
                                 <svg
@@ -48,7 +48,7 @@
 
                     <ul
                         v-if="city"
-                        class="max-w-sm absolute bg-gray-100 z-10 -ml-4"
+                        class="max-w-sm absolute bg-gray-200 z-10 -ml-4"
                     >
                         <div
                             class="max-w-sm"
@@ -78,7 +78,7 @@
 
             <div
                 v-if="selected"
-                class="block lg:flex bg-teal-500 justify-around items-center rounded overflow-hidden shadow-lg m-4 p-4 relative"
+                class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
             >
                 <div v-if="selected">
                     <card-weather :res="selected"></card-weather>

@@ -40881,7 +40881,8 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "flex-wrap rounded overflow-hidden shadow-lg m-4 p-4"
+              staticClass:
+                "flex-wrap bg-white rounded overflow-hidden shadow-lg m-4 p-4"
             },
             [
               _c(

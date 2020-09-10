@@ -9,7 +9,7 @@
 
             <div class="flex justify-center items-center ">
                 <div
-                    class="flex-wrap rounded overflow-hidden shadow-lg m-4 p-4"
+                    class="flex-wrap bg-white rounded overflow-hidden shadow-lg m-4 p-4"
                 >
                     <form
                         class="w-full max-w-sm"

@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,8 @@ Route::get('/radios', function () {
 });
 
 Route::get('/info', function () {
-    $path = base_path('counter.json');
-    $counter = file_get_contents($path);
-    $elements = json_decode($counter, true);
-    $total = $elements['total'];
+    $total = DB::table('visits')->count();
+
     return Inertia::render('Welcome', [
         'visitas' => $total
     ]);

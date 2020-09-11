@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
@@ -25,39 +26,26 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $path = base_path('counter.json');
-        $counter = file_get_contents($path);
-        $elements = json_decode($counter, true);
-
-        $visits = collect($elements['visitantes']);
-        $total = $elements['total'];
+        $visits = DB::table('visits')->get();
         if (count($visits) > 0) {
             foreach ($visits as $item) {
-                if ($item['ip'] != request()->ip() || $item['date'] != now()->format('d-m-Y')) {
-                    $new = [
+                if ($item->ip != request()->ip() || $item->date != now()->format('d-m-Y')) {
+                    DB::table('visits')->insert([
                         'ip' => request()->ip(),
-                        'date' =>now()->format('d-m-Y')
-                    ];
-                    $visits->pull($visits->search($item));
-                    $visits->push($new);
-                    $total++;
+                        'date' => now()->format('d-m-Y'),
+                        'created_at' => now(),
+                        'updated_at' => now()
+                    ]);
                 } 
             }
-        }else {
-            $new = [
+        } else {
+            DB::table('visits')->insert([
                 'ip' => request()->ip(),
-                'date' =>now()->format('d-m-Y')
-            ];
-            $visits->push($new);
-            $total++;
+                'date' => now()->format('d-m-Y'),
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
-
-        $aux = collect([
-            'visitantes' => $visits,
-            'total' => $total
-        ]);
-
-        file_put_contents($path, $aux);
 
         Inertia::share([
             'errors' => function () {

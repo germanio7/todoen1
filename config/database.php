@@ -47,7 +47,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => "postgres://bmaalyvmxflhlp:20c76b4cbe42fafd809bafc47b28b95a55fc0e4781f5a467c35f9723534c2d49@ec2-3-226-231-4.compute-1.amazonaws.com:5432/d8sqt5cnbi16jg",
+            'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -67,7 +67,7 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => $DATABASE_URL['url'],
+            'url' => "postgres://bmaalyvmxflhlp:20c76b4cbe42fafd809bafc47b28b95a55fc0e4781f5a467c35f9723534c2d49@ec2-3-226-231-4.compute-1.amazonaws.com:5432/d8sqt5cnbi16jg",
             'host' => $DATABASE_URL['host'],
             'port' => $DATABASE_URL['port'],
             'database' => ltrim($DATABASE_URL['path'],'/'),

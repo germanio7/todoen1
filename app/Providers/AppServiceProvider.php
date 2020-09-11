@@ -26,20 +26,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $visits = DB::table('visits')->get();
-        dd(request()->ip());
-        if (count($visits) > 0) {
-            foreach ($visits as $item) {
-                if ($item->ip != request()->ip() || $item->date != now()->format('d-m-Y')) {
-                    DB::table('visits')->insert([
-                        'ip' => request()->ip(),
-                        'date' => now()->format('d-m-Y'),
-                        'created_at' => now(),
-                        'updated_at' => now()
-                    ]);
-                } 
-            }
-        } else {
+        $visits = DB::table('visits')->where('ip', request()->ip())->where('date', now()->format('d-m-Y'))->get();
+
+        if (count($visits) < 1) {
             DB::table('visits')->insert([
                 'ip' => request()->ip(),
                 'date' => now()->format('d-m-Y'),

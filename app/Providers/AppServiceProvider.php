@@ -26,26 +26,26 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $visits = DB::table('visits')->get();
-        if (count($visits) > 0) {
-            foreach ($visits as $item) {
-                if ($item->ip != request()->ip() || $item->date != now()->format('d-m-Y')) {
-                    DB::table('visits')->insert([
-                        'ip' => request()->ip(),
-                        'date' => now()->format('d-m-Y'),
-                        'created_at' => now(),
-                        'updated_at' => now()
-                    ]);
-                } 
-            }
-        } else {
-            DB::table('visits')->insert([
-                'ip' => request()->ip(),
-                'date' => now()->format('d-m-Y'),
-                'created_at' => now(),
-                'updated_at' => now()
-            ]);
-        }
+        // $visits = DB::table('visits')->get();
+        // if (count($visits) > 0) {
+        //     foreach ($visits as $item) {
+        //         if ($item->ip != request()->ip() || $item->date != now()->format('d-m-Y')) {
+        //             DB::table('visits')->insert([
+        //                 'ip' => request()->ip(),
+        //                 'date' => now()->format('d-m-Y'),
+        //                 'created_at' => now(),
+        //                 'updated_at' => now()
+        //             ]);
+        //         } 
+        //     }
+        // } else {
+        //     DB::table('visits')->insert([
+        //         'ip' => request()->ip(),
+        //         'date' => now()->format('d-m-Y'),
+        //         'created_at' => now(),
+        //         'updated_at' => now()
+        //     ]);
+        // }
 
         Inertia::share([
             'errors' => function () {

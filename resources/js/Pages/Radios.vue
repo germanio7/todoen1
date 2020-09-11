@@ -8,24 +8,28 @@
                     >
                         Radios
                     </div>
-                    <div
-                        class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
-                    >
-                        <div v-for="item in radios" :key="item.id">
-                            <div
-                                @click="setRadio(item)"
-                                class="w-full cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                            >
+                    <div class="flex justify-center">
+                        <div
+                            class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
+                        >
+                            <div v-for="item in radios" :key="item.id">
                                 <div
-                                    class="md:flex bg-white rounded-lg p-6 items-center"
+                                    @click="setRadio(item)"
+                                    class="w-full cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                                 >
-                                    <img
-                                        class="h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6"
-                                        :src="item.img"
-                                        alt="no image"
-                                    />
-                                    <div class="text-center md:text-left">
-                                        <h2 class="text-lg">{{ item.name }}</h2>
+                                    <div
+                                        class="md:flex bg-white rounded-lg p-6 items-center"
+                                    >
+                                        <img
+                                            class="h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6"
+                                            :src="item.img"
+                                            alt="no image"
+                                        />
+                                        <div class="text-center md:text-left">
+                                            <h2 class="text-lg">
+                                                {{ item.name }}
+                                            </h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

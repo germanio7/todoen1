@@ -2266,6 +2266,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3105,6 +3109,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shared/Layout */ "./resources/js/Pages/Shared/Layout.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -39754,56 +39762,62 @@ var render = function() {
               [_vm._v("\n                    Radios\n                ")]
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
-              },
-              _vm._l(_vm.radios, function(item) {
-                return _c("div", { key: item.id }, [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "w-full cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
-                      on: {
-                        click: function($event) {
-                          return _vm.setRadio(item)
+            _c("div", { staticClass: "flex justify-center" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
+                },
+                _vm._l(_vm.radios, function(item) {
+                  return _c("div", { key: item.id }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "w-full cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                        on: {
+                          click: function($event) {
+                            return _vm.setRadio(item)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "md:flex bg-white rounded-lg p-6 items-center"
-                        },
-                        [
-                          _c("img", {
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
                             staticClass:
-                              "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                            attrs: { src: item.img, alt: "no image" }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "text-center md:text-left" },
-                            [
-                              _c("h2", { staticClass: "text-lg" }, [
-                                _vm._v(_vm._s(item.name))
-                              ])
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              }),
-              0
-            )
+                              "md:flex bg-white rounded-lg p-6 items-center"
+                          },
+                          [
+                            _c("img", {
+                              staticClass:
+                                "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
+                              attrs: { src: item.img, alt: "no image" }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-center md:text-left" },
+                              [
+                                _c("h2", { staticClass: "text-lg" }, [
+                                  _vm._v(
+                                    "\n                                            " +
+                                      _vm._s(item.name) +
+                                      "\n                                        "
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                }),
+                0
+              )
+            ])
           ])
         ])
       ])
@@ -41093,7 +41107,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex justify-center items-center bg-blue-500 text-white text-sm font-bold px-4 py-3",
+              "flex justify-center items-center bg-purple-600 text-white text-xl font-mono p-1",
             attrs: { role: "alert" }
           },
           [
@@ -41116,60 +41130,70 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("p", [_vm._v("Visitas: " + _vm._s(_vm.visitas))])
+            _c("p", { staticClass: "tracking-widest" }, [
+              _vm._v("Visitas: " + _vm._s(_vm.visitas))
+            ])
           ]
         ),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "text-center font-mono text-4xl md:text-6xl text-gray-900"
-          },
-          [_vm._v("\n            Tecnologías Utilizadas\n        ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center "
-          },
-          _vm._l(_vm.tecnos, function(item) {
-            return _c("div", { key: item.id }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                },
-                [
+        _c("div", { staticClass: "flex-1 justify-center" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "text-center font-mono text-4xl md:text-6xl text-gray-900"
+            },
+            [_vm._v("\n                Tecnologías Utilizadas\n            ")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex justify-center" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center "
+              },
+              _vm._l(_vm.tecnos, function(item) {
+                return _c("div", { key: item.id }, [
                   _c(
                     "div",
                     {
                       staticClass:
-                        "md:flex bg-white rounded-lg p-6 items-center"
+                        "w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                     },
                     [
-                      _c("img", {
-                        staticClass:
-                          "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
-                        attrs: { src: item.img, alt: "no image" }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "text-center md:text-left" }, [
-                        _c("h2", { staticClass: "text-lg" }, [
-                          _vm._v(_vm._s(item.name))
-                        ])
-                      ])
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "md:flex bg-white rounded-lg p-6 items-center"
+                        },
+                        [
+                          _c("img", {
+                            staticClass:
+                              "h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6",
+                            attrs: { src: item.img, alt: "no image" }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "text-center md:text-left" },
+                            [
+                              _c("h2", { staticClass: "text-lg" }, [
+                                _vm._v(_vm._s(item.name))
+                              ])
+                            ]
+                          )
+                        ]
+                      )
                     ]
                   )
-                ]
-              )
-            ])
-          }),
-          0
-        )
+                ])
+              }),
+              0
+            )
+          ])
+        ])
       ])
     ],
     1

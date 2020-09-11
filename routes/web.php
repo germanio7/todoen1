@@ -27,7 +27,13 @@ Route::get('/radios', function () {
 });
 
 Route::get('/info', function () {
-    return Inertia::render('Welcome');
+    $path = base_path('counter.json');
+    $counter = file_get_contents($path);
+    $elements = json_decode($counter, true);
+    $total = $elements['total'];
+    return Inertia::render('Welcome', [
+        'visitas' => $total
+    ]);
 });
 
 Route::get('/noticias', function () {

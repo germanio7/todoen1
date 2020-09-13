@@ -2133,6 +2133,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Games.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Games.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Shared/Layout */ "./resources/js/Pages/Shared/Layout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/News.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/News.vue?vue&type=script&lang=js& ***!
@@ -2471,6 +2510,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert */ "./resources/js/Pages/Shared/Alert.vue");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3281,6 +3328,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         name: "News API",
         img: "https://newsapi.org/images/n-logo-border.png"
+      }, {
+        name: "RetroGames",
+        img: "https://www.retrogames.cc/images/logo.png?v=20180731"
       }]
     };
   },
@@ -39722,6 +39772,53 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Games.vue?vue&type=template&id=b9a12b30&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Games.vue?vue&type=template&id=b9a12b30& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("layout", [
+        _c("div", { staticClass: "flex justify-center" }, [
+          _vm._v("\n            MK3\n            "),
+          _c("iframe", {
+            attrs: {
+              src:
+                "https://www.retrogames.cc/embed/29633-mortal-kombat-3-usa.html",
+              width: "800",
+              height: "500",
+              frameborder: "no",
+              allowfullscreen: "true",
+              webkitallowfullscreen: "true",
+              mozallowfullscreen: "true",
+              scrolling: "no"
+            }
+          })
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/News.vue?vue&type=template&id=4afb3f08&":
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/News.vue?vue&type=template&id=4afb3f08& ***!
@@ -40335,6 +40432,28 @@ var render = function() {
                     attrs: { href: "/weather" }
                   },
                   [_vm._v("Clima")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "text-sm " },
+              [
+                _c(
+                  "inertia-link",
+                  {
+                    staticClass:
+                      "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110",
+                    attrs: { href: "/juegos" }
+                  },
+                  [
+                    _vm._v("Juegos\n                    "),
+                    _c("span", { staticClass: "text-red-500" }, [
+                      _vm._v("(Beta)")
+                    ])
+                  ]
                 )
               ],
               1
@@ -53620,6 +53739,8 @@ var map = {
 	"./CardSevenDays.vue": "./resources/js/Pages/CardSevenDays.vue",
 	"./CardWeather": "./resources/js/Pages/CardWeather.vue",
 	"./CardWeather.vue": "./resources/js/Pages/CardWeather.vue",
+	"./Games": "./resources/js/Pages/Games.vue",
+	"./Games.vue": "./resources/js/Pages/Games.vue",
 	"./News": "./resources/js/Pages/News.vue",
 	"./News.vue": "./resources/js/Pages/News.vue",
 	"./Radios": "./resources/js/Pages/Radios.vue",
@@ -53795,6 +53916,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardWeather_vue_vue_type_template_id_421e99ab___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardWeather_vue_vue_type_template_id_421e99ab___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Games.vue":
+/*!**************************************!*\
+  !*** ./resources/js/Pages/Games.vue ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Games_vue_vue_type_template_id_b9a12b30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Games.vue?vue&type=template&id=b9a12b30& */ "./resources/js/Pages/Games.vue?vue&type=template&id=b9a12b30&");
+/* harmony import */ var _Games_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Games.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Games.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Games_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Games_vue_vue_type_template_id_b9a12b30___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Games_vue_vue_type_template_id_b9a12b30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Games.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Games.vue?vue&type=script&lang=js&":
+/*!***************************************************************!*\
+  !*** ./resources/js/Pages/Games.vue?vue&type=script&lang=js& ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Games_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Games.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Games.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Games_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Games.vue?vue&type=template&id=b9a12b30&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/Pages/Games.vue?vue&type=template&id=b9a12b30& ***!
+  \*********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Games_vue_vue_type_template_id_b9a12b30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Games.vue?vue&type=template&id=b9a12b30& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Games.vue?vue&type=template&id=b9a12b30&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Games_vue_vue_type_template_id_b9a12b30___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Games_vue_vue_type_template_id_b9a12b30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -39,4 +39,8 @@ Route::get('/noticias', function () {
     return Inertia::render('News');
 });
 
+Route::get('/juegos', function () {
+    return Inertia::render('Games');
+});
+
 // Route::resource('/users', 'UserController');

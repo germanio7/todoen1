@@ -79,6 +79,14 @@
                 </div>
                 <div class="text-sm ">
                     <inertia-link
+                        href="/juegos"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        >Juegos
+                        <span class="text-red-500">(Beta)</span></inertia-link
+                    >
+                </div>
+                <div class="text-sm ">
+                    <inertia-link
                         href="/info"
                         class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >Acerca de</inertia-link

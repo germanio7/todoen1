@@ -88,6 +88,10 @@ export default {
                 {
                     name: "News API",
                     img: "https://newsapi.org/images/n-logo-border.png"
+                },
+                {
+                    name: "RetroGames",
+                    img: "https://www.retrogames.cc/images/logo.png?v=20180731"
                 }
             ]
         };

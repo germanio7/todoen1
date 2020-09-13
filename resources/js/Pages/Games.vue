@@ -1,7 +1,7 @@
 <template>
     <div>
         <layout>
-            <div class="flex justify-center">
+            <div class="flex-wrap justify-center">
                 MK3
                 <iframe
                     src="https://www.retrogames.cc/embed/29633-mortal-kombat-3-usa.html"

@@ -2190,6 +2190,70 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2210,6 +2274,21 @@ __webpack_require__.r(__webpack_exports__);
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/news").then(function (response) {
         _this.news = response.data.articles;
+      });
+    },
+    categoryNews: function categoryNews(category) {
+      var _this2 = this;
+
+      var eskeletor = document.getElementById("esqueleto");
+      eskeletor.removeAttribute("hidden");
+      this.news = null;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("api/newsCategory", {
+        category: category
+      }).then(function (response) {
+        setTimeout(function () {
+          eskeletor.setAttribute("hidden", true);
+          _this2.news = response.data.articles;
+        }, 1500);
       });
     }
   }
@@ -3052,6 +3131,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -3071,24 +3151,44 @@ __webpack_require__.r(__webpack_exports__);
     CardWeather: _CardWeather__WEBPACK_IMPORTED_MODULE_1__["default"],
     CardSevenDays: _CardSevenDays__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
+  mounted: function mounted() {
+    this.defaultCity();
+  },
+  updated: function updated() {
+    var aux = document.getElementById("animacion");
+    aux.classList.toggle("animate-pulse");
+  },
   methods: {
-    searchCity: function searchCity() {
+    defaultCity: function defaultCity() {
       var _this = this;
 
+      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/default-city", {
+        city: "villa angela"
+      }).then(function (response) {
+        _this.selected = response.data.observations.location[0].observation[0];
+
+        _this.sevenDays();
+      });
+    },
+    searchCity: function searchCity() {
+      var _this2 = this;
+
+      var aux = document.getElementById("animacion");
+      aux.classList.toggle("animate-pulse");
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/search-city", {
         city: this.city
       }).then(function (response) {
-        _this.res = response.data.observations.location;
+        _this2.res = response.data.observations.location;
       });
     },
     sevenDays: function sevenDays() {
-      var _this2 = this;
+      var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/seven-days", {
         latitude: this.selected.latitude,
         longitude: this.selected.longitude
       }).then(function (response) {
-        _this2.days = response.data.dailyForecasts.forecastLocation.forecast;
+        _this3.days = response.data.dailyForecasts.forecastLocation.forecast;
       });
     },
     limpiar: function limpiar() {
@@ -39658,6 +39758,151 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
+          { staticClass: "flex-wrap md:flex justify-center px-6 pt-4 pb-2" },
+          [
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("business")
+                  }
+                }
+              },
+              [_vm._v("#negocios")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("entertainment")
+                  }
+                }
+              },
+              [_vm._v("#entretenimiento")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("general")
+                  }
+                }
+              },
+              [_vm._v("#general")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("health")
+                  }
+                }
+              },
+              [_vm._v("#salud")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("science")
+                  }
+                }
+              },
+              [_vm._v("#ciencia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("sports")
+                  }
+                }
+              },
+              [_vm._v("#deportes")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.categoryNews("technology")
+                  }
+                }
+              },
+              [_vm._v("#tecnología")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "esqueleto", hidden: "" } }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
+            },
+            _vm._l(9, function(item) {
+              return _c(
+                "div",
+                {
+                  staticClass:
+                    "border bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
+                },
+                [
+                  _c("div", { staticClass: "animate-pulse flex space-x-4 " }, [
+                    _c("div", {
+                      staticClass: "rounded-full bg-gray-400 h-12 w-12"
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "flex-1 space-y-4 py-1" }, [
+                      _c("div", {
+                        staticClass: "h-4 bg-gray-400 rounded w-3/4"
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "space-y-2" }, [
+                        _c("div", { staticClass: "h-4 bg-gray-400 rounded" }),
+                        _vm._v(" "),
+                        _c("div", {
+                          staticClass: "h-4 bg-gray-400 rounded w-5/6"
+                        })
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
           {
             staticClass: "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
           },
@@ -41051,7 +41296,8 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
+                  "block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative",
+                attrs: { id: "animacion" }
               },
               [
                 _vm.selected
@@ -53368,17 +53614,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/css/main.css":
-/*!********************************!*\
-  !*** ./resources/css/main.css ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/js/Pages sync recursive ^\\.\\/.*$":
 /*!******************************************!*\
   !*** ./resources/js/Pages sync ^\.\/.*$ ***!
@@ -54283,15 +54518,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/css/main.css ***!
-  \**************************************************************************************/
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\radios-clima\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\radios-clima\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\radios-clima\resources\css\main.css */"./resources/css/main.css");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\radios-clima\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

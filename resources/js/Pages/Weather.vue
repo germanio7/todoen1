@@ -77,6 +77,7 @@
             </div>
 
             <div
+                id="animacion"
                 v-if="selected"
                 class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
             >
@@ -108,8 +109,28 @@ export default {
     },
     components: { layout, CardWeather, CardSevenDays },
 
+    mounted() {
+        this.defaultCity();
+    },
+
+    updated() {
+        let aux = document.getElementById("animacion");
+        aux.classList.toggle("animate-pulse");
+    },
+
     methods: {
+        defaultCity() {
+            axios
+                .post("api/default-city", { city: "villa angela" })
+                .then(response => {
+                    this.selected =
+                        response.data.observations.location[0].observation[0];
+                    this.sevenDays();
+                });
+        },
         searchCity() {
+            let aux = document.getElementById("animacion");
+            aux.classList.toggle("animate-pulse");
             axios
                 .post("api/search-city", { city: this.city })
                 .then(response => {

@@ -113,11 +113,6 @@ export default {
         this.defaultCity();
     },
 
-    updated() {
-        let aux = document.getElementById("animacion");
-        aux.classList.toggle("animate-pulse");
-    },
-
     methods: {
         defaultCity() {
             axios
@@ -129,8 +124,6 @@ export default {
                 });
         },
         searchCity() {
-            let aux = document.getElementById("animacion");
-            aux.classList.toggle("animate-pulse");
             axios
                 .post("api/search-city", { city: this.city })
                 .then(response => {

@@ -3154,10 +3154,6 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.defaultCity();
   },
-  updated: function updated() {
-    var aux = document.getElementById("animacion");
-    aux.classList.toggle("animate-pulse");
-  },
   methods: {
     defaultCity: function defaultCity() {
       var _this = this;
@@ -3173,8 +3169,6 @@ __webpack_require__.r(__webpack_exports__);
     searchCity: function searchCity() {
       var _this2 = this;
 
-      var aux = document.getElementById("animacion");
-      aux.classList.toggle("animate-pulse");
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("api/search-city", {
         city: this.city
       }).then(function (response) {

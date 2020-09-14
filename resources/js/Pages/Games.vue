@@ -43,7 +43,7 @@
                     >{{ item.game }}</span
                 >
             </div>
-            <div class="flex justify-center mt-4">
+            <div class="flex justify-center mt-4 relative z-20">
                 <iframe
                     id="juego"
                     src=""
@@ -175,6 +175,11 @@ export default {
                         "https://www.retrogames.cc/embed/30223-fifa-98-road-to-world-cup-europe-en-fr-es-it-sv.html"
                 },
                 {
+                    game: "General Chaos",
+                    url:
+                        "https://www.retrogames.cc/embed/30081-general-chaos-usa-europe.html"
+                },
+                {
                     game: "Hudson's Adventure Island",
                     url:
                         "https://www.retrogames.cc/embed/20528-hudson-s-adventure-island-usa.html"
@@ -188,6 +193,16 @@ export default {
                     game: "International Superstar Soccer Deluxe",
                     url:
                         "https://www.retrogames.cc/embed/30521-international-superstar-soccer-deluxe-europe.html"
+                },
+                {
+                    game: "Jurassic Park",
+                    url:
+                        "https://www.retrogames.cc/embed/30179-jurassic-park-usa.html"
+                },
+                {
+                    game: "Killer Instinct",
+                    url:
+                        "https://www.retrogames.cc/embed/17355-killer-instinct-usa.html"
                 },
                 {
                     game: "Mortal Kombat II",
@@ -215,6 +230,11 @@ export default {
                         "https://www.retrogames.cc/embed/21194-pac-man-usa-namco.html"
                 },
                 {
+                    game: "Ren & Stimpy Show Presents Stimpy's Invention, The",
+                    url:
+                        "https://www.retrogames.cc/embed/30361-ren-stimpy-show-presents-stimpy-s-invention-the-europe.html"
+                },
+                {
                     game: "Road Fighter",
                     url:
                         "https://www.retrogames.cc/embed/20681-road-fighter-europe.html"
@@ -223,6 +243,31 @@ export default {
                     game: "Rock n' Roll Racing",
                     url:
                         "https://www.retrogames.cc/embed/28493-rock-n-roll-racing-usa.html"
+                },
+                {
+                    game: "Sonic the Hedgehog",
+                    url:
+                        "https://www.retrogames.cc/embed/30299-sonic-the-hedgehog-usa-europe.html"
+                },
+                {
+                    game: "Sonic the Hedgehog 2",
+                    url:
+                        "https://www.retrogames.cc/embed/17236-sonic-the-hedgehog-2-world-rev-a.html"
+                },
+                {
+                    game: "Sonic the Hedgehog 3",
+                    url:
+                        "https://www.retrogames.cc/embed/30002-sonic-the-hedgehog-3-europe.html"
+                },
+                {
+                    game: "Street Fighter II' - Special Champion Edition",
+                    url:
+                        "https://www.retrogames.cc/embed/30398-street-fighter-ii-special-champion-edition-usa.html"
+                },
+                {
+                    game: "Streets of Rage 2",
+                    url:
+                        "https://www.retrogames.cc/embed/28481-streets-of-rage-2-usa.html"
                 },
                 {
                     game: "Super Mario Bros.",
@@ -235,14 +280,29 @@ export default {
                         "https://www.retrogames.cc/embed/16887-super-mario-kart-usa.html"
                 },
                 {
+                    game: "Super Monaco GP",
+                    url:
+                        "https://www.retrogames.cc/embed/16811-super-monaco-gp-usa-en-ja-v1-3.html"
+                },
+                {
                     game: "Taz-Mania",
                     url:
                         "https://www.retrogames.cc/embed/19017-taz-mania-world.html"
                 },
                 {
+                    game: "Teenage Mutant Ninja Turtles - The Hyperstone Heist",
+                    url:
+                        "https://www.retrogames.cc/embed/28590-teenage-mutant-ninja-turtles-the-hyperstone-heist-usa.html"
+                },
+                {
                     game: "Tiny Toon Adventures",
                     url:
                         "https://www.retrogames.cc/embed/28522-tiny-toon-adventures-buster-s-hidden-treasure-usa.html"
+                },
+                {
+                    game: "Toxic Crusaders",
+                    url:
+                        "https://www.retrogames.cc/embed/30138-toxic-crusaders-usa.html"
                 },
                 {
                     game: "Ultimate Mortal Kombat 3",

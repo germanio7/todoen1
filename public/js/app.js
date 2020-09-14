@@ -2213,6 +2213,9 @@ __webpack_require__.r(__webpack_exports__);
         game: "After Burner II",
         url: "https://www.retrogames.cc/embed/29861-after-burner-ii-usa-europe.html"
       }, {
+        game: "Aladdin",
+        url: "https://www.retrogames.cc/embed/16687-aladdin-usa.html"
+      }, {
         game: "ATP Tour Championship Tennis",
         url: "https://www.retrogames.cc/embed/30481-atp-tour-championship-tennis-usa.html"
       }, {
@@ -2248,6 +2251,12 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         game: "Donkey Kong",
         url: "https://www.retrogames.cc/embed/17901-donkey-kong-world-rev-a.html"
+      }, {
+        game: "Donkey Kong Country",
+        url: "https://www.retrogames.cc/embed/18709-donkey-kong-country-usa-rev-a.html"
+      }, {
+        game: "Doom",
+        url: "https://www.retrogames.cc/embed/22868-doom-usa.html"
       }, {
         game: "Earthworm Jim",
         url: "https://www.retrogames.cc/embed/30211-earthworm-jim-usa.html"
@@ -3361,10 +3370,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.defaultCity();
-  },
-  updated: function updated() {
-    var aux = document.getElementById("animacion");
-    aux.scrollIntoView();
   },
   methods: {
     defaultCity: function defaultCity() {

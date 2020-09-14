@@ -6,7 +6,7 @@
             >
                 Juegos
             </div>
-            <div class="flex justify-center">
+            <div class="hidden lg:flex justify-center">
                 <div class="inline-block relative w-64">
                     <select
                         class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
@@ -33,6 +33,15 @@
                         </svg>
                     </div>
                 </div>
+            </div>
+            <div class="flex-wrap lg:hidden justify-center px-6 pt-4 pb-2">
+                <span
+                    v-for="item in games"
+                    :key="item.id"
+                    @click="setGame(item.url)"
+                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2"
+                    >{{ item.game }}</span
+                >
             </div>
             <div class="flex justify-center mt-4">
                 <iframe
@@ -179,6 +188,7 @@ export default {
         setGame(game) {
             let aux = document.getElementById("juego");
             aux.setAttribute("src", game);
+            aux.scrollIntoView();
         }
     }
 };

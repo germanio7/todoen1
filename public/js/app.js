@@ -2196,6 +2196,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2279,6 +2288,7 @@ __webpack_require__.r(__webpack_exports__);
     setGame: function setGame(game) {
       var aux = document.getElementById("juego");
       aux.setAttribute("src", game);
+      aux.scrollIntoView();
     }
   }
 });
@@ -39913,7 +39923,7 @@ var render = function() {
           [_vm._v("\n            Juegos\n        ")]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "flex justify-center" }, [
+        _c("div", { staticClass: "hidden lg:flex justify-center" }, [
           _c("div", { staticClass: "inline-block relative w-64" }, [
             _c(
               "select",
@@ -39973,6 +39983,28 @@ var render = function() {
             )
           ])
         ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "flex-wrap lg:hidden justify-center px-6 pt-4 pb-2" },
+          _vm._l(_vm.games, function(item) {
+            return _c(
+              "span",
+              {
+                key: item.id,
+                staticClass:
+                  "cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2",
+                on: {
+                  click: function($event) {
+                    return _vm.setGame(item.url)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(item.game))]
+            )
+          }),
+          0
+        ),
         _vm._v(" "),
         _c("div", { staticClass: "flex justify-center mt-4" }, [
           _c("iframe", {

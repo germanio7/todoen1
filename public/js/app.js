@@ -40665,7 +40665,7 @@ var render = function() {
                   [
                     _vm._v("Juegos\n                    "),
                     _c("span", { staticClass: "text-red-500" }, [
-                      _vm._v("(Beta)")
+                      _vm._v("(Nuevo)")
                     ])
                   ]
                 )

@@ -113,6 +113,11 @@ export default {
         this.defaultCity();
     },
 
+    updated() {
+        let aux = document.getElementById("animacion");
+        aux.scrollIntoView();
+    },
+
     methods: {
         defaultCity() {
             axios

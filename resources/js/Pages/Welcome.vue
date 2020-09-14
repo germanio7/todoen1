@@ -92,6 +92,11 @@ export default {
                 {
                     name: "RetroGames",
                     img: "https://www.retrogames.cc/images/logo.png?v=20180731"
+                },
+                {
+                    name: "EmulatorJS",
+                    img:
+                        "https://lh3.googleusercontent.com/proxy/hoE3TRFJpbdJJgkBGz0htZLaM3qSwrIPouzbZNa-6mczDBNHnxj3Ir8V9GOw26xBe1JRWkxWlqRigKERpvKKCNuMc-pqOIBibqqGTZaxlouP_wAmtKIBmP6ftV3mSMop5vcMyzMOVNFKchc9L6hIOVmHyAC_Lk2b9Lg"
                 }
             ]
         };

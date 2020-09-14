@@ -2219,6 +2219,21 @@ __webpack_require__.r(__webpack_exports__);
         game: "Bare Knuckle (Streets of Rage)",
         url: "https://www.retrogames.cc/embed/30497-bare-knuckle-ikari-no-tetsuken-streets-of-rage-world.html"
       }, {
+        game: "Balloon Fight",
+        url: "https://www.retrogames.cc/embed/19300-balloon-fight-usa.html"
+      }, {
+        game: "Battle City",
+        url: "https://www.retrogames.cc/embed/16882-battle-city-japan.html"
+      }, {
+        game: "Bomberman ",
+        url: "https://www.retrogames.cc/embed/20411-bomberman-usa.html"
+      }, {
+        game: "Boogerman",
+        url: "https://www.retrogames.cc/embed/30083-boogerman-a-pick-and-flick-adventure-usa.html"
+      }, {
+        game: "Circus Charlie",
+        url: "https://www.retrogames.cc/embed/21342-circus-charlie-japan.html"
+      }, {
         game: "Comix Zone",
         url: "https://www.retrogames.cc/embed/29773-comix-zone-usa.html"
       }, {
@@ -2231,17 +2246,32 @@ __webpack_require__.r(__webpack_exports__);
         game: "Desert Strike",
         url: "https://www.retrogames.cc/embed/18464-desert-strike-usa-europe.html"
       }, {
+        game: "Donkey Kong",
+        url: "https://www.retrogames.cc/embed/17901-donkey-kong-world-rev-a.html"
+      }, {
         game: "Earthworm Jim",
         url: "https://www.retrogames.cc/embed/30211-earthworm-jim-usa.html"
       }, {
+        game: "Excitebike",
+        url: "https://www.retrogames.cc/embed/20552-excitebike-japan-usa.html"
+      }, {
         game: "FIFA International Soccer",
         url: "https://www.retrogames.cc/embed/29938-fifa-international-soccer-usa-europe-en-fr-de-es.html"
+      }, {
+        game: "FIFA Soccer 96",
+        url: "https://www.retrogames.cc/embed/28457-fifa-soccer-96-usa-europe-en-fr-de-es-it-sv.html"
       }, {
         game: "FIFA Soccer 97",
         url: "https://www.retrogames.cc/embed/30117-fifa-soccer-97-usa-europe-en-fr-de-es-it-sv.html"
       }, {
         game: "FIFA 98 - Road to World Cup",
         url: "https://www.retrogames.cc/embed/30223-fifa-98-road-to-world-cup-europe-en-fr-es-it-sv.html"
+      }, {
+        game: "Hudson's Adventure Island",
+        url: "https://www.retrogames.cc/embed/20528-hudson-s-adventure-island-usa.html"
+      }, {
+        game: "Ice Climber",
+        url: "https://www.retrogames.cc/embed/17897-ice-climber-usa-europe.html"
       }, {
         game: "International Superstar Soccer Deluxe",
         url: "https://www.retrogames.cc/embed/30521-international-superstar-soccer-deluxe-europe.html"
@@ -2257,6 +2287,12 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         game: "NBA Jam Tournament Edition",
         url: "https://www.retrogames.cc/embed/30412-nba-jam-tournament-edition-world.html"
+      }, {
+        game: "Pac-Man",
+        url: "https://www.retrogames.cc/embed/21194-pac-man-usa-namco.html"
+      }, {
+        game: "Road Fighter",
+        url: "https://www.retrogames.cc/embed/20681-road-fighter-europe.html"
       }, {
         game: "Rock n' Roll Racing",
         url: "https://www.retrogames.cc/embed/28493-rock-n-roll-racing-usa.html"
@@ -2633,6 +2669,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Alert */ "./resources/js/Pages/Shared/Alert.vue");
+//
+//
 //
 //
 //
@@ -3324,6 +3362,10 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.defaultCity();
   },
+  updated: function updated() {
+    var aux = document.getElementById("animacion");
+    aux.scrollIntoView();
+  },
   methods: {
     defaultCity: function defaultCity() {
       var _this = this;
@@ -3454,6 +3496,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         name: "RetroGames",
         img: "https://www.retrogames.cc/images/logo.png?v=20180731"
+      }, {
+        name: "EmulatorJS",
+        img: "https://lh3.googleusercontent.com/proxy/hoE3TRFJpbdJJgkBGz0htZLaM3qSwrIPouzbZNa-6mczDBNHnxj3Ir8V9GOw26xBe1JRWkxWlqRigKERpvKKCNuMc-pqOIBibqqGTZaxlouP_wAmtKIBmP6ftV3mSMop5vcMyzMOVNFKchc9L6hIOVmHyAC_Lk2b9Lg"
       }]
     };
   },
@@ -40170,7 +40215,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
+                "grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-2"
             },
             _vm._l(9, function(item) {
               return _c(
@@ -40665,7 +40710,7 @@ var render = function() {
                   [
                     _vm._v("Juegos\n                    "),
                     _c("span", { staticClass: "text-red-500" }, [
-                      _vm._v("(Nuevo)")
+                      _vm._v("(Actualización)")
                     ])
                   ]
                 )

@@ -45,7 +45,7 @@
             </div>
             <div id="esqueleto" hidden>
                 <div
-                    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
+                    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-2"
                 >
                     <div
                         v-for="item in 9"

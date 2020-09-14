@@ -3,6 +3,7 @@
         <layout>
             <div class="grid grid-cols-1">
                 <div class="flex-wrap ">
+                    <new-alert message="Nueva Sección: Juegos"></new-alert>
                     <div
                         class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
                     >
@@ -43,6 +44,7 @@
 
 <script>
 import layout from "./Shared/Layout";
+import newAlert from "./Shared/NewAlert";
 
 export default {
     data() {
@@ -108,7 +110,7 @@ export default {
             ]
         };
     },
-    components: { layout },
+    components: { layout, newAlert },
     methods: {
         setRadio(radio) {
             var ifm = document.getElementById("myIFrame");

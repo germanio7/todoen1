@@ -44,6 +44,30 @@
                                 </div>
                             </div>
                         </div>
+                        <div
+                            class="w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        >
+                            <div
+                                class="md:flex bg-white rounded-lg p-6 items-center"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    data-prefix="fas"
+                                    data-icon="gamepad"
+                                    class="h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 640 512"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M480.07 96H160a160 160 0 10114.24 272h91.52A160 160 0 10480.07 96zM248 268a12 12 0 01-12 12h-52v52a12 12 0 01-12 12h-24a12 12 0 01-12-12v-52H84a12 12 0 01-12-12v-24a12 12 0 0112-12h52v-52a12 12 0 0112-12h24a12 12 0 0112 12v52h52a12 12 0 0112 12zm216 76a40 40 0 1140-40 40 40 0 01-40 40zm64-96a40 40 0 1140-40 40 40 0 01-40 40z"
+                                    />
+                                </svg>
+                                <div class="text-center md:text-left">
+                                    <h2 class="text-lg">EmulatorJS</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,11 +116,6 @@ export default {
                 {
                     name: "RetroGames",
                     img: "https://www.retrogames.cc/images/logo.png?v=20180731"
-                },
-                {
-                    name: "EmulatorJS",
-                    img:
-                        "https://lh3.googleusercontent.com/proxy/hoE3TRFJpbdJJgkBGz0htZLaM3qSwrIPouzbZNa-6mczDBNHnxj3Ir8V9GOw26xBe1JRWkxWlqRigKERpvKKCNuMc-pqOIBibqqGTZaxlouP_wAmtKIBmP6ftV3mSMop5vcMyzMOVNFKchc9L6hIOVmHyAC_Lk2b9Lg"
                 }
             ]
         };

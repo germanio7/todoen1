@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" type="image/svg" href="./audio.svg">
     {{-- <link rel="stylesheet" href="{{asset('css/main.css')}}"> --}}
-    <script src="{{ mix('/js/app.js') }}" defer></script>
+    <script src="{{ mix('/js/app.js?v='.filemtime(public_path('js/app.js'))) }}" defer></script>
   </head>
   <body class="bg-gray-100">
     @inertia

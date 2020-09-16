@@ -8,7 +8,7 @@
                 >
                     <span
                         class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"
-                        >Atención!</span
+                        >Actualización...</span
                     >
                     <span class="font-semibold mr-2 text-left flex-auto">{{
                         message

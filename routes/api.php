@@ -29,6 +29,16 @@ Route::post('/search-city', function (Request $request) {
     return collect(json_decode((string) $response->getBody(), true));
 });
 
+Route::post('/test', function (Request $request) {
+    $apiKey = 'ebb6cd107526bf1b0f4a849e5d81a5f2';
+    $client = new Client();
+    $url = "http://api.weatherstack.com/current?access_key=".$apiKey."&query=".$request->city."&units=m";
+
+    $response = $client->get($url);
+
+    return collect(json_decode((string) $response->getBody(), true));
+});
+
 Route::post('/default-city', function (Request $request) {
     $apiKey = 'aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs';
     $client = new Client();

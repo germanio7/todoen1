@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <title>Todo en uno</title>
-    {{-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> --}}
+    <title>Todo en uno | All in one</title>
+
     <link rel="stylesheet" href="{{mix('css/main.css')}}">
 
     <link rel="icon" type="image/svg" href="./audio.svg">
 
     <script src="{{ mix('/js/app.js') }}" defer></script>
-    {{-- <script src="{{ mix('/js/app.js?v='.filemtime(public_path('js/app.js'))) }}" defer></script> --}}
+    
   </head>
   <body class="bg-gray-100">
     @inertia

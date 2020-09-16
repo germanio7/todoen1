@@ -3,7 +3,7 @@
         <layout>
             <div class="grid grid-cols-1">
                 <div class="flex-wrap ">
-                    <new-alert message="Nueva Sección: Juegos"></new-alert>
+                    <!-- <new-alert message="Nueva Sección: Juegos"></new-alert> -->
                     <div
                         class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
                     >

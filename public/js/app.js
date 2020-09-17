@@ -41003,7 +41003,7 @@ var render = function() {
             _c(
               "svg",
               {
-                staticClass: "w-8 pr-2",
+                staticClass: "w-6 md:w-8 pr-2",
                 attrs: {
                   "aria-hidden": "true",
                   "data-prefix": "fas",
@@ -41026,7 +41026,7 @@ var render = function() {
             _c(
               "inertia-link",
               {
-                staticClass: "font-semibold text-xl tracking-tight",
+                staticClass: "font-semibold text-sm md:text-xl tracking-tight",
                 attrs: { href: "/" }
               },
               [_vm._v("Todo en uno")]
@@ -41035,7 +41035,7 @@ var render = function() {
             _c(
               "svg",
               {
-                staticClass: "w-8 pl-2",
+                staticClass: "w-6 md:w-8 pl-2",
                 attrs: {
                   "aria-hidden": "true",
                   "data-prefix": "fas",

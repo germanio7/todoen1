@@ -22,7 +22,7 @@
                     aria-hidden="true"
                     data-prefix="fas"
                     data-icon="newspaper"
-                    class="w-8 pr-2"
+                    class="w-6 md:w-8 pr-2"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512"
                 >
@@ -33,14 +33,14 @@
                 </svg>
                 <inertia-link
                     href="/"
-                    class="font-semibold text-xl tracking-tight"
+                    class="font-semibold text-sm md:text-xl tracking-tight"
                     >Todo en uno</inertia-link
                 >
                 <svg
                     aria-hidden="true"
                     data-prefix="fas"
                     data-icon="cloud-sun"
-                    class="w-8 pl-2"
+                    class="w-6 md:w-8 pl-2"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 512"
                 >

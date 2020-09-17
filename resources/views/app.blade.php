@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="{{mix('css/main.css')}}">
 
-    <link rel="icon" type="image/svg" href="./globo.svg">
+    <link rel="icon" type="image/ico" href="./globo.ico">
 
     <script src="{{ mix('/js/app.js') }}" defer></script>
     

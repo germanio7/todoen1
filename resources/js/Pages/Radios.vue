@@ -126,6 +126,7 @@ export default {
         setRadio(radio) {
             var ifm = document.getElementById("myIFrame");
             ifm.setAttribute("src", radio.url);
+            document.getElementById("footer").style.bottom = "0px";
         }
     }
 };

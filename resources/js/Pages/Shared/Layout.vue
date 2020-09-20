@@ -2,6 +2,7 @@
     <div>
         <!-- class="fixed" -->
         <nav
+            id="navbar"
             class="fixed w-full flex items-center justify-between flex-wrap bg-gray-900 p-6 z-40 -mt-24"
         >
             <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -149,7 +150,20 @@ export default {
         if (window.innerWidth >= 768) {
             this.mostrar();
         }
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "90px";
+                document.getElementById("footer").style.bottom = "0px";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+                document.getElementById("footer").style.bottom = "-150px";
+            }
+            prevScrollpos = currentScrollPos;
+        };
     },
+    updated() {},
     methods: {
         mostrar() {
             this.menu = !this.menu;

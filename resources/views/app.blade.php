@@ -18,7 +18,7 @@
 	@inertia
 </body>
 <footer>
-	<div class="z-10" style="position: fixed; bottom: 0px; width: 100%; text-align: center;">
+	<div id="footer" class="z-10" style="position: fixed; bottom: 0px; width: 100%; text-align: center;">
 		<iframe autoplay="true" id="myIFrame" src="" style="width:100%; height:100px;" scrolling="no" frameborder="no">
 		</iframe>
 	</div>

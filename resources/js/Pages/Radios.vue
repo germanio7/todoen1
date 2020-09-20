@@ -106,6 +106,17 @@ export default {
                     url: "https://tunein.com/embed/player/s135092/",
                     img:
                         "https://cdn-profiles.tunein.com/s135092/images/logoq.png?t=153597"
+                },
+                {
+                    name: "Radio Cantilo",
+                    url: "https://tunein.com/embed/player/s275689/",
+                    img:
+                        "https://cdn-profiles.tunein.com/s275689/images/logog.jpg?t=1"
+                },
+                {
+                    name: "FM PASION",
+                    url: "https://tunein.com/embed/player/s171699/",
+                    img: "https://cdn-radiotime-logos.tunein.com/s171699g.png"
                 }
             ]
         };

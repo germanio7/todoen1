@@ -29,11 +29,11 @@ class AppServiceProvider extends ServiceProvider
         // $aux = DB::table('visits')->get();
         // dd($aux);
 
-        $visits = DB::table('visits')->where('ip', request()->ip())->where('date', now()->format('d-m-Y'))->get();
+        $visits = DB::table('visits')->where('ip', request()->getClientIp())->where('date', now()->format('d-m-Y'))->get();
 
         if (count($visits) < 1) {
             DB::table('visits')->insert([
-                'ip' => request()->ip(),
+                'ip' => request()->getClientIp(),
                 'date' => now()->format('d-m-Y'),
                 'created_at' => now(),
                 'updated_at' => now()

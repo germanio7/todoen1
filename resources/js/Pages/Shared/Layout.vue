@@ -155,7 +155,9 @@ export default {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "90px";
-                document.getElementById("footer").style.bottom = "0px";
+                if (document.getElementById("myIFrame").getAttribute("src")) {
+                    document.getElementById("footer").style.bottom = "0px";
+                }
             } else {
                 document.getElementById("navbar").style.top = "-50px";
                 document.getElementById("footer").style.bottom = "-150px";

@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/weather', function () {
-    return Inertia::render('test');
+    return Inertia::render('Weather');
 });
 
 // Route::get('/test', function () {

@@ -5,12 +5,15 @@
                 class="flex justify-center items-center text-xl font-mono font-bold p-1"
             >
                 Compartir Todo en uno &nbsp
-                <button @click="share()">
+                <button
+                    class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                    @click="share()"
+                >
                     <svg
                         aria-hidden="true"
                         data-prefix="fab"
                         data-icon="whatsapp-square"
-                        class="w-6 text-green-500"
+                        class="w-8 text-green-400"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
                     >
@@ -145,7 +148,7 @@ export default {
     methods: {
         share() {
             window.open(
-                "https://api.whatsapp.com/send?text=https://todoen1.herokuapp.com"
+                "https://wa.me/send?text=https://todoen1.herokuapp.com"
             );
         }
     }

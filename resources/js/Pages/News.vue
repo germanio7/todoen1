@@ -103,13 +103,14 @@
                             </div>
                             <div class="px-6 pt-4 pb-2">
                                 <button
+                                    class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                                     @click="sendWhatsapp(item.title, item.url)"
                                 >
                                     <svg
                                         aria-hidden="true"
                                         data-prefix="fab"
                                         data-icon="whatsapp-square"
-                                        class="w-6 text-green-500"
+                                        class="w-8 text-green-400"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 448 512"
                                     >
@@ -163,7 +164,7 @@ export default {
                 });
         },
         sendWhatsapp(title, url) {
-            window.open("https://api.whatsapp.com/send?text=" + url);
+            window.open("https://wa.me/send?text=" + url);
         }
     }
 };

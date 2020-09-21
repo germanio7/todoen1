@@ -4,7 +4,7 @@
             <div
                 class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900 "
             >
-                Test WeatherStack
+                Clima
             </div>
 
             <div class="flex justify-center items-center ">

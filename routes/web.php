@@ -31,6 +31,10 @@ Route::get('/radios', function () {
     return Inertia::render('Radios');
 });
 
+Route::get('/spotify', function () {
+    return Inertia::render('Spotify');
+});
+
 Route::get('/info', function () {
     $total = DB::table('visits')->count();
 

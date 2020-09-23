@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/search-city', function (Request $request) {
-    $apiKey = 'aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs';
+    $apiKey = '6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o';
     $client = new Client();
     $url = "https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" . $apiKey . "&product=observation&name=" . $request->city;
 
@@ -29,7 +29,7 @@ Route::post('/search-city', function (Request $request) {
     return collect(json_decode((string) $response->getBody(), true));
 });
 
-Route::post('/test', function (Request $request) {
+Route::post('/auxiliar', function (Request $request) {
     $apiKey = 'ebb6cd107526bf1b0f4a849e5d81a5f2';
     $client = new Client();
     $url = "http://api.weatherstack.com/current?access_key=" . $apiKey . "&query=" . $request->city . "&units=m";
@@ -82,7 +82,7 @@ Route::get('/teams/{id}', function ($id) {
 });
 
 Route::post('/default-city', function (Request $request) {
-    $apiKey = 'aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs';
+    $apiKey = '6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o';
     $client = new Client();
     $url = "https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" . $apiKey . "&product=observation&name=" . $request->city;
 
@@ -92,7 +92,7 @@ Route::post('/default-city', function (Request $request) {
 });
 
 Route::post('/seven-days', function (Request $request) {
-    $apiKey = 'aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs';
+    $apiKey = '6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o';
     $client = new Client();
     $url = "https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" . $apiKey . "&product=forecast_7days_simple&latitude=" . $request->latitude . "&longitude=" . $request->longitude;
 

@@ -105,7 +105,7 @@
 export default {
     data() {
         return {
-            api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs"
+            api_key: "6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o"
         };
     },
     props: ["res"]

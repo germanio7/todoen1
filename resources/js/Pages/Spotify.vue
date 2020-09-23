@@ -2,11 +2,11 @@
     <div>
         <layout>
             <div
-                class="text-center font-mono text-4xl md:text-6xl text-gray-900"
+                class="text-center font-mono text-4xl md:text-6xl text-gray-900 px-4"
             >
                 Nuestra Lista en Spotify
             </div>
-            <div class="flex justify-center items-center ">
+            <div class="flex justify-center items-center rounded p-4">
                 <iframe
                     src="https://open.spotify.com/embed/playlist/2t2Swa2WSzoq5F94gV0OHR"
                     width="800"

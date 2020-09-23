@@ -30,6 +30,7 @@
                                 type="submit"
                             >
                                 <svg
+                                    id="auxi"
                                     aria-hidden="true"
                                     data-prefix="fas"
                                     data-icon="search"
@@ -78,9 +79,12 @@
 
             <div
                 id="animacion"
-                v-if="selected"
+                v-if="selected || resAux"
                 class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
             >
+                <div v-if="resAux">
+                    <card-weather-aux :res="resAux"></card-weather-aux>
+                </div>
                 <div v-if="selected">
                     <card-weather :res="selected"></card-weather>
                 </div>
@@ -95,25 +99,36 @@
 <script>
 import layout from "./Shared/Layout";
 import CardWeather from "./CardWeather";
+import CardWeatherAux from "./CardWeatherAux";
 import CardSevenDays from "./CardSevenDays";
 import axios from "axios";
 export default {
     data() {
         return {
             city: "",
-            api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs",
+            api_key: "6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o",
             selected: null,
             res: null,
+            resAux: null,
             days: null
         };
     },
-    components: { layout, CardWeather, CardSevenDays },
+    components: { layout, CardWeather, CardWeatherAux, CardSevenDays },
 
     mounted() {
         this.defaultCity();
     },
 
     methods: {
+        auxiliar() {
+            document.getElementById("auxi").classList.add("animate-spin");
+            axios.post("api/auxiliar", { city: this.city }).then(response => {
+                this.resAux = response.data;
+                document
+                    .getElementById("auxi")
+                    .classList.remove("animate-spin");
+            });
+        },
         defaultCity() {
             axios
                 .post("api/default-city", { city: "villa angela" })
@@ -121,6 +136,9 @@ export default {
                     this.selected =
                         response.data.observations.location[0].observation[0];
                     this.sevenDays();
+                })
+                .catch(() => {
+                    console.log("Hubo un problema...");
                 });
         },
         searchCity() {
@@ -128,6 +146,10 @@ export default {
                 .post("api/search-city", { city: this.city })
                 .then(response => {
                     this.res = response.data.observations.location;
+                    this.resAux = null;
+                })
+                .catch(() => {
+                    this.auxiliar();
                 });
         },
         sevenDays() {
@@ -143,6 +165,7 @@ export default {
         },
         limpiar() {
             this.res = null;
+            this.resAux = null;
         }
     }
 };

@@ -138,6 +138,11 @@ export default {
                         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/HERE_logo.svg/1200px-HERE_logo.svg.png"
                 },
                 {
+                    name: "weatherstack",
+                    img:
+                        "https://ipapi.com/site_images/apilayer_icon_weatherstack.png"
+                },
+                {
                     name: "News API",
                     img: "https://newsapi.org/images/n-logo-border.png"
                 },
@@ -145,6 +150,11 @@ export default {
                     name: "WhatsApp",
                     img:
                         "https://is4-ssl.mzstatic.com/image/thumb/Purple114/v4/66/b0/a6/66b0a612-9bc9-2547-244a-48ee83151fc5/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-85-220.png/246x0w.png"
+                },
+                {
+                    name: "Font Awesome",
+                    img:
+                        "https://www.drupal.org/files/project-images/font_awesome_logo.png"
                 },
                 {
                     name: "RetroGames",

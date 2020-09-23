@@ -105,7 +105,7 @@
 export default {
     data() {
         return {
-            api_key: "6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o"
+            api_key: process.env.MIX_HERE_WEATHER
         };
     },
     props: ["res"]

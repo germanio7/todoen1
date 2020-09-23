@@ -102,11 +102,12 @@ import CardWeather from "./CardWeather";
 import CardWeatherAux from "./CardWeatherAux";
 import CardSevenDays from "./CardSevenDays";
 import axios from "axios";
+
 export default {
     data() {
         return {
             city: "",
-            api_key: "6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o",
+            api_key: process.env.MIX_HERE_WEATHER,
             selected: null,
             res: null,
             resAux: null,
@@ -170,5 +171,3 @@ export default {
     }
 };
 </script>
-
-<style></style>

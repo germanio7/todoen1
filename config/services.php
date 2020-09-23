@@ -30,4 +30,24 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'here_weather' => [
+        'api_key' => env('MIX_HERE_WEATHER', 'YOUR_API_KEY')
+    ],
+
+    'weatherstack' => [
+        'api_key' => env('MIX_WEATHERSTACK', 'YOUR_API_KEY')
+    ],
+
+    'newsapi' => [
+        'api_key' => env('MIX_NEWSAPI', 'YOUR_API_KEY')
+    ],
+
+    'football_data' => [
+        'api_key' => env('MIX_FOOTBALL_DATA', 'YOUR_API_KEY')
+    ],
+
+    'google_search' => [
+        'api_key' => env('MIX_GOOGLE_SEARCH', 'YOUR_API_KEY')
+    ]
+
 ];

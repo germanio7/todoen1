@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/search-city', function (Request $request) {
-    $apiKey = '6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o';
+    $apiKey = config('services.here_weather.api_key');
     $client = new Client();
     $url = "https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" . $apiKey . "&product=observation&name=" . $request->city;
 
@@ -30,7 +30,7 @@ Route::post('/search-city', function (Request $request) {
 });
 
 Route::post('/auxiliar', function (Request $request) {
-    $apiKey = 'ebb6cd107526bf1b0f4a849e5d81a5f2';
+    $apiKey = config('services.weatherstack.api_key');
     $client = new Client();
     $url = "http://api.weatherstack.com/current?access_key=" . $apiKey . "&query=" . $request->city . "&units=m";
 
@@ -40,7 +40,7 @@ Route::post('/auxiliar', function (Request $request) {
 });
 
 Route::get('/prueba', function (Request $request) {
-    $apiKey = 'AIzaSyAc8_SvBpKsLlOrtqTOg5AN1Zbdlc_9Ab4';
+    $apiKey = config('services.google_search.api_key');
     $client = new Client();
     $url = "https://www.googleapis.com/customsearch/v1?key=" . $apiKey . "&cx=6e977d0b11e796d7b&q=boca juniors";
 
@@ -50,7 +50,7 @@ Route::get('/prueba', function (Request $request) {
 });
 
 Route::get('/scores', function () {
-    $apiKey = 'feda2374db304bc6a65d153009f4f355';
+    $apiKey = config('services.football_data.api_key');
     $client = new Client();
     // $url = 'https://api.football-data.org/v2/competitions';
     $url = 'http://api.football-data.org/v2/competitions/2021/matches?matchday=1';
@@ -66,7 +66,7 @@ Route::get('/scores', function () {
 });
 
 Route::get('/teams/{id}', function ($id) {
-    $apiKey = 'feda2374db304bc6a65d153009f4f355';
+    $apiKey = config('services.football_data.api_key');
     $client = new Client();
     $url = 'http://api.football-data.org/v2/teams/' . $id;
     $headers = [
@@ -82,7 +82,7 @@ Route::get('/teams/{id}', function ($id) {
 });
 
 Route::post('/default-city', function (Request $request) {
-    $apiKey = '6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o';
+    $apiKey = config('services.here_weather.api_key');
     $client = new Client();
     $url = "https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" . $apiKey . "&product=observation&name=" . $request->city;
 
@@ -92,7 +92,7 @@ Route::post('/default-city', function (Request $request) {
 });
 
 Route::post('/seven-days', function (Request $request) {
-    $apiKey = '6Q0ai7EkF7CuVBQESFfM-R_gmYRAwpXTE0OrYVgLl5o';
+    $apiKey = config('services.here_weather.api_key');
     $client = new Client();
     $url = "https://weather.ls.hereapi.com/weather/1.0/report.json?language=es-ES&apiKey=" . $apiKey . "&product=forecast_7days_simple&latitude=" . $request->latitude . "&longitude=" . $request->longitude;
 
@@ -102,7 +102,7 @@ Route::post('/seven-days', function (Request $request) {
 });
 
 Route::get('/news', function () {
-    $apiKey = 'cb8bd5bfdb31449eba1b6c5870b5fe84';
+    $apiKey = config('services.newsapi.api_key');
     $client = new Client();
     $url = "https://newsapi.org/v2/top-headlines?country=ar&apiKey=" . $apiKey;
 
@@ -112,7 +112,7 @@ Route::get('/news', function () {
 });
 
 Route::post('/newsCategory', function (Request $request) {
-    $apiKey = 'cb8bd5bfdb31449eba1b6c5870b5fe84';
+    $apiKey = config('services.newsapi.api_key');
     $client = new Client();
     $url = "https://newsapi.org/v2/top-headlines?country=ar&category=" . $request->category . "&apiKey=" . $apiKey;
 

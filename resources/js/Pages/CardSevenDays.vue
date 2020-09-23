@@ -67,7 +67,7 @@
 export default {
     data() {
         return {
-            api_key: "aZ8yVZMqrBUavs5QX7Bqfax4FY8JdmETwgJTHey9DCs"
+            api_key: process.env.MIX_HERE_WEATHER
         };
     },
     props: ["days"]

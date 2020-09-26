@@ -125,6 +125,7 @@ export default {
             document.getElementById("auxi").classList.add("animate-spin");
             axios.post("api/auxiliar", { city: this.city }).then(response => {
                 this.resAux = response.data;
+                // this.maps();
                 document
                     .getElementById("auxi")
                     .classList.remove("animate-spin");
@@ -153,6 +154,19 @@ export default {
                     this.auxiliar();
                 });
         },
+        // maps() {
+        //     axios
+        //         .post("api/maps", {
+        //             lat: this.resAux.location.lat,
+        //             lon: this.resAux.location.lon
+        //         })
+        //         .then(response => {
+        //             console.log(response.data);
+        //         })
+        //         .catch(() => {
+        //             //
+        //         });
+        // },
         sevenDays() {
             axios
                 .post("api/seven-days", {

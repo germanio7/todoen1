@@ -141,6 +141,27 @@
         <article class="container mx-auto mt-24 mb-32">
             <slot />
         </article>
+
+        <button
+            @click="topFunction()"
+            id="myBtn"
+            title="Ir a arriba"
+            class="bg-purple-300 transition duration-500 ease-in-out hover:bg-purple-500 transform hover:-translate-y-1 hover:scale-110 text-purple-800 rounded-full inline-flex items-center fixed z-50 bottom-0 right-0 mr-2 mb-2 outline-none invisible"
+        >
+            <svg
+                aria-hidden="true"
+                data-prefix="fas"
+                data-icon="chevron-circle-up"
+                class="w-10"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+            >
+                <path
+                    fill="currentColor"
+                    d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z"
+                />
+            </svg>
+        </button>
     </div>
 </template>
 
@@ -159,6 +180,7 @@ export default {
         }
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
+            document.getElementById("myBtn").classList.remove("invisible");
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "90px";
@@ -176,6 +198,10 @@ export default {
     methods: {
         mostrar() {
             this.menu = !this.menu;
+        },
+        topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
     }
 };

@@ -23,6 +23,10 @@ Route::get('/weather', function () {
     return Inertia::render('Weather');
 });
 
+Route::get('/scores', function () {
+    return Inertia::render('Scores');
+});
+
 Route::get('/test', function () {
     return Inertia::render('test');
 });

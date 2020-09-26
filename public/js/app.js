@@ -3128,6 +3128,10 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       prevScrollpos = currentScrollPos;
+
+      if (window.pageYOffset == 0) {
+        document.getElementById("myBtn").classList.add("invisible");
+      }
     };
   },
   updated: function updated() {},
@@ -41672,7 +41676,7 @@ var render = function() {
       "button",
       {
         staticClass:
-          "bg-purple-300 transition duration-500 ease-in-out hover:bg-purple-500 transform hover:-translate-y-1 hover:scale-110 text-purple-800 rounded-full inline-flex items-center fixed z-50 bottom-0 right-0 mr-2 mb-2 outline-none invisible",
+          "bg-purple-300 transition duration-500 ease-in-out hover:bg-purple-500 transform hover:-translate-y-1 hover:scale-110 text-purple-800 rounded-full inline-flex items-center fixed z-50 bottom-0 right-0 mr-2 mb-2 outline-none invisible animate-bounce",
         attrs: { id: "myBtn", title: "Ir a arriba" },
         on: {
           click: function($event) {

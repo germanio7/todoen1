@@ -62,11 +62,44 @@ Route::get('/prueba', function (Request $request) {
     return collect(json_decode((string) $response->getBody(), true));
 });
 
-Route::get('/scores', function () {
+Route::get('/scores/{id}', function ($id) {
     $apiKey = config('services.football_data.api_key');
     $client = new Client();
-    // $url = 'https://api.football-data.org/v2/competitions';
-    $url = 'http://api.football-data.org/v2/competitions/2021/matches?matchday=1';
+    $url = 'http://api.football-data.org/v2/competitions/' . $id;
+
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    $data = collect(json_decode((string) $response->getBody(), true));
+    $currentMatchday = $data['currentSeason']['currentMatchday'];
+
+    $aux = '/matches?matchday=' . $currentMatchday;
+
+    $response = $client->get($url . $aux, $headers);
+
+    return $data = collect(json_decode((string) $response->getBody(), true));
+
+    // $matches = $data['matches'];
+
+    // foreach ($matches as $item) {
+    //     $urlTeam = 'http://api.football-data.org/v2/teams/' . $item['homeTeam']['id'];
+    //     $response = $client->get($urlTeam, $headers);
+    //     $aux = collect(json_decode((string) $response->getBody(), true));
+    //     $item['homeTeam']['img'] = $aux['crestUrl'];
+    // }
+
+    // return $matches;
+});
+
+Route::get('/match/{id}', function ($id) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/matches/' . $id;
     $headers = [
         'headers' => [
             'X-Auth-Token' => $apiKey
@@ -92,6 +125,38 @@ Route::get('/teams/{id}', function ($id) {
 
     $aux = collect(json_decode((string) $response->getBody(), true));
     return $aux['crestUrl'];
+});
+
+Route::get('/standings/{id}', function ($id) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/competitions/' . $id . '/standings?standingType=TOTAL';
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    $aux = collect(json_decode((string) $response->getBody(), true));
+    return $aux['standings'][0]['table'];
+});
+
+Route::get('/scorers/{id}', function ($id) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/competitions/' . $id . '/scorers';
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    $aux = collect(json_decode((string) $response->getBody(), true));
+    return $aux['scorers'];
 });
 
 Route::post('/default-city', function (Request $request) {

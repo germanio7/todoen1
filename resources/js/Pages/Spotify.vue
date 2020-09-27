@@ -6,6 +6,7 @@
             >
                 Nuestra Lista en Spotify
             </div>
+            <hr />
             <div class="flex justify-center items-center rounded p-4">
                 <iframe
                     src="https://open.spotify.com/embed/playlist/2t2Swa2WSzoq5F94gV0OHR"

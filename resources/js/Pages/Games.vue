@@ -6,6 +6,7 @@
             >
                 Juegos
             </div>
+            <hr />
             <div class="flex-wrap justify-center px-6 pt-4 pb-2">
                 <span
                     v-for="item in games"
@@ -15,6 +16,7 @@
                     >{{ item.game }}</span
                 >
             </div>
+            <hr />
             <div class="flex justify-center mt-4 relative z-20">
                 <iframe
                     id="juego"

@@ -6,7 +6,7 @@
             >
                 Clima
             </div>
-
+            <hr />
             <div class="flex justify-center items-center ">
                 <div
                     class="flex-wrap bg-white rounded overflow-hidden shadow-lg m-4 p-4"
@@ -76,7 +76,7 @@
                     </ul>
                 </div>
             </div>
-
+            <hr />
             <div
                 id="animacion"
                 v-if="selected || resAux"

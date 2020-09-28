@@ -78,6 +78,22 @@
             </div>
             <hr />
             <div
+                id="esqueleto"
+                class="border-l-4 border-purple-500 bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
+                hidden
+            >
+                <div class="animate-pulse flex space-x-4 ">
+                    <div class="rounded-full bg-gray-400 h-12 w-12"></div>
+                    <div class="flex-1 space-y-4 py-1">
+                        <div class="h-4 bg-gray-400 rounded w-3/4"></div>
+                        <div class="space-y-2">
+                            <div class="h-4 bg-gray-400 rounded"></div>
+                            <div class="h-4 bg-gray-400 rounded w-5/6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
                 id="animacion"
                 v-if="selected || resAux"
                 class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
@@ -129,6 +145,8 @@ export default {
                 document
                     .getElementById("auxi")
                     .classList.remove("animate-spin");
+                let eskeletor = document.getElementById("esqueleto");
+                eskeletor.setAttribute("hidden", true);
             });
         },
         defaultCity() {
@@ -144,11 +162,14 @@ export default {
                 });
         },
         searchCity() {
+            let eskeletor = document.getElementById("esqueleto");
+            eskeletor.removeAttribute("hidden");
             axios
                 .post("api/search-city", { city: this.city })
                 .then(response => {
                     this.res = response.data.observations.location;
                     this.resAux = null;
+                    eskeletor.setAttribute("hidden", true);
                 })
                 .catch(() => {
                     this.auxiliar();

@@ -47,7 +47,7 @@
                     <div class="grid gap-6 grid-cols-1 md:grid-cols-2 m-2">
                         <div
                             v-for="item in 9"
-                            class="border bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
+                            class="border-l-4 border-purple-500 bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
                         >
                             <div class="animate-pulse flex space-x-4 ">
                                 <div
@@ -72,6 +72,12 @@
                 </div>
                 <!-- Partidos -->
                 <div
+                    v-if="comp"
+                    class="text-base md:text-xl font-bold text-center p-2"
+                >
+                    <pre>  {{ comp }} |  Fecha Nº {{ fec }}</pre>
+                </div>
+                <div
                     class="grid grid-cols-1 md:grid-cols-2 justify-center items-center"
                 >
                     <div
@@ -80,8 +86,7 @@
                         :key="item.id"
                     >
                         <div
-                            @click="showModal(item)"
-                            class="w-full border-l-4 border-purple-500 cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-2"
+                            class="w-full border-l-4 border-purple-500 rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-2"
                         >
                             <div
                                 class="flex justify-between bg-white rounded-lg p-6 items-center"
@@ -104,153 +109,103 @@
                                     </h2>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <!-- tabla Pos-->
-                <div
-                    v-if="tablaPos"
-                    class="flex justify-center overflow-x-auto my-4 mx-2"
-                >
-                    <table class="table-auto bg-white">
-                        <thead>
-                            <tr>
-                                <th class="px-4 py-2">Pos</th>
-                                <th class="px-4 py-2">Equipo</th>
-                                <th class="px-4 py-2">J</th>
-                                <th class="px-4 py-2">G</th>
-                                <th class="px-4 py-2">E</th>
-                                <th class="px-4 py-2">P</th>
-                                <th class="px-4 py-2">Puntos</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="item in tablaPos" :key="item.id">
-                                <td class="border px-4 py-2">
-                                    {{ item.position }}
-                                </td>
-                                <td class="flex border px-4 py-2">
-                                    <img
-                                        class="w-8 pr-2"
-                                        :src="item.team.crestUrl"
-                                        alt=""
-                                    />
-                                    <span class="">
-                                        {{ item.team.name }}
-                                    </span>
-                                </td>
-                                <td class="border px-4 py-2">
-                                    {{ item.playedGames }}
-                                </td>
-                                <td class="border px-4 py-2">
-                                    {{ item.won }}
-                                </td>
-                                <td class="border px-4 py-2">
-                                    {{ item.draw }}
-                                </td>
-                                <td class="border px-4 py-2">
-                                    {{ item.lost }}
-                                </td>
-                                <td class="border text-center px-4 py-2">
-                                    {{ item.points }}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <hr />
-                <!-- goleadores -->
-                <div
-                    v-if="tableScorers"
-                    class="flex justify-center overflow-x-auto mt-4 mx-2"
-                >
-                    <table class="table-auto bg-white">
-                        <thead>
-                            <tr>
-                                <th class="px-4 py-2">Jugador</th>
-                                <th class="px-4 py-2">Equipo</th>
-                                <th class="px-4 py-2">Goles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="item in tableScorers" :key="item.id">
-                                <td class="border px-4 py-2">
-                                    {{ item.player.name }}
-                                </td>
-                                <td class="border px-4 py-2">
-                                    {{ item.team.name }}
-                                </td>
-                                <td class="border text-center px-4 py-2">
-                                    {{ item.numberOfGoals }}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </layout>
-
-        <!-- modal -->
-        <div
-            v-if="match"
-            id="modalMatch"
-            class="fixed z-10 inset-0 overflow-y-auto"
-        >
-            <div
-                class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
-            >
-                <div class="fixed inset-0 transition-opacity">
-                    <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-                </div>
-                <span
-                    class="hidden sm:inline-block sm:align-middle sm:h-screen"
-                ></span
-                >&#8203;
-                <div
-                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
-                    role="dialog"
-                    aria-modal="true"
-                    aria-labelledby="modal-headline"
-                >
-                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <div class="sm:flex sm:items-start">
-                            <div
-                                class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left"
-                            >
-                                <h3
-                                    class="text-lg leading-6 font-medium text-gray-900"
-                                    id="modal-headline"
-                                >
-                                    {{ match.head2head.homeTeam.name }} -
-                                    {{ match.head2head.awayTeam.name }}
-                                </h3>
-                                <div class="mt-2">
-                                    <p class="text-sm leading-5 text-gray-500">
-                                        {{ match.match.score }}
-                                    </p>
-                                </div>
+                            <div class="text-center font-semibold">
+                                {{ item.status }}
+                            </div>
+                            <div class="text-center font-semibold">
+                                {{ new Date(item.utcDate) }}
                             </div>
                         </div>
                     </div>
+                </div>
+                <hr />
+                <div
+                    v-if="tablaPos || tableScorers"
+                    class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
+                >
+                    <!-- tabla Pos-->
                     <div
-                        class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                        v-if="tablaPos"
+                        class="flex justify-center overflow-x-auto my-4 mx-2"
                     >
-                        <span
-                            class="mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
-                        >
-                            <button
-                                @click="closeModal()"
-                                type="button"
-                                class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5"
-                            >
-                                Cerrar
-                            </button>
-                        </span>
+                        <table class="table-auto bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-2">Pos</th>
+                                    <th class="px-4 py-2">Equipo</th>
+                                    <th class="px-4 py-2">J</th>
+                                    <th class="px-4 py-2">G</th>
+                                    <th class="px-4 py-2">E</th>
+                                    <th class="px-4 py-2">P</th>
+                                    <th class="px-4 py-2">Puntos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in tablaPos" :key="item.id">
+                                    <td class="border text-center px-4 py-2">
+                                        {{ item.position }}
+                                    </td>
+                                    <td class="flex border px-4 py-2">
+                                        <img
+                                            class="w-8 pr-2"
+                                            :src="item.team.crestUrl"
+                                            alt=""
+                                        />
+                                        <span class="">
+                                            {{ item.team.name }}
+                                        </span>
+                                    </td>
+                                    <td class="border px-4 py-2">
+                                        {{ item.playedGames }}
+                                    </td>
+                                    <td class="border px-4 py-2">
+                                        {{ item.won }}
+                                    </td>
+                                    <td class="border px-4 py-2">
+                                        {{ item.draw }}
+                                    </td>
+                                    <td class="border px-4 py-2">
+                                        {{ item.lost }}
+                                    </td>
+                                    <td class="border text-center px-4 py-2">
+                                        {{ item.points }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr />
+                    <!-- goleadores -->
+                    <div
+                        v-if="tableScorers"
+                        class="flex justify-center overflow-x-auto mt-4 mx-2"
+                    >
+                        <table class="table-auto bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-2">Jugador</th>
+                                    <th class="px-4 py-2">Equipo</th>
+                                    <th class="px-4 py-2">Goles</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in tableScorers" :key="item.id">
+                                    <td class="border px-4 py-2">
+                                        {{ item.player.name }}
+                                    </td>
+                                    <td class="border px-4 py-2">
+                                        {{ item.team.name }}
+                                    </td>
+                                    <td class="border text-center px-4 py-2">
+                                        {{ item.numberOfGoals }}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        </div>
+        </layout>
     </div>
 </template>
 
@@ -260,6 +215,8 @@ import layout from "./Shared/Layout";
 export default {
     data() {
         return {
+            fec: "",
+            comp: "",
             scores: {},
             match: null,
             tablaPos: null,
@@ -275,6 +232,7 @@ export default {
 
     methods: {
         setScores(id) {
+            this.fec = "";
             this.scores = null;
             this.tablaPos = null;
             let eskeletor = document.getElementById("esqueleto");
@@ -283,6 +241,8 @@ export default {
             axios.get("api/scores/" + id).then(response => {
                 setTimeout(() => {
                     eskeletor.setAttribute("hidden", true);
+                    this.fec = response.data.filters.matchday;
+                    this.comp = response.data.competition.name;
                     this.scores = response.data.matches;
                 }, 500);
             });
@@ -293,12 +253,6 @@ export default {
         imagen(id) {
             axios.get("api/teams/" + id).then(response => {
                 return response.data;
-            });
-        },
-
-        showModal(item) {
-            axios.get("api/match/" + item.id).then(response => {
-                this.match = response.data;
             });
         },
 
@@ -322,10 +276,6 @@ export default {
                 .catch(() => {
                     console.log("No se cargó correctamente");
                 });
-        },
-
-        closeModal() {
-            this.match = null;
         }
     }
 };

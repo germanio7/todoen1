@@ -2,7 +2,7 @@
     <div>
         <div class="flex-1  justify-center p-2">
             <div
-                class="w-full border bg-white rounded flex-wrap items-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                class="w-full border-b-4 border-purple-500 bg-white rounded flex-wrap items-center p-6 bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             >
                 <div v-for="item in days" :key="item.id">
                     <div class="flex w-full justify-between items-center">

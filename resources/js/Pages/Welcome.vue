@@ -52,7 +52,7 @@
                     >
                         <div v-for="item in tecnos" :key="item.id">
                             <div
-                                class="w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                                class="w-full border-l-4 border-purple-500 rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                             >
                                 <div
                                     class="md:flex bg-white rounded-lg p-6 items-center"
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div
-                            class="w-full rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                            class="w-full border-l-4 border-purple-500 rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >
                             <div
                                 class="md:flex bg-white rounded-lg p-6 items-center"

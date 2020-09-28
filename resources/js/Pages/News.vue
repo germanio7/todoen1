@@ -51,7 +51,7 @@
                 >
                     <div
                         v-for="item in 9"
-                        class="border bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
+                        class="border-l-4 border-purple-500 bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
                     >
                         <div class="animate-pulse flex space-x-4 ">
                             <div
@@ -75,7 +75,7 @@
             <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
                 <div v-for="item in news" :key="item.id">
                     <div
-                        class="max-w-sm rounded bg-white overflow-hidden shadow-lg m-2 p-2 h-full "
+                        class="max-w-sm border-b-4 border-purple-500 rounded bg-white overflow-hidden shadow-lg m-2 p-2 h-full "
                     >
                         <img
                             class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -141,12 +141,16 @@ export default {
         };
     },
     components: { layout },
-    beforeMount() {
+    mounted() {
         this.setNews();
     },
     methods: {
         setNews() {
+            let eskeletor = document.getElementById("esqueleto");
+            eskeletor.removeAttribute("hidden");
             axios.get("api/news").then(response => {
+                this.news = response.data.articles;
+                eskeletor.setAttribute("hidden", true);
                 this.news = response.data.articles;
             });
         },

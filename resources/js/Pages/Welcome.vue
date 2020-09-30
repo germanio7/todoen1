@@ -158,8 +158,9 @@ export default {
                         "https://www.drupal.org/files/project-images/font_awesome_logo.png"
                 },
                 {
-                    name: "football-data.org",
-                    img: "https://www.football-data.org/assets/logo.jpg"
+                    name: "The Sports DB",
+                    img:
+                        "https://www.thesportsdb.com/images/logo_new-medium.png"
                 },
                 {
                     name: "RetroGames",

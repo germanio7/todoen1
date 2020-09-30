@@ -6,7 +6,7 @@
                     class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
                 >
                     <div class="text-center">
-                        Resultados Fútbol
+                        Resultados Deportivos
                     </div>
                 </div>
                 <hr />
@@ -124,10 +124,7 @@
                     class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
                 >
                     <!-- tabla Pos-->
-                    <div
-                        v-if="tablaPos"
-                        class="flex justify-center overflow-x-auto my-4 mx-2"
-                    >
+                    <div v-if="tablaPos" class="overflow-x-auto my-4 mx-2">
                         <table class="table-auto bg-white">
                             <thead>
                                 <tr>
@@ -176,10 +173,7 @@
                     </div>
                     <hr />
                     <!-- goleadores -->
-                    <div
-                        v-if="tableScorers"
-                        class="flex justify-center overflow-x-auto mt-4 mx-2"
-                    >
+                    <div v-if="tableScorers" class="overflow-x-auto mt-4 mx-2">
                         <table class="table-auto bg-white">
                             <thead>
                                 <tr>

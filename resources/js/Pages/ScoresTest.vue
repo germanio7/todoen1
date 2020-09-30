@@ -238,9 +238,9 @@ export default {
             this.events = null;
             axios.get("api/competition/" + id).then(response => {
                 this.competition = response.data.leagues[0];
-                this.lastEvents(id);
                 this.tableCompetition();
             });
+            this.lastEvents(id);
         },
 
         lastEvents(id) {
@@ -264,7 +264,7 @@ export default {
 
         tableCompetition() {
             axios
-                .post("api/table-competition/", {
+                .post("api/table-competition", {
                     id: this.competition.idLeague,
                     season: this.competition.strCurrentSeason
                 })

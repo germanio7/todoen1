@@ -62,7 +62,10 @@
                                     selected = item.observation[0];
                                     res = null;
                                     city = '';
+                                    latitude = selected.latitude;
+                                    longitude = selected.longitude;
                                     sevenDays();
+                                    maps();
                                 "
                             >
                                 <pre class="truncate"
@@ -80,16 +83,23 @@
             <div
                 id="animacion"
                 v-if="selected || resAux"
-                class="block lg:flex bg-gray-900 justify-around rounded overflow-hidden shadow-lg m-4 p-4 relative"
+                class="flex-wrap bg-gray-900 justify-center rounded overflow-hidden shadow-lg m-4 p-4 relative"
             >
-                <div v-if="resAux">
-                    <card-weather-aux :res="resAux"></card-weather-aux>
+                <div class="block lg:flex justify-center">
+                    <div v-if="resAux">
+                        <card-weather-aux :res="resAux"></card-weather-aux>
+                    </div>
+                    <div v-if="selected">
+                        <card-weather :res="selected"></card-weather>
+                    </div>
+                    <div v-if="days">
+                        <card-seven-days :days="days"></card-seven-days>
+                    </div>
                 </div>
-                <div v-if="selected">
-                    <card-weather :res="selected"></card-weather>
-                </div>
-                <div v-if="days">
-                    <card-seven-days :days="days"></card-seven-days>
+                <div
+                    class="flex justify-center p-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                >
+                    <img class="w-auto" :src="image" alt="" />
                 </div>
             </div>
         </layout>
@@ -106,14 +116,15 @@ import axios from "axios";
 export default {
     data() {
         return {
-            city: "",
+            city: "villa angela",
             api_key: process.env.MIX_HERE_WEATHER,
             selected: null,
             res: null,
             resAux: null,
             days: null,
-            latitude: null,
-            longitude: null
+            latitude: -27.57383,
+            longitude: -60.71526,
+            image: null
         };
     },
     components: { layout, CardWeather, CardWeatherAux, CardSevenDays },
@@ -125,20 +136,18 @@ export default {
     methods: {
         auxiliar() {
             document.getElementById("auxi").classList.add("animate-spin");
-            axios
-                .post("api/auxiliar", { city: "villa angela" })
-                .then(response => {
-                    this.resAux = response.data;
+            axios.post("api/auxiliar", { city: this.city }).then(response => {
+                this.resAux = response.data;
 
-                    document
-                        .getElementById("auxi")
-                        .classList.remove("animate-spin");
-                });
+                document
+                    .getElementById("auxi")
+                    .classList.remove("animate-spin");
+            });
         },
         defaultCity() {
             document.getElementById("auxi").classList.add("animate-spin");
             axios
-                .post("api/default-city", { city: "villa angela" })
+                .post("api/default-city", { city: this.city })
                 .then(response => {
                     this.selected =
                         response.data.observations.location[0].observation[0];
@@ -173,17 +182,28 @@ export default {
                 });
         },
         maps() {
-            axios
-                .post("api/maps", {
-                    lat: this.latitude,
-                    lon: this.longitude
-                })
-                .then(response => {
-                    console.log(response.data);
-                })
-                .catch(() => {
-                    //
-                });
+            let ancho = 800;
+            let alto = 600;
+            let pip = 300;
+            if (screen.width <= 640) {
+                ancho = 300;
+                alto = 400;
+                pip = 250;
+            }
+            this.image =
+                "https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey=" +
+                this.api_key +
+                "&ppi=" +
+                pip +
+                "&c=" +
+                this.latitude +
+                "," +
+                this.longitude +
+                "&h=" +
+                alto +
+                "&w=" +
+                ancho +
+                "&z=8&pip";
         },
         sevenDays() {
             axios

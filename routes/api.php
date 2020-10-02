@@ -18,17 +18,6 @@ Route::post('/search-city', function (Request $request) {
     return collect(json_decode((string) $response->getBody(), true));
 });
 
-Route::post('/maps', function (Request $request) {
-    $apiKey = config('services.here_weather.api_key');
-    $client = new Client();
-    // $url = "https://geocode.search.hereapi.com/v1/geocode?q=" . $request->city . "&apiKey=" . $apiKey;
-    $url = "https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey=" . $apiKey . "&lat=" . $request->lat . "&lon=" . $request->lon . "vt=0&z=15";
-
-    $response = $client->get($url);
-
-    return collect(json_decode((string) $response->getBody(), true));
-});
-
 Route::post('/auxiliar', function (Request $request) {
     $apiKey = config('services.weatherstack.api_key');
     $client = new Client();
@@ -216,6 +205,24 @@ Route::get('/last-events/{id}', function ($id) {
 Route::get('/next-events/{id}', function ($id) {
     $client = new Client();
     $url = 'https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=' . $id;
+
+    $response = $client->get($url);
+
+    return collect(json_decode((string) $response->getBody(), true));
+});
+
+Route::get('/dolar-blue', function () {
+    $client = new Client();
+    $url = 'https://api-dolar-argentina.herokuapp.com/api/dolarblue';
+
+    $response = $client->get($url);
+
+    return collect(json_decode((string) $response->getBody(), true));
+});
+
+Route::get('/dolar-oficial', function () {
+    $client = new Client();
+    $url = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial';
 
     $response = $client->get($url);
 

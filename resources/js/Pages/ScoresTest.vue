@@ -37,6 +37,11 @@
                         >#Serie A</span
                     >
                     <span
+                        @click="setCompetition(4406)"
+                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                        >#Super Liga Argentina</span
+                    >
+                    <span
                         @click="setCompetition(4480)"
                         class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >#Uefa Champions League</span
@@ -86,21 +91,21 @@
                         :key="item.id"
                     >
                         <div
-                            class="w-full border-l-4 border-purple-500 rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-2"
+                            class="w-full border-l-4 border-purple-500 overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-2"
                         >
                             <div
                                 v-if="
                                     competition.strSport == 'Tennis' ||
                                         competition.strSport == 'Motorsport'
                                 "
-                                class="text-center text-base bg-white rounded-lg p-6"
+                                class="text-center text-base bg-white  p-6"
                             >
                                 {{ item.strEvent }}
                             </div>
 
                             <div
                                 v-else
-                                class="flex justify-between bg-white rounded-lg p-6 items-center"
+                                class="flex justify-between bg-white  p-6 items-center"
                             >
                                 <div class="text-left">
                                     <h2 class="text-base">
@@ -120,7 +125,9 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="text-center font-semibold">
+                            <div
+                                class="bg-purple-100 text-center font-semibold"
+                            >
                                 <p v-if="item.strStatus == 'Match Finished'">
                                     Finalizado
                                 </p>
@@ -147,7 +154,7 @@
                             @click="lastEvents(competition.idLeague)"
                             class="bg-purple-500 w-auto hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded  m-4 rounded-l"
                         >
-                            Últimos
+                            Anteriores
                         </button>
                         <button
                             @click="nextEvents(competition.idLeague)"
@@ -240,7 +247,7 @@ export default {
                 this.competition = response.data.leagues[0];
                 this.tableCompetition();
             });
-            this.lastEvents(id);
+            this.nextEvents(id);
         },
 
         lastEvents(id) {

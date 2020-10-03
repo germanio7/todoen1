@@ -14,7 +14,7 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-auto font-mono " style="background-image: url(./fondo.svg);">
 	@inertia
 </body>
 <footer>

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Radios');
+    return Inertia::render('Welcome');
 });
 
 Route::get('/weather', function () {
@@ -35,14 +35,10 @@ Route::get('/radios', function () {
     return Inertia::render('Radios');
 });
 
-Route::get('/spotify', function () {
-    return Inertia::render('Spotify');
-});
-
 Route::get('/info', function () {
     $total = DB::table('visits')->count();
 
-    return Inertia::render('Welcome', [
+    return Inertia::render('Info', [
         'visitas' => $total
     ]);
 });

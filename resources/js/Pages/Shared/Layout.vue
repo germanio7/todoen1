@@ -35,7 +35,7 @@
                 <inertia-link
                     href="/"
                     class="font-semibold text-sm md:text-xl tracking-tight"
-                    >Todo en uno</inertia-link
+                    >Todo en 1</inertia-link
                 >
                 <svg
                     aria-hidden="true"
@@ -109,13 +109,6 @@
                         href="/juegos"
                         class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                         >Juegos
-                    </inertia-link>
-                </div>
-                <div class="text-sm ">
-                    <inertia-link
-                        href="/spotify"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >Spotify
                     </inertia-link>
                 </div>
                 <div class="text-sm ">

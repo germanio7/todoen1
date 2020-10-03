@@ -32,10 +32,6 @@
                             >Compra $ {{ dolarOficial.compra }} - Venta $
                             {{ dolarOficial.venta }}</span
                         >
-                        <span
-                            class="flex justify-center font-semibold mr-2 text-center flex-auto mt-1"
-                            >{{ dolarOficial.fecha }}</span
-                        >
                     </div>
                 </div>
                 <div
@@ -65,10 +61,6 @@
                             class="flex justify-center font-semibold mr-2 text-center flex-auto mb-1"
                             >Compra $ {{ dolarBlue.compra }} - Venta $
                             {{ dolarBlue.venta }}</span
-                        >
-                        <span
-                            class="flex justify-center font-semibold mr-2 text-center flex-auto mt-1"
-                            >{{ dolarBlue.fecha }}</span
                         >
                     </div>
                 </div>

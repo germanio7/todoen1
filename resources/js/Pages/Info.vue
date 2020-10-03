@@ -25,7 +25,7 @@
                 </button>
             </div>
             <div
-                class="flex justify-center items-center bg-gradient-to-r from-purple-700 to-purple-300 text-white text-xl font-mono p-1"
+                class="flex justify-center items-center rounded-lg bg-gradient-to-r from-purple-700 to-purple-300 text-white text-xl font-mono p-1"
                 role="alert"
             >
                 <svg
@@ -127,11 +127,6 @@ export default {
                     name: "Here Destination Weather",
                     img:
                         "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/HERE_logo.svg/1200px-HERE_logo.svg.png"
-                },
-                {
-                    name: "weatherstack",
-                    img:
-                        "https://ipapi.com/site_images/apilayer_icon_weatherstack.png"
                 },
                 {
                     name: "News API",

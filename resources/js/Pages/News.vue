@@ -2,10 +2,10 @@
     <div>
         <layout>
             <div
-                class="grid grid-cols-1 md:grid-cols-2 justify-center bg-gradient-to-r from-purple-700 to-purple-300 text-center py-4 lg:px-4 mx-2"
+                class="grid grid-cols-1 md:grid-cols-2 rounded-lg justify-center bg-gradient-to-r from-purple-700 to-purple-300 text-center py-4 lg:px-4 mx-2"
             >
                 <div
-                    class="p-2 bg-green-800 justify-around items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
+                    class="p-2 bg-green-800 rounded-lg justify-around items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
                     role="alert"
                 >
                     <span
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div
-                    class="p-2 bg-blue-800 justify-around items-center text-blue-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
+                    class="p-2 bg-blue-800 rounded-lg justify-around items-center text-blue-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
                     role="alert"
                 >
                     <span

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<title>Todo en uno | All in one</title>
+	<title>Todo en 1</title>
 
 	<link rel="stylesheet" href="{{mix('css/main.css')}}">
 
@@ -14,7 +14,9 @@
 
 </head>
 
-<body class="bg-auto font-mono " style="background-image: url(./fondo.svg);">
+{{-- <body class="bg-auto font-mono" style="background-image: url(./fondo.svg);"> --}}
+
+<body class="bg-gray-100 font-mono">
 	@inertia
 </body>
 <footer>

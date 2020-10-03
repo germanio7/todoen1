@@ -8,18 +8,28 @@
                     Bienvenido
                 </div>
                 <hr />
-                <div class="grid grid-rows-2 grid-flow-col gap-2 p-2">
-                    <div class="row-span-2 bg-gray-500">
-                        <img class="h-full" src="clima.svg" alt="" />
+                <div
+                    class="grid grid-rows-2 grid-flow-col gap-2 justify-items-stretch p-2"
+                >
+                    <div
+                        class="row-span-2 bg-purple-500 rounded-lg flex justify-center items-center"
+                    >
+                        <img class="w-full" src="clima.svg" alt="" />
                     </div>
-                    <div class="row-span-1 bg-gray-600">
-                        <img class="h-full" src="noticias.svg" alt="" />
+                    <div
+                        class="row-span-1 bg-purple-500 rounded-lg flex justify-center items-center"
+                    >
+                        <img class="w-full" src="noticias.svg" alt="" />
                     </div>
-                    <div class="row-span-1 bg-gray-700">
-                        <img class="h-full" src="juegos.svg" alt="" />
+                    <div
+                        class="row-span-1 bg-purple-700 rounded-lg flex justify-center items-center"
+                    >
+                        <img class="w-full" src="juegos.svg" alt="" />
                     </div>
-                    <div class="row-span-2 bg-gray-400">
-                        <img class="h-full" src="musica.svg" alt="" />
+                    <div
+                        class="row-span-2 bg-purple-400 rounded-lg flex justify-center items-center"
+                    >
+                        <img class="w-full" src="musica.svg" alt="" />
                     </div>
                 </div>
             </div>

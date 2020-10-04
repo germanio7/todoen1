@@ -24,11 +24,11 @@ Route::get('/weather', function () {
 });
 
 Route::get('/scores', function () {
-    return Inertia::render('ScoresTest');
+    return Inertia::render('Scores');
 });
 
-Route::get('/test', function () {
-    return Inertia::render('Scores');
+Route::get('/youtube', function () {
+    return Inertia::render('Youtube');
 });
 
 Route::get('/radios', function () {

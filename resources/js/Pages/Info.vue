@@ -25,7 +25,7 @@
                 </button>
             </div>
             <div
-                class="flex justify-center items-center rounded-lg bg-gradient-to-r from-purple-700 to-purple-300 text-white text-xl font-mono p-1"
+                class="flex justify-center items-center rounded-lg bg-gradient-to-r from-purple-700 to-purple-300 text-white text-xl font-mono p-2 mx-2"
                 role="alert"
             >
                 <svg

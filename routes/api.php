@@ -18,6 +18,35 @@ Route::post('/search-city', function (Request $request) {
     return collect(json_decode((string) $response->getBody(), true));
 });
 
+Route::post('/youtube', function (Request $request) {
+    if ($request->get('link')) {
+
+        $vid = substr($request->get('link'), -11);
+
+        parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=" . $vid), $info);
+
+        if (key_exists('player_response', $info)) {
+            $aux = $info['player_response'];
+
+            $arr = json_decode($aux, true);
+
+            if (key_exists('streamingData', $arr)) {
+                $formats = $arr['streamingData']['adaptiveFormats'];
+                foreach ($formats as $forma) {
+                    if ($forma['itag'] == 140) {
+                        if (key_exists('signatureCipher', $forma)) {
+                            parse_str($forma['signatureCipher'], $aux);
+                            return $aux['url'];
+                        } else {
+                            return $forma['url'];
+                        }
+                    }
+                }
+            }
+        }
+    }
+});
+
 Route::post('/auxiliar', function (Request $request) {
     $apiKey = config('services.weatherstack.api_key');
     $client = new Client();

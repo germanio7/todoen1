@@ -19,7 +19,7 @@
                                 v-model="link"
                                 class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                                 type="text"
-                                placeholder="Ingrese ID Video Youtube..."
+                                placeholder="Ingrese Link o ID del Video Youtube..."
                             />
                             <button
                                 class="flex-shrink-0 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-900 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -114,7 +114,7 @@ export default {
         search() {
             document.getElementById("success").classList.add("hidden");
             document.getElementById("error").classList.add("hidden");
-            if (this.link.length == 11) {
+            if (this.link.length >= 11) {
                 document.getElementById("loading").classList.remove("hidden");
                 axios
                     .post(
@@ -129,7 +129,10 @@ export default {
                             );
                             const link = document.createElement("a");
                             link.href = url;
-                            link.setAttribute("download", Date.now() + ".mp3");
+                            link.setAttribute(
+                                "download",
+                                "audio" + Date.now() + ".mp3"
+                            );
                             document.body.appendChild(link);
                             link.click();
                             document

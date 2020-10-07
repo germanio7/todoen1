@@ -21,8 +21,7 @@ Route::post('/search-city', function (Request $request) {
 Route::post('/youtube', function (Request $request) {
     if ($request->get('link')) {
 
-        // $vid = substr($request->get('link'), -11);
-        $vid = $request->get('link');
+        $vid = substr($request->get('link'), -11);
 
         parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=" . $vid), $info);
 
@@ -40,11 +39,11 @@ Route::post('/youtube', function (Request $request) {
                         if (key_exists('signatureCipher', $forma)) {
                             parse_str($forma['signatureCipher'], $aux);
                             header("Content-Type: application/force-download");
-                            header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
+                            header("Content-Disposition: attachment");
                             readfile($aux['url']);
                         } else {
                             header("Content-Type: application/force-download");
-                            header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
+                            header("Content-Disposition: attachment");
                             readfile($forma['url']);
                         }
                     }

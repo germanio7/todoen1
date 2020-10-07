@@ -16,7 +16,7 @@
 
 {{-- <body class="bg-auto font-mono" style="background-image: url(./fondo.svg);"> --}}
 
-<body class="bg-gray-100 font-mono">
+<body class="bg-gray-100">
 	@inertia
 </body>
 <footer>

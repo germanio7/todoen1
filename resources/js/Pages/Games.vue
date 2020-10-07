@@ -13,7 +13,7 @@
                     :key="item.id"
                     @click="setGame(item.url)"
                     class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >{{ item.game }}</span
+                    >#{{ item.game }}</span
                 >
             </div>
             <hr />

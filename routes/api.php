@@ -30,15 +30,21 @@ Route::post('/youtube', function (Request $request) {
 
             $arr = json_decode($aux, true);
 
+            $nombre = $arr['videoDetails']['title'];
+
             if (key_exists('streamingData', $arr)) {
                 $formats = $arr['streamingData']['adaptiveFormats'];
                 foreach ($formats as $forma) {
                     if ($forma['itag'] == 140) {
                         if (key_exists('signatureCipher', $forma)) {
                             parse_str($forma['signatureCipher'], $aux);
-                            return $aux['url'];
+                            header("Content-Type: application/force-download");
+                            header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
+                            readfile($aux['url']);
                         } else {
-                            return $forma['url'];
+                            header("Content-Type: application/force-download");
+                            header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
+                            readfile($forma['url']);
                         }
                     }
                 }

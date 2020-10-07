@@ -21,7 +21,8 @@ Route::post('/search-city', function (Request $request) {
 Route::post('/youtube', function (Request $request) {
     if ($request->get('link')) {
 
-        $vid = substr($request->get('link'), -11);
+        // $vid = substr($request->get('link'), -11);
+        $vid = $request->get('link');
 
         parse_str(file_get_contents("http://youtube.com/get_video_info?video_id=" . $vid), $info);
 

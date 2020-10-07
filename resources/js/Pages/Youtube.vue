@@ -19,7 +19,7 @@
                                 v-model="link"
                                 class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                                 type="text"
-                                placeholder="Link Youtube..."
+                                placeholder="Ingrese ID Video Youtube..."
                             />
                             <button
                                 class="flex-shrink-0 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-900 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -44,14 +44,37 @@
                     </form>
                 </div>
 
-                <div class="inline-block justify-center" v-if="url">
-                    <p class="w-auto flex justify-center mx-4">{{ url }}</p>
-                    <a
-                        class="w-auto flex justify-center bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded  m-4 rounded-l"
-                        target="_blank"
-                        :href="url"
-                        >Descargar</a
+                <div class="flex justify-center mt-16">
+                    <svg
+                        id="success"
+                        aria-hidden="true"
+                        data-prefix="far"
+                        data-icon="check-circle"
+                        class="animate-ping text-green-500 w-16 hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
                     >
+                        <path
+                            fill="currentColor"
+                            d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"
+                        />
+                    </svg>
+                </div>
+                <div class="flex justify-center mt-16">
+                    <svg
+                        id="error"
+                        aria-hidden="true"
+                        data-prefix="fas"
+                        data-icon="exclamation-circle"
+                        class="animate-ping text-red-500 w-16 hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+                        />
+                    </svg>
                 </div>
             </div>
         </layout>
@@ -73,20 +96,41 @@ export default {
 
     methods: {
         search() {
-            document.getElementById("auxi").classList.add("animate-spin");
-            axios
-                .post("api/youtube", { link: this.link })
-                .then(response => {
-                    this.url = response.data;
-                    document
-                        .getElementById("auxi")
-                        .classList.remove("animate-spin");
-                })
-                .catch(() => {
-                    document
-                        .getElementById("auxi")
-                        .classList.remove("animate-spin");
-                });
+            document.getElementById("success").classList.add("hidden");
+            document.getElementById("error").classList.add("hidden");
+            if (this.link.length == 11) {
+                document.getElementById("auxi").classList.add("animate-spin");
+                axios
+                    .post(
+                        "api/youtube",
+                        { link: this.link },
+                        { responseType: "blob" }
+                    )
+                    .then(response => {
+                        document
+                            .getElementById("auxi")
+                            .classList.remove("animate-spin");
+                        const url = window.URL.createObjectURL(
+                            new Blob([response.data])
+                        );
+                        const link = document.createElement("a");
+                        link.href = url;
+                        link.setAttribute("download", Date.now() + ".mp3");
+                        document.body.appendChild(link);
+                        link.click();
+                        document
+                            .getElementById("success")
+                            .classList.remove("hidden");
+                    })
+                    .catch(() => {
+                        document
+                            .getElementById("auxi")
+                            .classList.remove("animate-spin");
+                        document
+                            .getElementById("error")
+                            .classList.remove("hidden");
+                    });
+            }
         }
     }
 };

@@ -44,7 +44,7 @@
                         <pre>Sólo videos sin licencia...</pre>
                     </form>
                 </div>
-                <div class="flex justify-center mt-16">
+                <div class="flex justify-center mt-8">
                     <svg
                         id="loading"
                         aria-hidden="true"
@@ -60,7 +60,7 @@
                         />
                     </svg>
                 </div>
-                <div class="flex justify-center mt-16">
+                <div class="flex justify-center mt-8">
                     <svg
                         id="success"
                         aria-hidden="true"
@@ -76,7 +76,7 @@
                         />
                     </svg>
                 </div>
-                <div class="flex justify-center mt-16">
+                <div class="flex justify-center mt-8">
                     <svg
                         id="error"
                         aria-hidden="true"
@@ -123,20 +123,29 @@ export default {
                         { responseType: "blob" }
                     )
                     .then(response => {
-                        const url = window.URL.createObjectURL(
-                            new Blob([response.data])
-                        );
-                        const link = document.createElement("a");
-                        link.href = url;
-                        link.setAttribute("download", Date.now() + ".mp3");
-                        document.body.appendChild(link);
-                        link.click();
-                        document
-                            .getElementById("success")
-                            .classList.remove("hidden");
-                        document
-                            .getElementById("loading")
-                            .classList.add("hidden");
+                        if (response.data.size > 0) {
+                            const url = window.URL.createObjectURL(
+                                new Blob([response.data])
+                            );
+                            const link = document.createElement("a");
+                            link.href = url;
+                            link.setAttribute("download", Date.now() + ".mp3");
+                            document.body.appendChild(link);
+                            link.click();
+                            document
+                                .getElementById("success")
+                                .classList.remove("hidden");
+                            document
+                                .getElementById("loading")
+                                .classList.add("hidden");
+                        } else {
+                            document
+                                .getElementById("loading")
+                                .classList.add("hidden");
+                            document
+                                .getElementById("error")
+                                .classList.remove("hidden");
+                        }
                     })
                     .catch(() => {
                         document

@@ -4,7 +4,7 @@
             <div
                 class="flex flex-wrap justify-center font-mono text-4xl md:text-6xl text-gray-900 "
             >
-                Descargar
+                Descargar mp3
             </div>
             <hr />
             <div class="block justify-center items-center ">
@@ -41,9 +41,25 @@
                                 </svg>
                             </button>
                         </div>
+                        <pre>Sólo videos sin licencia...</pre>
                     </form>
                 </div>
-
+                <div class="flex justify-center mt-16">
+                    <svg
+                        id="loading"
+                        aria-hidden="true"
+                        data-prefix="fas"
+                        data-icon="spinner"
+                        class="animate-spin text-purple-500 w-16 hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+                        />
+                    </svg>
+                </div>
                 <div class="flex justify-center mt-16">
                     <svg
                         id="success"
@@ -99,7 +115,7 @@ export default {
             document.getElementById("success").classList.add("hidden");
             document.getElementById("error").classList.add("hidden");
             if (this.link.length == 11) {
-                document.getElementById("auxi").classList.add("animate-spin");
+                document.getElementById("loading").classList.remove("hidden");
                 axios
                     .post(
                         "api/youtube",
@@ -107,9 +123,6 @@ export default {
                         { responseType: "blob" }
                     )
                     .then(response => {
-                        document
-                            .getElementById("auxi")
-                            .classList.remove("animate-spin");
                         const url = window.URL.createObjectURL(
                             new Blob([response.data])
                         );
@@ -121,11 +134,14 @@ export default {
                         document
                             .getElementById("success")
                             .classList.remove("hidden");
+                        document
+                            .getElementById("loading")
+                            .classList.add("hidden");
                     })
                     .catch(() => {
                         document
-                            .getElementById("auxi")
-                            .classList.remove("animate-spin");
+                            .getElementById("loading")
+                            .classList.add("hidden");
                         document
                             .getElementById("error")
                             .classList.remove("hidden");

@@ -38,21 +38,13 @@ Route::post('/youtube', function (Request $request) {
                     if ($forma['itag'] == 140) {
                         if (key_exists('signatureCipher', $forma)) {
                             parse_str($forma['signatureCipher'], $aux);
-                            // header("Content-Type: application/force-download");
-                            // header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
-                            // readfile($aux['url']);
-                            $origen   = fopen($aux['url'], 'r');
-                            $destino = fopen($nombre . '.mp3', 'w');
-                            stream_copy_to_stream($origen, $destino);
-                            return response()->download($destino);
+                            header("Content-Type: application/force-download");
+                            header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
+                            readfile($aux['url']);
                         } else {
-                            // header("Content-Type: application/force-download");
-                            // header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
-                            // readfile($forma['url']);
-                            $origen   = fopen($forma['url'], 'r');
-                            $destino = fopen($nombre . '.mp3', 'w');
-                            stream_copy_to_stream($origen, $destino);
-                            return response()->download($destino);
+                            header("Content-Type: application/force-download");
+                            header("Content-Disposition: attachment; filename=\"$nombre.mp3\"");
+                            readfile($forma['url']);
                         }
                     }
                 }

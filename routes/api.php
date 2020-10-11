@@ -156,3 +156,74 @@ Route::get('/dolar-oficial', function () {
 
     return collect(json_decode((string) $response->getBody(), true));
 });
+
+// Football Data
+Route::get('/scores/{id}', function ($id) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/competitions/' . $id;
+
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    $data = collect(json_decode((string) $response->getBody(), true));
+    $currentMatchday = $data['currentSeason']['currentMatchday'];
+
+    $aux = '/matches?matchday=' . $currentMatchday;
+
+    $response = $client->get($url . $aux, $headers);
+
+    return $data = collect(json_decode((string) $response->getBody(), true));
+});
+
+Route::post('/partidos', function (Request $request) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/competitions/' . $request->id . '/matches?matchday=' . $request->round;
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    return collect(json_decode((string) $response->getBody(), true));
+});
+
+Route::get('/standings/{id}', function ($id) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/competitions/' . $id . '/standings?standingType=TOTAL';
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    $aux = collect(json_decode((string) $response->getBody(), true));
+    return $aux['standings'];
+});
+
+Route::get('/scorers/{id}', function ($id) {
+    $apiKey = config('services.football_data.api_key');
+    $client = new Client();
+    $url = 'http://api.football-data.org/v2/competitions/' . $id . '/scorers';
+    $headers = [
+        'headers' => [
+            'X-Auth-Token' => $apiKey
+        ]
+    ];
+
+    $response = $client->get($url, $headers);
+
+    $aux = collect(json_decode((string) $response->getBody(), true));
+    return $aux['scorers'];
+});

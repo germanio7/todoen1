@@ -14,22 +14,38 @@
                     <div
                         class="row-span-2 bg-purple-500 rounded-lg flex justify-center items-center"
                     >
-                        <img class="w-full" src="clima.svg" alt="" />
+                        <img
+                            class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                            src="clima.svg"
+                            alt=""
+                        />
                     </div>
                     <div
                         class="row-span-1 bg-purple-500 rounded-lg flex justify-center items-center"
                     >
-                        <img class="w-full" src="noticias.svg" alt="" />
+                        <img
+                            class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                            src="noticias.svg"
+                            alt=""
+                        />
                     </div>
                     <div
                         class="row-span-1 bg-purple-700 rounded-lg flex justify-center items-center"
                     >
-                        <img class="w-full" src="juegos.svg" alt="" />
+                        <img
+                            class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                            src="juegos.svg"
+                            alt=""
+                        />
                     </div>
                     <div
                         class="row-span-2 bg-purple-400 rounded-lg flex justify-center items-center"
                     >
-                        <img class="w-full" src="musica.svg" alt="" />
+                        <img
+                            class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                            src="musica.svg"
+                            alt=""
+                        />
                     </div>
                 </div>
             </div>

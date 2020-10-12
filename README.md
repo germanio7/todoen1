@@ -4,5 +4,5 @@
     SPA built with Laravel, VueJS, InertiaJS and TailwindCSS
 </p>
 <p>
-    RadioStation, News, Weather and Games
+    RadioStations, News, Weather and Games
 </p>

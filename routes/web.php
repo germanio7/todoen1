@@ -24,7 +24,8 @@ Route::get('/weather', function () {
 });
 
 Route::get('/scores', function () {
-    return Inertia::render('FootballData');
+    // return Inertia::render('FootballData');
+    return Inertia::render('Scores');
 });
 
 Route::get('/youtube', function () {
@@ -52,7 +53,7 @@ Route::get('/juegos', function () {
 });
 
 Route::get('/test', function () {
-    return Inertia::render('Scores');
+    return Inertia::render('FootballData');
 });
 
 // Route::resource('/users', 'UserController');

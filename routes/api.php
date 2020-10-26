@@ -227,3 +227,14 @@ Route::get('/scorers/{id}', function ($id) {
     $aux = collect(json_decode((string) $response->getBody(), true));
     return $aux['scorers'];
 });
+
+Route::get('/unsplash', function () {
+    // $accessKey = config('services.newsapi.api_key');
+    $accessKey = 'xIm3ODEu_EO9N-GcqIwguHE98k6GuVQtizyPBHpifgQ';
+    $client = new Client();
+    $url = "https://api.unsplash.com/photos/random?client_id=" . $accessKey;
+
+    $response = $client->get($url);
+
+    return collect(json_decode((string) $response->getBody(), true));
+});

@@ -8,7 +8,14 @@
                     Bienvenido
                 </div>
                 <hr />
-                <div
+                <div class="flex justify-center mt-4 p-4 rounded-lg shadow-2xl">
+                    <img
+                        class="transform min-w-full rounded-lg"
+                        :src="foto.urls.full"
+                        alt=""
+                    />
+                </div>
+                <!-- <div
                     class="grid grid-rows-2 grid-flow-col gap-2 justify-items-stretch p-2"
                 >
                     <div
@@ -47,7 +54,7 @@
                             alt=""
                         />
                     </div>
-                </div>
+                </div> -->
             </div>
         </layout>
     </div>
@@ -58,13 +65,24 @@ import layout from "./Shared/Layout";
 export default {
     data() {
         return {
-            //
+            foto: null
         };
     },
+
+    mounted() {
+        this.photo();
+    },
+
     props: ["visitas"],
+
     components: { layout },
+
     methods: {
-        //
+        photo() {
+            axios.get("api/unsplash").then(response => {
+                this.foto = response.data;
+            });
+        }
     }
 };
 </script>

@@ -115,7 +115,7 @@
                     <inertia-link
                         href="/scores"
                         class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >Resultados Fútbol
+                        >Resultados Deportivos
                     </inertia-link>
                 </div>
                 <div class="text-sm ">
@@ -190,12 +190,12 @@ export default {
             document.getElementById("myBtn").classList.remove("invisible");
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "90px";
+                // document.getElementById("navbar").style.top = "90px";
                 if (document.getElementById("myIFrame").getAttribute("src")) {
                     document.getElementById("footer").style.bottom = "0px";
                 }
             } else {
-                document.getElementById("navbar").style.top = "-50px";
+                // document.getElementById("navbar").style.top = "-50px";
                 document.getElementById("footer").style.bottom = "-150px";
             }
             prevScrollpos = currentScrollPos;

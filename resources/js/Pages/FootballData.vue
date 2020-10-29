@@ -169,8 +169,12 @@ export default {
                     this.competition = response.data.competition;
                     this.matches = response.data.matches;
                     this.currentMatchday = response.data.filters.matchday;
-                    this.tableCompetition();
-                    this.scorers();
+                    setTimeout(() => {
+                        this.tableCompetition();
+                    }, 500);
+                    setTimeout(() => {
+                        this.scorers();
+                    }, 500);
                     this.selected = "partidos";
                 })
                 .catch(() => {

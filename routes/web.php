@@ -29,7 +29,7 @@ Route::get('/scores', function () {
 });
 
 Route::get('/youtube', function () {
-    return Inertia::render('Youtube');
+    // return Inertia::render('Youtube');
 });
 
 Route::get('/radios', function () {
@@ -54,7 +54,7 @@ Route::get('/juegos', function () {
 
 Route::get('/test', function () {
     // return Inertia::render('FootballData');
-    return Inertia::render('Scores');
+    // return Inertia::render('Scores');
 });
 
 // Route::resource('/users', 'UserController');

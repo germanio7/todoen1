@@ -26,178 +26,60 @@
                 >
                     {{ competition.name }}
                 </div>
-                <!-- Partidos -->
-                <div
-                    v-if="matches"
-                    class="grid grid-cols-1 md:grid-cols-2 justify-center items-center"
-                >
-                    <div
-                        class="flex justify-center"
-                        v-for="item in matches"
-                        :key="item.id"
-                    >
-                        <div
-                            class="w-full border-l-4 rounded-lg border-purple-500 overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-2"
-                        >
-                            <div
-                                class="flex justify-between bg-white  p-6 items-center"
-                            >
-                                <div class="text-left">
-                                    <h2 class="text-base">
-                                        {{ item.homeTeam.name }}
-                                    </h2>
-                                </div>
-                                <b>
-                                    {{ item.score.fullTime.homeTeam }}
-                                </b>
-                                <div class="text-center">
-                                    <b>-</b>
-                                </div>
-                                <b>{{ item.score.fullTime.awayTeam }} </b>
-                                <div class="text-right">
-                                    <h2 class="text-base">
-                                        {{ item.awayTeam.name }}
-                                    </h2>
-                                </div>
-                            </div>
-                            <div
-                                class="bg-purple-100 text-center font-semibold"
-                            >
-                                <p v-if="item.status == 'FINISHED'">
-                                    Finalizado
-                                </p>
-                                <p v-if="item.status == 'POSTPONED'">
-                                    Aplazado
-                                </p>
-                                <p v-if="item.status == 'CANCELED'">
-                                    Cancelado
-                                </p>
-                                <p v-if="item.status == 'SUSPENDED'">
-                                    Suspendido
-                                </p>
-                                <p v-if="item.status == 'IN_PLAY'">
-                                    En juego
-                                </p>
-                                <p v-if="item.status == 'PAUSED'">
-                                    En pausa
-                                </p>
-                                <p v-if="item.status == 'AWARDED'">
-                                    Awarded
-                                </p>
-                                <p v-if="item.status == 'SCHEDULED'">
-                                    Programado
-                                </p>
-                                <p>
-                                    <span>
-                                        Fecha Nº {{ item.matchday }} |
-                                    </span>
-                                    {{
-                                        new Date(item.utcDate).toLocaleString()
-                                    }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div v-if="competition" class="flex justify-center mx-2 px-2">
-                    <button
-                        @click="lastRound()"
-                        class="bg-purple-500 w-auto hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded m-4 rounded-l"
-                    >
-                        Fecha Anterior
-                    </button>
-                    <button
-                        @click="currentRound()"
-                        class="bg-purple-500 w-auto hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded m-4 rounded-l"
-                    >
-                        Fecha En Curso
-                    </button>
-                    <button
-                        @click="nextRound()"
-                        class="bg-purple-500 w-auto hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded m-4 rounded-r"
-                    >
-                        Próxima Fecha
-                    </button>
+                    <nav class="flex flex-col sm:flex-row">
+                        <button
+                            :class="
+                                selected == 'partidos'
+                                    ? 'border-b-2 font-medium border-purple-500 text-purple-500'
+                                    : ''
+                            "
+                            @click="selected = 'partidos'"
+                            class="text-gray-600 py-4 px-6 block hover:text-purple-500 focus:outline-none "
+                        >
+                            Partidos</button
+                        ><button
+                            :class="
+                                selected == 'posiciones'
+                                    ? 'border-b-2 font-medium border-purple-500 text-purple-500'
+                                    : ''
+                            "
+                            @click="selected = 'posiciones'"
+                            class="text-gray-600 py-4 px-6 block hover:text-purple-500 focus:outline-none"
+                        >
+                            Tabla Posiciones</button
+                        ><button
+                            :class="
+                                selected == 'goleadores'
+                                    ? 'border-b-2 font-medium border-purple-500 text-purple-500'
+                                    : ''
+                            "
+                            @click="selected = 'goleadores'"
+                            class="text-gray-600 py-4 px-6 block hover:text-purple-500 focus:outline-none"
+                        >
+                            Tabla Goleadores
+                        </button>
+                    </nav>
                 </div>
-                <div
-                    v-if="tablaPos"
-                    class="grid grid-cols-1 lg:grid-cols-2 bg-gray-900 rounded overflow-hidden shadow-lg m-4 p-4 relative"
-                >
-                    <div v-for="posiciones in tablaPos" :key="posiciones.id">
-                        <!-- tabla Pos-->
-                        <div class="overflow-x-auto my-4 mx-2">
-                            <table class="table-auto bg-white">
-                                <thead>
-                                    <tr>
-                                        <th class="px-4 py-2">Pos</th>
-                                        <th class="px-4 py-2">Equipo</th>
-                                        <th class="px-4 py-2">J</th>
-                                        <th class="px-4 py-2">G</th>
-                                        <th class="px-4 py-2">E</th>
-                                        <th class="px-4 py-2">P</th>
-                                        <th class="px-4 py-2">Puntos</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr
-                                        v-for="item in posiciones.table"
-                                        :key="item.id"
-                                    >
-                                        <td class="border px-4 py-2">
-                                            {{ item.position }}
-                                        </td>
-                                        <td class="border px-4 py-2">
-                                            {{ item.team.name }}
-                                        </td>
-                                        <td class="border px-4 py-2">
-                                            {{ item.playedGames }}
-                                        </td>
-                                        <td class="border px-4 py-2">
-                                            {{ item.won }}
-                                        </td>
-                                        <td class="border px-4 py-2">
-                                            {{ item.draw }}
-                                        </td>
-                                        <td class="border px-4 py-2">
-                                            {{ item.lost }}
-                                        </td>
-                                        <td
-                                            class="border text-center px-4 py-2"
-                                        >
-                                            {{ item.points }}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <!-- Partidos -->
+                <matches-component
+                    v-show="selected == 'partidos'"
+                    :competition="competition"
+                    :currentMatchday="currentMatchday"
+                    :matches="matches"
+                ></matches-component>
 
-                    <!-- goleadores -->
-                    <div v-if="tableScorers" class="overflow-x-auto mt-4 mx-2">
-                        <table class="table-auto bg-white">
-                            <thead>
-                                <tr>
-                                    <th class="px-4 py-2">Jugador</th>
-                                    <th class="px-4 py-2">Equipo</th>
-                                    <th class="px-4 py-2">Goles</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="item in tableScorers" :key="item.id">
-                                    <td class="border px-4 py-2">
-                                        {{ item.player.name }}
-                                    </td>
-                                    <td class="border px-4 py-2">
-                                        {{ item.team.name }}
-                                    </td>
-                                    <td class="border text-center px-4 py-2">
-                                        {{ item.numberOfGoals }}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <!-- Posiciones -->
+                <positions-component
+                    v-show="selected == 'posiciones'"
+                    :tablaPos="tablaPos"
+                ></positions-component>
+
+                <!-- Goleadores -->
+                <scorers-component
+                    v-show="selected == 'goleadores'"
+                    :tableScorers="tableScorers"
+                ></scorers-component>
             </div>
         </layout>
     </div>
@@ -205,10 +87,14 @@
 
 <script>
 import layout from "./Shared/Layout";
+import MatchesComponent from "./MatchesComponent";
+import PositionsComponent from "./PositionsComponent";
+import ScorersComponent from "./ScorersComponent";
 
 export default {
     data() {
         return {
+            matches: null,
             competitions: [
                 {
                     id: 2001,
@@ -255,19 +141,24 @@ export default {
                     name: "European-Cup of Nations"
                 }
             ],
-            matches: null,
             tablaPos: null,
             tableScorers: null,
             competition: null,
-            currentMatchday: null
+            currentMatchday: null,
+            selected: "partidos"
         };
     },
 
-    components: { layout },
+    components: {
+        layout,
+        MatchesComponent,
+        PositionsComponent,
+        ScorersComponent
+    },
 
     methods: {
         setCompetition(id) {
-            this.matches = null;
+            this.selected = "";
             this.tablaPos = null;
             this.tableScorers = null;
             this.competition = null;
@@ -280,48 +171,7 @@ export default {
                     this.currentMatchday = response.data.filters.matchday;
                     this.tableCompetition();
                     this.scorers();
-                })
-                .catch(() => {
-                    console.log("Ha ocurrido un error..-");
-                });
-        },
-
-        lastRound() {
-            axios
-                .post("api/partidos", {
-                    id: this.competition.id,
-                    round: Number(this.currentMatchday) - 1
-                })
-                .then(response => {
-                    this.matches = response.data.matches;
-                })
-                .catch(() => {
-                    console.log("Ha ocurrido un error..-");
-                });
-        },
-
-        currentRound() {
-            axios
-                .post("api/partidos", {
-                    id: this.competition.id,
-                    round: this.currentMatchday
-                })
-                .then(response => {
-                    this.matches = response.data.matches;
-                })
-                .catch(() => {
-                    console.log("Ha ocurrido un error..-");
-                });
-        },
-
-        nextRound() {
-            axios
-                .post("api/partidos", {
-                    id: this.competition.id,
-                    round: Number(this.currentMatchday) + 1
-                })
-                .then(response => {
-                    this.matches = response.data.matches;
+                    this.selected = "partidos";
                 })
                 .catch(() => {
                     console.log("Ha ocurrido un error..-");

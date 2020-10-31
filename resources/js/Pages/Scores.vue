@@ -9,148 +9,22 @@
                         Resultados Deportivos
                     </div>
                 </div>
+                <a
+                    target="_blank"
+                    class="flex justify-center font-bold text-purple-900"
+                    href="https://futbollibre.online/es"
+                >
+                    Ver Partidos online - Fútbol Libre</a
+                >
                 <hr />
                 <div class="flex-wrap md:flex justify-center px-6 pt-4 pb-2">
-                    <span
-                        @click="setCompetition(4328)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Premier League</span
-                    >
-                    <span
-                        @click="setCompetition(4482)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#FA Cup</span
-                    >
-                    <span
-                        @click="setCompetition(4570)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Carabao Cup</span
-                    >
-                    <span
-                        @click="setCompetition(4331)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Bundesliga</span
-                    >
-                    <span
-                        @click="setCompetition(4485)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#DFB Cup</span
-                    >
-                    <span
-                        @click="setCompetition(4335)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#La Liga Santander</span
-                    >
-                    <span
-                        @click="setCompetition(4483)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Copa del Rey</span
-                    >
-                    <span
-                        @click="setCompetition(4334)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Ligue 1</span
-                    >
-                    <span
-                        @click="setCompetition(4484)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Coupe de France</span
-                    >
-                    <span
-                        @click="setCompetition(4332)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Serie A</span
-                    >
-                    <span
-                        @click="setCompetition(4506)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Coppa Italia</span
-                    >
-                    <span
-                        @click="setCompetition(4406)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Superliga Argentina</span
-                    >
-                    <span
-                        @click="setCompetition(4500)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Copa Argentina</span
-                    >
-                    <span
-                        @click="setCompetition(4616)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Nacional B</span
-                    >
-                    <span
-                        @click="setCompetition(4480)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#UEFA Champions League</span
-                    >
-                    <span
-                        @click="setCompetition(4481)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#UEFA Europa League</span
-                    >
-                    <span
-                        @click="setCompetition(4501)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Copa Libertadores</span
-                    >
-                    <span
-                        @click="setCompetition(4724)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#CONMEBOL Sudamericana</span
-                    >
-                    <span
-                        @click="setCompetition(4429)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#FIFA World Cup</span
-                    >
-                    <span
-                        @click="setCompetition(4387)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#NBA</span
-                    >
-                    <span
-                        @click="setCompetition(4546)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#EuroLeague Basketball</span
-                    >
-                    <span
-                        @click="setCompetition(4734)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#LNB</span
-                    >
-                    <span
-                        @click="setCompetition(4370)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#F1</span
-                    >
-                    <span
-                        @click="setCompetition(4407)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#MotoGP</span
-                    >
-                    <span
-                        @click="setCompetition(4409)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#World Rally Championship</span
-                    >
-                    <span
-                        @click="setCompetition(4464)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#ATP</span
-                    >
-                    <span
-                        @click="setCompetition(4443)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#UFC</span
-                    >
-                    <span
-                        @click="setCompetition(4551)"
-                        class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                        >#Super Rugby</span
-                    >
+                    <div v-for="item in competitions" :key="item.id">
+                        <span
+                            @click="setCompetition(item.id)"
+                            class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                            >#{{ item.name }}</span
+                        >
+                    </div>
                 </div>
                 <hr />
                 <div
@@ -158,147 +32,49 @@
                     v-if="competition"
                     class="flex justify-center m-4"
                 >
-                    <img :src="competition.strBadge" class="w-32" alt="img" />
+                    <img
+                        :src="competition.strBadge"
+                        class="w-16 md:w-24 lg:w-32"
+                        alt="img"
+                    />
+                </div>
+                <div v-if="competition" class="flex justify-center mx-2 px-2">
+                    <nav class="flex flex-col sm:flex-row">
+                        <button
+                            :class="
+                                selected == 'partidos'
+                                    ? 'border-b-2 font-medium border-purple-500 text-purple-500'
+                                    : ''
+                            "
+                            @click="selected = 'partidos'"
+                            class="text-gray-600 py-4 px-6 block hover:text-purple-500 focus:outline-none "
+                        >
+                            Partidos</button
+                        ><button
+                            :class="
+                                selected == 'posiciones'
+                                    ? 'border-b-2 font-medium border-purple-500 text-purple-500'
+                                    : ''
+                            "
+                            @click="selected = 'posiciones'"
+                            class="text-gray-600 py-4 px-6 block hover:text-purple-500 focus:outline-none"
+                        >
+                            Tabla Posiciones
+                        </button>
+                    </nav>
                 </div>
                 <!-- Partidos -->
-                <div
-                    v-if="events"
-                    class="grid grid-cols-1 md:grid-cols-2 justify-center items-center"
-                >
-                    <div
-                        class="flex justify-center"
-                        v-for="item in events"
-                        :key="item.id"
-                    >
-                        <div
-                            class="w-full border-l-4 rounded-lg border-purple-500 overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-2"
-                        >
-                            <div
-                                v-if="
-                                    competition.strSport == 'Tennis' ||
-                                        competition.strSport == 'Motorsport' ||
-                                        competition.strSport == 'Fighting'
-                                "
-                                class="text-center text-base bg-white  p-6"
-                            >
-                                {{ item.strEvent }}
-                            </div>
+                <partidos
+                    v-show="selected == 'partidos'"
+                    :events="events"
+                    :competition="competition"
+                ></partidos>
 
-                            <div
-                                v-else
-                                class="flex justify-between bg-white  p-6 items-center"
-                            >
-                                <div class="text-left">
-                                    <h2 class="text-base">
-                                        {{ item.strHomeTeam }}
-                                    </h2>
-                                </div>
-                                <b>
-                                    {{ item.intHomeScore }}
-                                </b>
-                                <div class="text-center">
-                                    <b>-</b>
-                                </div>
-                                <b>{{ item.intAwayScore }} </b>
-                                <div class="text-right">
-                                    <h2 class="text-base">
-                                        {{ item.strAwayTeam }}
-                                    </h2>
-                                </div>
-                            </div>
-                            <div
-                                class="bg-purple-100 text-center font-semibold"
-                            >
-                                <p v-if="item.strStatus == 'Match Finished'">
-                                    Finalizado
-                                </p>
-                                <p v-if="item.strStatus == 'Halftime'">
-                                    Medio Tiempo
-                                </p>
-                                <p>
-                                    <span v-if="item.strSport == 'Soccer'">
-                                        Round Nº {{ item.intRound }} |
-                                    </span>
-                                    {{ item.dateEvent }}
-                                </p>
-                                <a
-                                    class="text-blue-500 text-center cursor-pointer break-words font-mono text-xs pt-4 no-underline hover:underline"
-                                    target="_blank"
-                                    :href="item.strVideo"
-                                    >{{ item.strVideo }}</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div v-if="competition" class="flex justify-center">
-                    <button
-                        @click="lastEvents(competition.idLeague)"
-                        class="bg-purple-500 w-auto hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded  m-4 rounded-l"
-                    >
-                        Últimos eventos
-                    </button>
-                    <button
-                        @click="nextEvents(competition.idLeague)"
-                        class="bg-purple-500 w-auto hover:bg-purple-400 text-white font-bold py-2 px-4 border-b-4 border-purple-700 hover:border-purple-500 rounded  m-4 rounded-r"
-                    >
-                        Próximos eventos
-                    </button>
-                </div>
-                <div v-if="competition" class="flex justify-center m-4">
-                    <img :src="competition.strBanner" class="w-1/2" />
-                </div>
-
-                <div
-                    v-if="
-                        tablaPos &&
-                            competition.idCup != 1 &&
-                            competition.strSport == 'Soccer'
-                    "
-                    class="flex justify-center bg-gray-900 rounded overflow-hidden shadow-lg m-4 p-4 relative"
-                >
-                    <!-- tabla Pos-->
-                    <div class="overflow-x-auto my-4 mx-2">
-                        <table class="table-auto bg-white">
-                            <thead>
-                                <tr>
-                                    <th class="px-4 py-2">Pos</th>
-                                    <th class="px-4 py-2">Equipo</th>
-                                    <th class="px-4 py-2">J</th>
-                                    <th class="px-4 py-2">G</th>
-                                    <th class="px-4 py-2">E</th>
-                                    <th class="px-4 py-2">P</th>
-                                    <th class="px-4 py-2">Puntos</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="(value, key, index) in tablaPos">
-                                    <td class="border text-center px-4 py-2">
-                                        {{ key + 1 }}
-                                    </td>
-                                    <td class="border px-4 py-2">
-                                        {{ value.name }}
-                                    </td>
-                                    <td class="border px-4 py-2">
-                                        {{ value.played }}
-                                    </td>
-                                    <td class="border px-4 py-2">
-                                        {{ value.win }}
-                                    </td>
-                                    <td class="border px-4 py-2">
-                                        {{ value.draw }}
-                                    </td>
-                                    <td class="border px-4 py-2">
-                                        {{ value.loss }}
-                                    </td>
-                                    <td class="border text-center px-4 py-2">
-                                        {{ value.total }}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <posiciones
+                    v-show="selected == 'posiciones'"
+                    :competition="competition"
+                    :tablaPos="tablaPos"
+                ></posiciones>
             </div>
         </layout>
     </div>
@@ -306,40 +82,124 @@
 
 <script>
 import layout from "./Shared/Layout";
+import partidos from "./ScoresMatches";
+import posiciones from "./ScoresTablePositions";
 
 export default {
     data() {
         return {
+            competitions: [
+                {
+                    id: 4480,
+                    name: "UEFA Champions League"
+                },
+                {
+                    id: 4481,
+                    name: "UEFA Europa League"
+                },
+                {
+                    id: 4501,
+                    name: "Copa Libertadores"
+                },
+                {
+                    id: 4724,
+                    name: "CONMEBOL Sudamericana"
+                },
+                {
+                    id: 4328,
+                    name: "Premier League - Inglaterra"
+                },
+                {
+                    id: 4482,
+                    name: "FA Cup"
+                },
+                {
+                    id: 4570,
+                    name: "Carabao Cup"
+                },
+                {
+                    id: 4332,
+                    name: "Serie A - Italia"
+                },
+                {
+                    id: 4506,
+                    name: "Coppa Italia"
+                },
+                {
+                    id: 4331,
+                    name: "Bundesliga - Alemania"
+                },
+                {
+                    id: 4485,
+                    name: "DFB Cup"
+                },
+                {
+                    id: 4335,
+                    name: "Primera Division - España"
+                },
+                {
+                    id: 4483,
+                    name: "Copa del Rey"
+                },
+                {
+                    id: 4334,
+                    name: "Ligue 1 - Francia"
+                },
+                {
+                    id: 4484,
+                    name: "Coupe de France"
+                },
+                {
+                    id: 4406,
+                    name: "Superliga Argentina"
+                },
+                {
+                    id: 4500,
+                    name: "Copa Argentina"
+                },
+                {
+                    id: 4429,
+                    name: "FIFA World Cup"
+                },
+                {
+                    id: 4387,
+                    name: "NBA"
+                },
+                {
+                    id: 4546,
+                    name: "EuroLeague Basketball"
+                },
+                {
+                    id: 4734,
+                    name: "LNB"
+                }
+            ],
             events: null,
             tablaPos: null,
             tableScorers: null,
-            competition: null
+            competition: null,
+            selected: "partidos"
         };
     },
 
-    components: { layout },
+    components: { layout, partidos, posiciones },
 
     methods: {
         setCompetition(id) {
+            this.selected = "";
             this.competition = null;
             this.tablaPos = null;
             this.events = null;
             axios.get("api/competition/" + id).then(response => {
                 this.competition = response.data.leagues[0];
+                this.lastEvents(id);
                 this.tableCompetition();
+                this.selected = "partidos";
             });
-            this.lastEvents(id);
         },
 
         lastEvents(id) {
             axios.get("api/last-events/" + id).then(response => {
-                this.events = response.data.events;
-                this.scrolltoview();
-            });
-        },
-
-        nextEvents(id) {
-            axios.get("api/next-events/" + id).then(response => {
                 this.events = response.data.events;
                 this.scrolltoview();
             });

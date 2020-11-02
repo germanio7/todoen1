@@ -139,7 +139,7 @@
             <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
                 <div v-for="item in news" :key="item.id">
                     <div
-                        class="max-w-sm border-b-4 border-purple-500 rounded bg-white overflow-hidden shadow-lg m-2 p-2 h-full "
+                        class="max-w-sm flex flex-col flex-1 border-b-4 border-purple-500 rounded bg-white overflow-hidden shadow-lg m-2 p-2 h-full "
                     >
                         <img
                             class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -161,7 +161,7 @@
                             >
                         </div>
                         <div
-                            class="grid grid-cols-1 justify-between items-center"
+                            class="flex flex-col flex-1 justify-between items-center"
                         >
                             <div class="px-6 pt-4 pb-2">
                                 <span

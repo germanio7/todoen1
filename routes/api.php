@@ -139,6 +139,15 @@ Route::get('/next-events/{id}', function ($id) {
     return collect(json_decode((string) $response->getBody(), true));
 });
 
+Route::get('/event-results/{id}', function ($id) {
+    $client = new Client();
+    $url = 'https://www.thesportsdb.com/api/v1/json/1/eventresults.php?id=' . $id;
+
+    $response = $client->get($url);
+
+    return collect(json_decode((string) $response->getBody(), true));
+});
+
 Route::get('/dolar-blue', function () {
     $client = new Client();
     $url = 'https://api-dolar-argentina.herokuapp.com/api/dolarblue';

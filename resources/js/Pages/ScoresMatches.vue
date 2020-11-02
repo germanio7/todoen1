@@ -58,12 +58,26 @@
                             </span>
                             {{ item.dateEvent }}
                         </p>
-                        <a
-                            class="text-blue-500 text-center cursor-pointer break-words font-mono text-xs pt-4 no-underline hover:underline"
-                            target="_blank"
-                            :href="item.strVideo"
-                            >{{ item.strVideo }}</a
-                        >
+                        <p>
+                            <a
+                                class="text-blue-500 text-center cursor-pointer break-words font-mono text-xs pt-4 no-underline hover:underline"
+                                target="_blank"
+                                :href="item.strVideo"
+                                >{{ item.strVideo }}</a
+                            >
+                        </p>
+                        <p>
+                            <button
+                                class="font-bold text-purple-900"
+                                v-if="competition.strSport == 'Motorsport'"
+                                @click="
+                                    showModal = true;
+                                    auxEvent = item.idEvent;
+                                "
+                            >
+                                Ver Más...
+                            </button>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -82,17 +96,27 @@
                 Próximos eventos
             </button>
         </div>
+
+        <modal
+            :eventoid="auxEvent"
+            @cerrar-modal="cerrar"
+            v-show="showModal"
+        ></modal>
     </div>
 </template>
 
 <script>
+import modal from "./ScoresModal";
+
 export default {
     data() {
         return {
-            //
+            showModal: false,
+            auxEvent: null
         };
     },
     props: ["events", "competition"],
+    components: { modal },
     methods: {
         lastEvents(id) {
             axios.get("api/last-events/" + id).then(response => {
@@ -111,6 +135,10 @@ export default {
         scrolltoview() {
             let aux = document.getElementById("subir");
             aux.scrollIntoView();
+        },
+
+        cerrar() {
+            this.showModal = false;
         }
     }
 };

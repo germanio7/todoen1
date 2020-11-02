@@ -158,6 +158,10 @@ export default {
                     name: "Copa Argentina"
                 },
                 {
+                    id: 4616,
+                    name: "Primera B Nacional"
+                },
+                {
                     id: 4429,
                     name: "FIFA World Cup"
                 },
@@ -170,8 +174,16 @@ export default {
                     name: "EuroLeague Basketball"
                 },
                 {
-                    id: 4734,
-                    name: "LNB"
+                    id: 4370,
+                    name: "F1"
+                },
+                {
+                    id: 4407,
+                    name: "MotoGP"
+                },
+                {
+                    id: 4551,
+                    name: "Super Rugby"
                 }
             ],
             events: null,

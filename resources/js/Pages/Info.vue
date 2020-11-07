@@ -175,15 +175,15 @@ export default {
                     name: "News API",
                     img: "https://newsapi.org/images/n-logo-border.png"
                 },
-                // {
-                //     name: "The Sports DB",
-                //     img:
-                //         "https://www.thesportsdb.com/images/logo_new-medium.png"
-                // },
                 {
-                    name: "Football Data",
-                    img: "https://www.football-data.org/assets/logo.jpg"
+                    name: "The Sports DB",
+                    img:
+                        "https://www.thesportsdb.com/images/logo_new-medium.png"
                 },
+                // {
+                //     name: "Football Data",
+                //     img: "https://www.football-data.org/assets/logo.jpg"
+                // },
                 {
                     name: "RetroGames",
                     img: "https://www.retrogames.cc/images/logo.png?v=20180731"

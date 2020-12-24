@@ -8,7 +8,7 @@
                     Bienvenido
                 </div>
                 <hr />
-                <div
+                <!-- <div
                     class="grid grid-rows-2 grid-flow-col gap-2 font-mono font-bold text-white justify-items-stretch p-2"
                 >
                     <div
@@ -66,6 +66,16 @@
                         >
                             clima
                         </div>
+                    </div>
+                </div> -->
+                <div
+                    class="row-span-2 relative rounded-lg flex justify-center items-center"
+                >
+                    <img class="w-full " src="fiestas.jpg" alt="" />
+                    <div
+                        class="absolute bg-black text-white rounded uppercase text-lg md:text-3xl lg:text-4xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                    >
+                        Felices Fiestas!!!
                     </div>
                 </div>
             </div>

@@ -9,13 +9,22 @@
                         Resultados Deportivos
                     </div>
                 </div>
-                <a
+                <!-- <a
                     target="_blank"
                     class="flex justify-center font-bold text-purple-900"
                     href="https://futbollibre.online/es"
                 >
                     Ver Partidos online - Fútbol Libre</a
-                >
+                > -->
+                <div class="flex justify-center">
+                    <button
+                        @click="verFutbol()"
+                        class="font-bold outline text-purple-900"
+                    >
+                        Ver Partidos online - Fútbol Libre
+                    </button>
+                </div>
+
                 <hr />
                 <div class="flex-wrap md:flex justify-center px-6 pt-4 pb-2">
                     <div v-for="item in competitions" :key="item.id">
@@ -27,6 +36,16 @@
                     </div>
                 </div>
                 <hr />
+
+                <div id="futbol">
+                    <iframe
+                        v-show="futbol"
+                        class="w-full h-screen"
+                        src="https://futbollibre.online/es/"
+                        frameborder="0"
+                    ></iframe>
+                </div>
+
                 <div
                     id="subir"
                     v-if="competition"
@@ -190,7 +209,8 @@ export default {
             tablaPos: null,
             tableScorers: null,
             competition: null,
-            selected: "partidos"
+            selected: "partidos",
+            futbol: false
         };
     },
 
@@ -231,6 +251,11 @@ export default {
                 .then(response => {
                     this.tablaPos = response.data.table;
                 });
+        },
+
+        verFutbol() {
+            this.futbol = !this.futbol;
+            document.getElementById("futbol").scrollIntoView();
         }
     }
 };

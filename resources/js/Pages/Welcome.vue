@@ -71,7 +71,7 @@
                 <div
                     class="row-span-2 relative rounded-lg flex justify-center items-center"
                 >
-                    <img class="w-full " src="fiestas.jpg" alt="" />
+                    <img class="w-full " src="party.jpeg" alt="" />
                     <div
                         class="absolute bg-black text-white rounded uppercase text-lg md:text-3xl lg:text-4xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                     >

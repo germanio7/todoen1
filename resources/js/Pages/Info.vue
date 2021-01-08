@@ -154,8 +154,7 @@ export default {
                 },
                 {
                     name: "Tailwind CSS",
-                    img:
-                        "https://tailwindcss.com/_next/static/media/twitter-square.18b32c43e6fa4c8ee7db66330112a331.png"
+                    img: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
                 },
                 {
                     name: "VueJS",
@@ -175,11 +174,11 @@ export default {
                     name: "News API",
                     img: "https://newsapi.org/images/n-logo-border.png"
                 },
-                {
-                    name: "The Sports DB",
-                    img:
-                        "https://www.thesportsdb.com/images/logo_new-medium.png"
-                },
+                // {
+                //     name: "The Sports DB",
+                //     img:
+                //         "https://www.thesportsdb.com/images/logo_new-medium.png"
+                // },
                 // {
                 //     name: "Football Data",
                 //     img: "https://www.football-data.org/assets/logo.jpg"

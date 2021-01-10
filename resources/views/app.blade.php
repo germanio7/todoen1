@@ -14,9 +14,35 @@
 
 </head>
 
+<style>
+	/* width */
+	::-webkit-scrollbar {
+		width: 16px;
+		height: 16px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		/* border-radius: 100vh; */
+		background: #111827;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #8B5CF6;
+		border-radius: 100vh;
+		border: 3px solid #111827;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #8B5CF6;
+	}
+</style>
+
 {{-- <body class="bg-auto font-mono" style="background-image: url(./fondo.svg);"> --}}
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 scrollbar-thumb:bg-red-500 scrollbar-track:rounded">
 	@inertia
 </body>
 <footer>

@@ -4,14 +4,15 @@
             <section class="mx-auto">
                 <div class="container px-5 mx-auto lg:px-24 ">
                     <div
-                        class="flex flex-col w-full mb-12 text-left lg:text-center"
+                        class="flex flex-col w-full mb-2 text-left lg:text-center"
                     >
                         <h1
-                            class="mb-6 text-2xl text-center font-semibold text-blue-800 title-font"
+                            class=" text-2xl text-center font-semibold text-blue-800 title-font"
                         >
                             Radios
                         </h1>
                     </div>
+                    <hr />
                     <div
                         class="grid grid-cols-3 gap-16 my-16 text-center lg:grid-cols-6"
                     >

@@ -1,10 +1,12 @@
 <template>
     <div>
         <layout>
-            <div
-                class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
-            >
-                Juegos
+            <div class="flex flex-col w-full mb-4 text-left lg:text-center">
+                <h1
+                    class="text-2xl text-center font-semibold text-blue-800 title-font"
+                >
+                    Juegos
+                </h1>
             </div>
             <hr />
             <div class="flex-wrap justify-center px-6 pt-4 pb-2">

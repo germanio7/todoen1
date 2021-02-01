@@ -1,10 +1,12 @@
 <template>
     <div>
         <layout>
-            <div
-                class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900 "
-            >
-                Clima
+            <div class="flex flex-col w-full mb-2 text-left lg:text-center">
+                <h1
+                    class=" text-2xl text-center font-semibold text-blue-800 title-font"
+                >
+                    Clima
+                </h1>
             </div>
             <hr />
             <div class="flex justify-center items-center ">
@@ -83,7 +85,7 @@
             <div
                 id="animacion"
                 v-if="selected || resAux"
-                class="flex-wrap bg-gray-900 justify-center rounded overflow-hidden shadow-lg m-4 p-4 relative"
+                class="flex-wrap justify-center rounded overflow-hidden  m-4 p-4 relative"
             >
                 <div class="block lg:flex justify-center">
                     <div v-if="resAux">
@@ -96,9 +98,7 @@
                         <card-seven-days :days="days"></card-seven-days>
                     </div>
                 </div>
-                <div
-                    class="flex justify-center p-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                >
+                <div class="flex justify-center p-2">
                     <img class="w-auto" :src="image" alt="" />
                 </div>
             </div>

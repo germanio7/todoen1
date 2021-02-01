@@ -37,7 +37,8 @@ Route::get('/radios', function () {
 });
 
 Route::get('/info', function () {
-    $total = DB::table('visits')->count();
+    // $total = DB::table('visits')->count();
+    $total = 999;
 
     return Inertia::render('Info', [
         'visitas' => $total

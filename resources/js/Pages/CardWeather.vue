@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center p-2">
         <div
-            class="w-auto border-b-4 border-purple-500 bg-white rounded flex flex-col justify-center items-center text-center p-6  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+            class="w-auto border-b-4 border-purple-500 bg-white rounded flex flex-col justify-center items-center text-center p-6 "
         >
             <div class="text-md font-bold flex flex-col text-gray-900">
                 <span class="uppercase">{{ res.city }}, {{ res.country }}</span>

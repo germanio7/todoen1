@@ -2,7 +2,7 @@
     <div>
         <layout>
             <div
-                class="grid grid-cols-1 md:grid-cols-2 rounded-lg justify-center bg-gradient-to-r from-purple-700 to-purple-300 text-center py-4 lg:px-4 mx-2"
+                class="grid grid-cols-1 md:grid-cols-2 rounded-lg justify-center text-center py-4 lg:px-4 mx-2"
             >
                 <div
                     class="p-2 bg-green-800 rounded-lg justify-around items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
@@ -65,10 +65,12 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
-            >
-                Noticias
+            <div class="flex flex-col w-full mb-2 text-left lg:text-center">
+                <h1
+                    class=" text-2xl text-center font-semibold text-blue-800 title-font"
+                >
+                    Noticias
+                </h1>
             </div>
             <hr />
             <div class="flex-wrap md:flex justify-center px-6 pt-4 pb-2">
@@ -109,62 +111,64 @@
                 >
             </div>
             <hr />
-            <div id="esqueleto" hidden>
-                <div
-                    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-2"
-                >
-                    <div
-                        v-for="item in 9"
-                        class="border-l-4 border-purple-500 bg-white border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto m-4"
-                    >
-                        <div class="animate-pulse flex space-x-4 ">
-                            <div
-                                class="rounded-full bg-gray-400 h-12 w-12"
-                            ></div>
-                            <div class="flex-1 space-y-4 py-1">
-                                <div
-                                    class="h-4 bg-gray-400 rounded w-3/4"
-                                ></div>
-                                <div class="space-y-2">
-                                    <div class="h-4 bg-gray-400 rounded"></div>
-                                    <div
-                                        class="h-4 bg-gray-400 rounded w-5/6"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+
+            <section class="text-gray-700 body-font">
                 <div v-for="item in news" :key="item.id">
                     <div
-                        class="max-w-sm flex flex-col flex-1 border-b-4 border-purple-500 rounded bg-white overflow-hidden shadow-lg m-2 p-2 h-full "
+                        class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row"
                     >
-                        <img
-                            class="w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                            :src="item.urlToImage"
-                            alt="No Image"
-                        />
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">
+                        <div
+                            class="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0"
+                        >
+                            <img
+                                class="object-cover object-center rounded"
+                                alt="hero"
+                                :src="item.urlToImage"
+                            />
+                        </div>
+                        <div
+                            class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left"
+                        >
+                            <h1
+                                class="mb-8 text-2xl font-bold tracking-tighter text-center text-blue-800 lg:text-left lg:text-2xl title-font"
+                            >
                                 {{ item.title }}
-                            </div>
-                            <p class="text-gray-700 text-base">
+                            </h1>
+                            <p
+                                class="mb-8 text-base leading-relaxed text-center text-gray-700 lg:text-left lg:text-1xl"
+                            >
                                 {{ item.description }}
                             </p>
-                            <a
-                                class="text-blue-500 break-words font-mono text-xs pt-4 no-underline hover:underline"
-                                target="_blank"
-                                :href="item.url"
-                                >{{ item.url }}</a
-                            >
+                            <div class="flex justify-center">
+                                <a
+                                    target="_blank"
+                                    :href="item.url"
+                                    class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 "
+                                >
+                                    Leer Más
+                                    <svg
+                                        class="w-4 h-4 ml-2"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        width="20"
+                                        height="20"
+                                        fill="currentColor"
+                                    >
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <div id="esqueleto" hidden>
+                <h3 class="text-center">Cargando...</h3>
             </div>
-            <br />
-            <br />
             <hr />
             <p class="text-center text-gray-500 text-sm mt-4">
                 &copy;2021

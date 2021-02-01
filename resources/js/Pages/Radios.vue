@@ -1,44 +1,47 @@
 <template>
     <div>
         <layout>
-            <div class="grid grid-cols-1">
-                <div class="flex-wrap ">
-                    <!-- <new-alert message="Nueva Sección: Juegos"></new-alert> -->
+            <section class="mx-auto">
+                <div class="container px-5 mx-auto lg:px-24 ">
                     <div
-                        class="flex justify-center font-mono text-4xl md:text-6xl text-gray-900"
+                        class="flex flex-col w-full mb-12 text-left lg:text-center"
                     >
-                        Radios
-                    </div>
-                    <hr />
-                    <div class="flex justify-center">
-                        <div
-                            class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center"
+                        <h1
+                            class="mb-6 text-2xl text-center font-semibold text-blue-800 title-font"
                         >
-                            <div v-for="item in radios" :key="item.id">
-                                <div
-                                    @click="setRadio(item)"
-                                    class="w-full border-l-4 border-purple-500 cursor-pointer rounded overflow-hidden shadow-lg my-4 md:w-9/12 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                                >
-                                    <div
-                                        class="md:flex bg-white rounded-lg p-6 items-center"
-                                    >
-                                        <img
-                                            class="h-16 w-16 md:h-24 md:w-24 mx-auto md:mx-0 md:mr-6"
-                                            :src="item.img"
-                                            alt="no image"
-                                        />
-                                        <div class="text-center md:text-left">
-                                            <h2 class="text-lg">
-                                                {{ item.name }}
-                                            </h2>
-                                        </div>
-                                    </div>
+                            Radios
+                        </h1>
+                    </div>
+                    <div
+                        class="grid grid-cols-3 gap-16 my-16 text-center lg:grid-cols-6"
+                    >
+                        <div v-for="item in radios" :key="item.id">
+                            <div
+                                @click="setRadio(item)"
+                                class="flex-wrap items-center justify-center cursor-pointer"
+                            >
+                                <img
+                                    :src="item.img"
+                                    alt="Todoist Logo"
+                                    class="block object-contain h-16"
+                                />
+                                <div class="text-center md:text-left">
+                                    <h2 class="text-lg">
+                                        {{ item.name }}
+                                    </h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <hr />
+            <p class="text-center text-gray-500 text-sm mt-4">
+                &copy;2021
+                <a target="_blank" href="https://github.com/germanio7"
+                    >Germanio7</a
+                >
+            </p>
         </layout>
     </div>
 </template>

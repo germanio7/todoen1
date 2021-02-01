@@ -30,6 +30,15 @@
                     scrolling="no"
                 ></iframe>
             </div>
+            <br />
+
+            <hr />
+            <p class="text-center text-gray-500 text-sm mt-4">
+                &copy;2021
+                <a target="_blank" href="https://github.com/germanio7"
+                    >Germanio7</a
+                >
+            </p>
         </layout>
     </div>
 </template>

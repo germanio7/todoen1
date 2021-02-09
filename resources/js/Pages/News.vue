@@ -122,6 +122,7 @@
                         <a
                             :href="item.url"
                             aria-label="TastyIgniter: Open Source Restaurant Software"
+                            target="_blank"
                         >
                             <img
                                 :src="item.urlToImage"

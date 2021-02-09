@@ -13,27 +13,23 @@
                         </h1>
                     </div>
                     <hr />
-                    <div
-                        class="grid grid-cols-3 gap-16 my-16 text-center lg:grid-cols-6"
-                    >
+                    <br />
+                    <div class="flex flex-wrap">
                         <div v-for="item in radios" :key="item.id">
                             <div
                                 @click="setRadio(item)"
-                                class="flex-wrap items-center justify-center cursor-pointer"
+                                class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                             >
-                                <img
-                                    :src="item.img"
-                                    alt="Todoist Logo"
-                                    class="block object-contain h-16"
-                                />
-                                <div class="text-center md:text-left">
-                                    <h2 class="text-lg">
-                                        {{ item.name }}
-                                    </h2>
-                                </div>
+                                <img :src="item.img" class="h-16" alt="" />
+                                <p
+                                    class="font-body ml-2 text-sm leading-none text-white capitalize"
+                                >
+                                    {{ item.name }}
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <br />
                 </div>
             </section>
             <hr />

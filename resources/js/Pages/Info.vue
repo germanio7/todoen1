@@ -16,29 +16,31 @@
                             </h1>
                         </div>
                         <hr />
-                        <div
-                            class="grid grid-cols-3 gap-16 my-16 text-center lg:grid-cols-6"
-                        >
+
+                        <br />
+                        <div class="flex flex-wrap">
                             <div v-for="item in tecnos" :key="item.id">
                                 <div
-                                    class="flex-wrap items-center justify-center "
+                                    @click="setRadio(item)"
+                                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                                 >
-                                    <img
-                                        :src="item.img"
-                                        alt="Todoist Logo"
-                                        class="block object-contain h-16"
-                                    />
-                                    <div class="text-center md:text-left">
-                                        <h2 class="text-lg">{{ item.name }}</h2>
-                                    </div>
+                                    <img :src="item.img" class="h-16" alt="" />
+                                    <p
+                                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                                    >
+                                        {{ item.name }}
+                                    </p>
                                 </div>
                             </div>
-                            <div class="flex-wrap items-center justify-center ">
+                            <div
+                                @click="setRadio(item)"
+                                class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                            >
                                 <svg
                                     aria-hidden="true"
                                     data-prefix="fas"
                                     data-icon="gamepad"
-                                    class="block object-contain h-16"
+                                    class="h-16"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 640 512"
                                 >
@@ -47,11 +49,14 @@
                                         d="M480.07 96H160a160 160 0 10114.24 272h91.52A160 160 0 10480.07 96zM248 268a12 12 0 01-12 12h-52v52a12 12 0 01-12 12h-24a12 12 0 01-12-12v-52H84a12 12 0 01-12-12v-24a12 12 0 0112-12h52v-52a12 12 0 0112-12h24a12 12 0 0112 12v52h52a12 12 0 0112 12zm216 76a40 40 0 1140-40 40 40 0 01-40 40zm64-96a40 40 0 1140-40 40 40 0 01-40 40z"
                                     />
                                 </svg>
-                                <div class="text-center md:text-left">
-                                    <h2 class="text-lg">EmulatorJS</h2>
-                                </div>
+                                <p
+                                    class="font-body ml-2 text-sm leading-none text-white capitalize"
+                                >
+                                    EmulatorJS
+                                </p>
                             </div>
                         </div>
+                        <br />
                     </div>
                 </section>
                 <hr />

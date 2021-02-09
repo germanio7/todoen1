@@ -111,65 +111,60 @@
                 >
             </div>
             <hr />
-
-            <section class="text-gray-700 body-font">
-                <div v-for="item in news" :key="item.id">
-                    <div
-                        class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row"
+            <br />
+            <ul
+                class="lg:gap-16 sm:gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-10 col-start-2 gap-6"
+            >
+                <div v-for="item in news" :key="item.id" class="px-2">
+                    <li
+                        class="card group col-span-12 sm:col-span-6 lg:col-span-4 group-link-underline"
                     >
-                        <div
-                            class="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0"
+                        <a
+                            :href="item.url"
+                            aria-label="TastyIgniter: Open Source Restaurant Software"
                         >
                             <img
-                                class="object-cover object-center rounded"
-                                alt="hero"
                                 :src="item.urlToImage"
+                                class="w-full mb-4 rounded-lg shadow-none transition transition-shadow duration-500 ease-in-out group-hover:shadow-lg"
+                                alt=""
                             />
-                        </div>
-                        <div
-                            class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left"
-                        >
-                            <h1
-                                class="mb-8 text-2xl font-bold tracking-tighter text-center text-blue-800 lg:text-left lg:text-2xl title-font"
-                            >
-                                {{ item.title }}
-                            </h1>
-                            <p
-                                class="mb-8 text-base leading-relaxed text-center text-gray-700 lg:text-left lg:text-1xl"
-                            >
-                                {{ item.description }}
-                            </p>
-                            <div class="flex justify-center">
-                                <a
-                                    target="_blank"
-                                    :href="item.url"
-                                    class="inline-flex items-center font-semibold text-blue-700 md:mb-2 lg:mb-0 hover:text-blue-400 "
+                            <div class="flex items-center mb-3">
+                                <span
+                                    class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 text-white font-display mr-2 capitalize bg-brand-500"
+                                    style="background-color: #4662B2"
                                 >
-                                    Leer Más
-                                    <svg
-                                        class="w-4 h-4 ml-2"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="20"
-                                        height="20"
-                                        fill="currentColor"
-                                    >
-                                        <path fill="none" d="M0 0h24v24H0z" />
-                                        <path
-                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                        />
-                                    </svg>
-                                </a>
+                                    {{ item.source.name }}
+                                </span>
+                                <p
+                                    class="font-display text-xs font-normal opacity-75 text-black"
+                                >
+                                    {{
+                                        new Date(
+                                            item.publishedAt
+                                        ).toDateString()
+                                    }}
+                                </p>
                             </div>
-                        </div>
-                    </div>
+                            <p
+                                class="font-display max-w-sm text-2xl font-bold leading-tight"
+                            >
+                                <span
+                                    class="link link-underline link-underline-black text-black"
+                                >
+                                    {{ item.title }}
+                                </span>
+                            </p>
+                        </a>
+                    </li>
                 </div>
-            </section>
+            </ul>
 
             <div id="esqueleto" hidden>
                 <h3 class="text-center">Cargando...</h3>
             </div>
+            <br />
             <hr />
+
             <p class="text-center text-gray-500 text-sm mt-4">
                 &copy;2021
                 <a target="_blank" href="https://github.com/germanio7"

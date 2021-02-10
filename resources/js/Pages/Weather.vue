@@ -67,7 +67,6 @@
                                     latitude = selected.latitude;
                                     longitude = selected.longitude;
                                     sevenDays();
-                                    maps();
                                 "
                             >
                                 <pre class="truncate"
@@ -92,14 +91,11 @@
                         <card-weather-aux :res="resAux"></card-weather-aux>
                     </div>
                     <div v-if="selected">
-                        <card-weather :res="selected"></card-weather>
+                        <card-weather
+                            :res="selected"
+                            :days="days"
+                        ></card-weather>
                     </div>
-                    <div v-if="days">
-                        <card-seven-days :days="days"></card-seven-days>
-                    </div>
-                </div>
-                <div class="flex justify-center p-2">
-                    <img class="w-auto" :src="image" alt="" />
                 </div>
             </div>
 
@@ -118,7 +114,6 @@
 import layout from "./Shared/Layout";
 import CardWeather from "./CardWeather";
 import CardWeatherAux from "./CardWeatherAux";
-import CardSevenDays from "./CardSevenDays";
 import axios from "axios";
 
 export default {
@@ -135,7 +130,7 @@ export default {
             image: null
         };
     },
-    components: { layout, CardWeather, CardWeatherAux, CardSevenDays },
+    components: { layout, CardWeather, CardWeatherAux },
 
     mounted() {
         this.defaultCity();
@@ -167,7 +162,6 @@ export default {
                     document
                         .getElementById("auxi")
                         .classList.remove("animate-spin");
-                    this.maps();
                 })
                 .catch(() => {
                     console.log("Hubo un problema...");
@@ -188,30 +182,6 @@ export default {
                 .catch(() => {
                     this.auxiliar();
                 });
-        },
-        maps() {
-            let ancho = 800;
-            let alto = 600;
-            let pip = 300;
-            if (screen.width <= 640) {
-                ancho = 300;
-                alto = 400;
-                pip = 250;
-            }
-            this.image =
-                "https://image.maps.ls.hereapi.com/mia/1.6/mapview?apiKey=" +
-                this.api_key +
-                "&ppi=" +
-                pip +
-                "&c=" +
-                this.latitude +
-                "," +
-                this.longitude +
-                "&h=" +
-                alto +
-                "&w=" +
-                ancho +
-                "&z=8&pip";
         },
         sevenDays() {
             axios

@@ -24,7 +24,15 @@
                                     @click="setRadio(item)"
                                     class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                                 >
-                                    <img :src="item.img" class="h-16" alt="" />
+                                    <img
+                                        :src="
+                                            item.img
+                                                ? item.img
+                                                : './noimage.png'
+                                        "
+                                        class="h-16"
+                                        alt=""
+                                    />
                                     <p
                                         class="font-body ml-2 text-sm leading-none text-white capitalize"
                                     >

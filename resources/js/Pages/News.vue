@@ -73,49 +73,86 @@
                 </h1>
             </div>
             <hr />
-            <div class="flex-wrap md:flex justify-center px-6 pt-4 pb-2">
-                <span
+
+            <div class="flex flex-wrap justify-center pt-4 pb-2">
+                <div
                     @click="categoryNews('business')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#negocios</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
-                <span
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #negocios
+                    </p>
+                </div>
+                <div
                     @click="categoryNews('entertainment')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#entretenimiento</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
-                <span
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #entretenimiento
+                    </p>
+                </div>
+                <div
                     @click="categoryNews('general')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#general</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
-                <span
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #general
+                    </p>
+                </div>
+                <div
                     @click="categoryNews('health')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#salud</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
-                <span
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #salud
+                    </p>
+                </div>
+                <div
                     @click="categoryNews('science')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#ciencia</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
-                <span
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #ciencia
+                    </p>
+                </div>
+                <div
                     @click="categoryNews('sports')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#deportes</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
-                <span
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #deportes
+                    </p>
+                </div>
+                <div
                     @click="categoryNews('technology')"
-                    class="cursor-pointer inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-purple-700 mr-2 mb-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                    >#tecnología</span
+                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
                 >
+                    <p
+                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                    >
+                        #tecnología
+                    </p>
+                </div>
             </div>
+
             <hr />
             <br />
             <ul
                 class="lg:gap-16 sm:gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-10 col-start-2 gap-6"
             >
-                <div v-for="item in news" :key="item.id" class="px-2">
+                <div v-for="item in news" :key="item.id" class="container px-2">
                     <li
                         class="card group col-span-12 sm:col-span-6 lg:col-span-4 group-link-underline"
                     >
@@ -125,7 +162,11 @@
                             target="_blank"
                         >
                             <img
-                                :src="item.urlToImage"
+                                :src="
+                                    item.urlToImage
+                                        ? item.urlToImage
+                                        : './noimage.png'
+                                "
                                 class="w-full mb-4 rounded-lg shadow-none transition transition-shadow duration-500 ease-in-out group-hover:shadow-lg"
                                 alt=""
                             />

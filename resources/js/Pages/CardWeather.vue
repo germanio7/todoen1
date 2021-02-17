@@ -2,24 +2,28 @@
     <div class="flex justify-center p-2">
         <div class="text-white mb-8">
             <div
-                class="weather-container font-sans md:w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-lg mt-8"
+                class=" font-sans md:w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-lg mt-8"
             >
-                <div
-                    class="current-weather flex items-center justify-between px-6 py-8"
-                >
-                    <div class="flex flex-col md:flex-row items-center">
-                        <div>
+                <div class="flex items-center justify-between p-2">
+                    <div
+                        class="flex flex-col md:flex-row text-center justify-center items-center"
+                    >
+                        <div class="flex justify-center text-center">
                             <div class="text-6xl font-semibold">
                                 {{ Math.round(res.temperature) }}°C
                             </div>
                         </div>
-                        <div class="md:mx-5">
+                        <div
+                            class="flex flex-wrap justify-center text-center pl-2"
+                        >
                             <div class="font-semibold">
                                 {{ res.description }}
                             </div>
-                            {{ res.city }}, {{ res.country }}
+                            <div class="flex text-center">
+                                {{ res.city }}, {{ res.country }}
+                            </div>
                         </div>
-                        <div>
+                        <div class="flex justify-center text-center">
                             <div
                                 class="w-32 h-32 flex items-center justify-center"
                             >

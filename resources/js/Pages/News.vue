@@ -154,7 +154,7 @@
             >
                 <div v-for="item in news" :key="item.id" class="container px-2">
                     <li
-                        class="card group col-span-12 sm:col-span-6 lg:col-span-4 group-link-underline"
+                        class="card pb-8 md:pb-2 group col-span-12 sm:col-span-6 lg:col-span-4 group-link-underline"
                     >
                         <a
                             :href="item.url"

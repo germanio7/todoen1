@@ -1,12 +1,12 @@
 <template>
     <div class="flex justify-center p-2">
-        <div class="text-white mb-8">
+        <div class="flex justify-center text-white mb-8">
             <div
-                class=" font-sans md:w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-lg mt-8"
+                class="font-sans md:w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-lg mt-8"
             >
-                <div class="flex items-center justify-between p-2">
+                <div class="flex items-center justify-center p-2">
                     <div
-                        class="flex flex-col md:flex-row text-center justify-center items-center"
+                        class="flex flex-col md:flex-row text-center justify-around items-center"
                     >
                         <div class="flex justify-center text-center">
                             <div class="text-6xl font-semibold">
@@ -34,14 +34,6 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <canvas
-                            ref="iconCurrent"
-                            id="iconCurrent"
-                            width="96"
-                            height="96"
-                        ></canvas>
-                    </div>
                 </div>
                 <!-- end current-weather -->
 
@@ -57,15 +49,19 @@
                         <div class="w-1/6 text-lg text-gray-200">
                             {{ item.weekday }}
                         </div>
-                        <div class="w-4/6 px-4 flex items-center">
-                            <div>
+                        <div
+                            class="w-4/6 px-4 flex justify-center items-center"
+                        >
+                            <div class="flex justify-center">
                                 <img
                                     :src="item.iconLink + '?apiKey=' + api_key"
                                     alt=""
                                     class="pr-2"
                                 />
                             </div>
-                            <div class="ml-3">{{ item.description }}</div>
+                            <div class="hidden md:flex justify-center ml-3">
+                                {{ item.description }}
+                            </div>
                         </div>
                         <div class="w-1/6 text-right">
                             <div>{{ Math.round(item.highTemperature) }}°C</div>

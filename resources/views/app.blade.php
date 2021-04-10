@@ -11,7 +11,7 @@
 	<link rel="icon" type="image/ico" href="./globo.ico">
 
 	<script src="{{ mix('/js/app.js') }}" defer></script>
-
+	@laravelPWA
 </head>
 
 <style>

@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/offline', function () {
+    return view('vendor/laravelpwa/offline');
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome');
 });

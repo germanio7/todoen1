@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// PWA Routes
 Route::get('/offline', function () {
     return view('vendor/laravelpwa/offline');
 });

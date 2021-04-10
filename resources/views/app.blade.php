@@ -44,7 +44,11 @@
 
 <body class="bg-gray-100 scrollbar-thumb:bg-red-500 scrollbar-track:rounded">
 	@inertia
-	@yield('app')
+
+	<div id="app">
+		@yield('app')
+	</div>
+
 </body>
 <footer>
 	<div id="footer" class="z-10" style="position: fixed; bottom: -100px; width: 100%; text-align: center;">

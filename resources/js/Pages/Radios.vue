@@ -62,6 +62,12 @@ export default {
                         "https://cdn-profiles.tunein.com/s25905/images/logog.jpg?t=159040"
                 },
                 {
+                    name: "Urbana Play",
+                    url: "https://urbanaplayfm.com/radio/",
+                    img:
+                        "https://www.enlaradio.com.ar/adjuntos/image/FM/elr-urbana-play.jpg"
+                },
+                {
                     name: "La 100",
                     url: "https://tunein.com/embed/player/s6984/",
                     img:
@@ -123,12 +129,7 @@ export default {
                     url: "https://tunein.com/embed/player/s171699/",
                     img: "https://cdn-radiotime-logos.tunein.com/s171699g.png"
                 },
-                {
-                    name: "Urbana Play",
-                    url: "https://urbanaplayfm.com/",
-                    img:
-                        "https://www.enlaradio.com.ar/adjuntos/image/FM/elr-urbana-play.jpg"
-                }
+                
             ]
         };
     },

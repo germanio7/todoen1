@@ -18,5 +18,6 @@ new Vue({
 }).$mount(app);
 
 InertiaProgress.init({
-  delay: 500,
+  delay: 2500,
+  showSpinner: true,
 });

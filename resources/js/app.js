@@ -2,6 +2,7 @@ require('./bootstrap');
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
+import { InertiaProgress } from '@inertiajs/progress'
 
 Vue.use(InertiaApp)
 
@@ -14,4 +15,6 @@ new Vue({
       resolveComponent: name => require(`./Pages/${name}`).default,
     },
   }),
-}).$mount(app)
+}).$mount(app);
+
+InertiaProgress.init();

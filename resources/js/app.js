@@ -17,4 +17,6 @@ new Vue({
   }),
 }).$mount(app);
 
-InertiaProgress.init();
+InertiaProgress.init({
+  delay: 500,
+});

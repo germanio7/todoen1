@@ -5,10 +5,26 @@
                 <section class="text-gray-700 body-font">
                     <div class="container px-8 mx-auto py-36 lg:px-4">
                         <div
-                            class="flex text-center flex-col w-full mb-12 text-left lg:text-center"
+                            class="
+                                flex
+                                text-center
+                                flex-col
+                                w-full
+                                mb-12
+                                text-left
+                                lg:text-center
+                            "
                         >
                             <h1
-                                class="mb-6 text-2xl font-semibold tracking-tighter text-purple-700 sm:text-6xl title-font"
+                                class="
+                                    mb-6
+                                    text-2xl
+                                    font-semibold
+                                    tracking-tighter
+                                    text-purple-700
+                                    sm:text-6xl
+                                    title-font
+                                "
                             >
                                 Bienvenid@
                             </h1>
@@ -18,10 +34,26 @@
             </div>
 
             <ul
-                class="lg:gap-16 sm:gap-8 grid grid-cols-12 col-span-10 col-start-2 gap-6 pb-12"
+                class="
+                    lg:gap-16
+                    sm:gap-8
+                    grid grid-cols-12
+                    col-span-10 col-start-2
+                    gap-6
+                    pb-12
+                "
             >
                 <li
-                    class="card group col-span-12 text-purple-700 sm:col-span-6 lg:col-span-3 group-link-underline p-2"
+                    class="
+                        card
+                        group
+                        col-span-12
+                        text-purple-700
+                        sm:col-span-6
+                        lg:col-span-3
+                        group-link-underline
+                        p-2
+                    "
                 >
                     <inertia-link
                         href="/noticias"
@@ -31,7 +63,14 @@
                             aria-hidden="true"
                             data-prefix="fas"
                             data-icon="newspaper"
-                            class="object-cover object-center text-purple-700 w-full h-40 mb-6 rounded"
+                            class="
+                                object-cover object-center
+                                text-purple-700
+                                w-full
+                                h-40
+                                mb-6
+                                rounded
+                            "
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 576 512"
                         >
@@ -42,8 +81,22 @@
                         </svg>
                         <div class="flex items-center mb-3">
                             <span
-                                class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 text-white font-display mr-2 capitalize bg-brand-500"
-                                style="background-color: #5F41B2"
+                                class="
+                                    inline-flex
+                                    items-center
+                                    px-3
+                                    py-0.5
+                                    rounded-full
+                                    text-xs
+                                    font-bold
+                                    leading-5
+                                    text-white
+                                    font-display
+                                    mr-2
+                                    capitalize
+                                    bg-brand-500
+                                "
+                                style="background-color: #5f41b2"
                             >
                                 Noticias
                             </span>
@@ -51,7 +104,16 @@
                     </inertia-link>
                 </li>
                 <li
-                    class="card group col-span-12 text-purple-700 sm:col-span-6 lg:col-span-3 group-link-underline p-2"
+                    class="
+                        card
+                        group
+                        col-span-12
+                        text-purple-700
+                        sm:col-span-6
+                        lg:col-span-3
+                        group-link-underline
+                        p-2
+                    "
                 >
                     <inertia-link
                         href="/radios"
@@ -61,7 +123,14 @@
                             aria-hidden="true"
                             data-prefix="fas"
                             data-icon="broadcast-tower"
-                            class="object-cover object-center text-purple-700 w-full h-40 mb-6 rounded"
+                            class="
+                                object-cover object-center
+                                text-purple-700
+                                w-full
+                                h-40
+                                mb-6
+                                rounded
+                            "
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 640 512"
                         >
@@ -72,8 +141,22 @@
                         </svg>
                         <div class="flex items-center mb-3">
                             <span
-                                class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 text-white font-display mr-2 capitalize bg-brand-500"
-                                style="background-color: #5F41B2"
+                                class="
+                                    inline-flex
+                                    items-center
+                                    px-3
+                                    py-0.5
+                                    rounded-full
+                                    text-xs
+                                    font-bold
+                                    leading-5
+                                    text-white
+                                    font-display
+                                    mr-2
+                                    capitalize
+                                    bg-brand-500
+                                "
+                                style="background-color: #5f41b2"
                             >
                                 Radios
                             </span>
@@ -81,7 +164,16 @@
                     </inertia-link>
                 </li>
                 <li
-                    class="card group col-span-12 text-purple-700 sm:col-span-6 lg:col-span-3 group-link-underline p-2"
+                    class="
+                        card
+                        group
+                        col-span-12
+                        text-purple-700
+                        sm:col-span-6
+                        lg:col-span-3
+                        group-link-underline
+                        p-2
+                    "
                 >
                     <inertia-link
                         href="/juegos"
@@ -91,7 +183,14 @@
                             aria-hidden="true"
                             data-prefix="fas"
                             data-icon="gamepad"
-                            class="object-cover object-center text-purple-700 w-full h-40 mb-6 rounded"
+                            class="
+                                object-cover object-center
+                                text-purple-700
+                                w-full
+                                h-40
+                                mb-6
+                                rounded
+                            "
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 640 512"
                         >
@@ -102,8 +201,22 @@
                         </svg>
                         <div class="flex items-center mb-3">
                             <span
-                                class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 text-white font-display mr-2 capitalize bg-brand-500"
-                                style="background-color: #5F41B2"
+                                class="
+                                    inline-flex
+                                    items-center
+                                    px-3
+                                    py-0.5
+                                    rounded-full
+                                    text-xs
+                                    font-bold
+                                    leading-5
+                                    text-white
+                                    font-display
+                                    mr-2
+                                    capitalize
+                                    bg-brand-500
+                                "
+                                style="background-color: #5f41b2"
                             >
                                 Juegos
                             </span>
@@ -111,7 +224,16 @@
                     </inertia-link>
                 </li>
                 <li
-                    class="card group col-span-12 text-purple-700 sm:col-span-6 lg:col-span-3 group-link-underline p-2"
+                    class="
+                        card
+                        group
+                        col-span-12
+                        text-purple-700
+                        sm:col-span-6
+                        lg:col-span-3
+                        group-link-underline
+                        p-2
+                    "
                 >
                     <inertia-link
                         href="/weather"
@@ -121,7 +243,14 @@
                             aria-hidden="true"
                             data-prefix="fas"
                             data-icon="cloud-sun"
-                            class="object-cover object-center text-purple-700 w-full h-40 mb-6 rounded"
+                            class="
+                                object-cover object-center
+                                text-purple-700
+                                w-full
+                                h-40
+                                mb-6
+                                rounded
+                            "
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 640 512"
                         >
@@ -132,8 +261,22 @@
                         </svg>
                         <div class="flex items-center mb-3">
                             <span
-                                class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 text-white font-display mr-2 capitalize bg-brand-500"
-                                style="background-color: #5F41B2"
+                                class="
+                                    inline-flex
+                                    items-center
+                                    px-3
+                                    py-0.5
+                                    rounded-full
+                                    text-xs
+                                    font-bold
+                                    leading-5
+                                    text-white
+                                    font-display
+                                    mr-2
+                                    capitalize
+                                    bg-brand-500
+                                "
+                                style="background-color: #5f41b2"
                             >
                                 Clima
                             </span>
@@ -143,10 +286,18 @@
             </ul>
 
             <hr />
+
             <p class="text-center text-gray-500 text-sm mt-4">
-                &copy;2021
+                &copy;2022
                 <a target="_blank" href="https://github.com/germanio7"
-                    >Germanio7</a
+                    >Github</a
+                >
+                |
+                <a
+                    target="_blank"
+                    class="badge-base__link LI-simple-link"
+                    href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
+                    >Linkedin</a
                 >
             </p>
         </layout>
@@ -158,6 +309,6 @@ import layout from "./Shared/Layout";
 export default {
     props: ["visitas"],
 
-    components: { layout }
+    components: { layout },
 };
 </script>

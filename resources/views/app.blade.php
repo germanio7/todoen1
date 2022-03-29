@@ -12,6 +12,7 @@
 
 	<script src="{{ mix('/js/app.js') }}" defer></script>
 	@laravelPWA
+	<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 
 <style>
@@ -40,21 +41,23 @@
 	}
 </style>
 
-{{-- <body class="bg-auto font-mono" style="background-image: url(./fondo.svg);"> --}}
+{{--
 
-<body class="bg-gray-100 scrollbar-thumb:bg-red-500 scrollbar-track:rounded">
-	@inertia
+<body class="bg-auto font-mono" style="background-image: url(./fondo.svg);"> --}}
 
-	<div id="app">
-		@yield('app')
-	</div>
+	<body class="bg-gray-100 scrollbar-thumb:bg-red-500 scrollbar-track:rounded">
+		@inertia
 
-</body>
-<footer>
-	<div id="footer" class="z-10" style="position: fixed; bottom: -100px; width: 100%; text-align: center;">
-		<iframe autoplay="true" id="myIFrame" style="width:100%; height:100px;" scrolling="no" frameborder="no">
-		</iframe>
-	</div>
-</footer>
+		<div id="app">
+			@yield('app')
+		</div>
+
+	</body>
+	<footer>
+		<div id="footer" class="z-10" style="position: fixed; bottom: -100px; width: 100%; text-align: center;">
+			<iframe autoplay="true" id="myIFrame" style="width:100%; height:100px;" scrolling="no" frameborder="no">
+			</iframe>
+		</div>
+	</footer>
 
 </html>

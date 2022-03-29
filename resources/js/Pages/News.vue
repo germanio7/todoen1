@@ -2,14 +2,46 @@
     <div>
         <layout>
             <div
-                class="grid grid-cols-1 md:grid-cols-2 rounded-lg justify-center text-center py-4 lg:px-4 mx-2"
+                class="
+                    grid grid-cols-1
+                    md:grid-cols-2
+                    rounded-lg
+                    justify-center
+                    text-center
+                    py-4
+                    lg:px-4
+                    mx-2
+                "
             >
                 <div
-                    class="p-2 bg-green-800 rounded-lg justify-around items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
+                    class="
+                        p-2
+                        bg-green-800
+                        rounded-lg
+                        justify-around
+                        items-center
+                        text-green-100
+                        leading-none
+                        lg:rounded-full
+                        flex
+                        lg:inline-flex
+                        m-1
+                    "
                     role="alert"
                 >
                     <span
-                        class="flex items-center rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3"
+                        class="
+                            flex
+                            items-center
+                            rounded-full
+                            bg-green-500
+                            uppercase
+                            px-2
+                            py-1
+                            text-xs
+                            font-bold
+                            mr-3
+                        "
                         >Dólar
                         <svg
                             aria-hidden="true"
@@ -28,18 +60,49 @@
                     >
                     <div class="grid grid-cols-1 justify-center">
                         <span
-                            class="flex justify-center font-semibold mr-2 text-center flex-auto mb-1"
+                            class="
+                                flex
+                                justify-center
+                                font-semibold
+                                mr-2
+                                text-center
+                                flex-auto
+                                mb-1
+                            "
                             >Compra $ {{ dolarOficial.compra }} - Venta $
                             {{ dolarOficial.venta }}</span
                         >
                     </div>
                 </div>
                 <div
-                    class="p-2 bg-blue-800 rounded-lg justify-around items-center text-blue-100 leading-none lg:rounded-full flex lg:inline-flex m-1"
+                    class="
+                        p-2
+                        bg-blue-800
+                        rounded-lg
+                        justify-around
+                        items-center
+                        text-blue-100
+                        leading-none
+                        lg:rounded-full
+                        flex
+                        lg:inline-flex
+                        m-1
+                    "
                     role="alert"
                 >
                     <span
-                        class="flex items-center rounded-full bg-blue-500 uppercase px-2 py-1 text-xs font-bold mr-3"
+                        class="
+                            flex
+                            items-center
+                            rounded-full
+                            bg-blue-500
+                            uppercase
+                            px-2
+                            py-1
+                            text-xs
+                            font-bold
+                            mr-3
+                        "
                         >Dólar
                         <svg
                             aria-hidden="true"
@@ -58,7 +121,15 @@
                     >
                     <div class="grid grid-cols-1 justify-center">
                         <span
-                            class="flex justify-center font-semibold mr-2 text-center flex-auto mb-1"
+                            class="
+                                flex
+                                justify-center
+                                font-semibold
+                                mr-2
+                                text-center
+                                flex-auto
+                                mb-1
+                            "
                             >Compra $ {{ dolarBlue.compra }} - Venta $
                             {{ dolarBlue.venta }}</span
                         >
@@ -67,7 +138,12 @@
             </div>
             <div class="flex flex-col w-full mb-2 text-left lg:text-center">
                 <h1
-                    class=" text-2xl text-center font-semibold text-blue-800 title-font"
+                    class="
+                        text-2xl text-center
+                        font-semibold
+                        text-blue-800
+                        title-font
+                    "
                 >
                     Noticias
                 </h1>
@@ -77,70 +153,224 @@
             <div class="flex flex-wrap justify-center pt-4 pb-2">
                 <div
                     @click="categoryNews('business')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #negocios
                     </p>
                 </div>
                 <div
                     @click="categoryNews('entertainment')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #entretenimiento
                     </p>
                 </div>
                 <div
                     @click="categoryNews('general')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #general
                     </p>
                 </div>
                 <div
                     @click="categoryNews('health')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #salud
                     </p>
                 </div>
                 <div
                     @click="categoryNews('science')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #ciencia
                     </p>
                 </div>
                 <div
                     @click="categoryNews('sports')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #deportes
                     </p>
                 </div>
                 <div
                     @click="categoryNews('technology')"
-                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                    class="
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
+                    "
                 >
                     <p
-                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                        class="
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
+                        "
                     >
                         #tecnología
                     </p>
@@ -150,11 +380,28 @@
             <hr />
             <br />
             <ul
-                class="lg:gap-16 sm:gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-10 col-start-2 gap-6"
+                class="
+                    lg:gap-16
+                    sm:gap-8
+                    grid grid-cols-1
+                    md:grid-cols-2
+                    lg:grid-cols-3
+                    col-span-10 col-start-2
+                    gap-6
+                "
             >
                 <div v-for="item in news" :key="item.id" class="container px-2">
                     <li
-                        class="card pb-8 md:pb-2 group col-span-12 sm:col-span-6 lg:col-span-4 group-link-underline"
+                        class="
+                            card
+                            pb-8
+                            md:pb-2
+                            group
+                            col-span-12
+                            sm:col-span-6
+                            lg:col-span-4
+                            group-link-underline
+                        "
                     >
                         <a
                             :href="item.url"
@@ -167,18 +414,47 @@
                                         ? item.urlToImage
                                         : './noimage.png'
                                 "
-                                class="w-full mb-4 rounded-lg shadow-none transition transition-shadow duration-500 ease-in-out group-hover:shadow-lg"
+                                class="
+                                    w-full
+                                    mb-4
+                                    rounded-lg
+                                    shadow-none
+                                    transition transition-shadow
+                                    duration-500
+                                    ease-in-out
+                                    group-hover:shadow-lg
+                                "
                                 alt=""
                             />
                             <div class="flex items-center mb-3">
                                 <span
-                                    class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold leading-5 text-white font-display mr-2 capitalize bg-brand-500"
-                                    style="background-color: #4662B2"
+                                    class="
+                                        inline-flex
+                                        items-center
+                                        px-3
+                                        py-0.5
+                                        rounded-full
+                                        text-xs
+                                        font-bold
+                                        leading-5
+                                        text-white
+                                        font-display
+                                        mr-2
+                                        capitalize
+                                        bg-brand-500
+                                    "
+                                    style="background-color: #4662b2"
                                 >
                                     {{ item.source.name }}
                                 </span>
                                 <p
-                                    class="font-display text-xs font-normal opacity-75 text-black"
+                                    class="
+                                        font-display
+                                        text-xs
+                                        font-normal
+                                        opacity-75
+                                        text-black
+                                    "
                                 >
                                     {{
                                         new Date(
@@ -188,10 +464,19 @@
                                 </p>
                             </div>
                             <p
-                                class="font-display max-w-sm text-2xl font-bold leading-tight"
+                                class="
+                                    font-display
+                                    max-w-sm
+                                    text-2xl
+                                    font-bold
+                                    leading-tight
+                                "
                             >
                                 <span
-                                    class="link link-underline link-underline-black text-black"
+                                    class="
+                                        link link-underline link-underline-black
+                                        text-black
+                                    "
                                 >
                                     {{ item.title }}
                                 </span>
@@ -208,9 +493,16 @@
             <hr />
 
             <p class="text-center text-gray-500 text-sm mt-4">
-                &copy;2021
+                &copy;2022
                 <a target="_blank" href="https://github.com/germanio7"
-                    >Germanio7</a
+                    >Github</a
+                >
+                |
+                <a
+                    target="_blank"
+                    class="badge-base__link LI-simple-link"
+                    href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
+                    >Linkedin</a
                 >
             </p>
         </layout>
@@ -225,7 +517,7 @@ export default {
         return {
             news: null,
             dolarOficial: {},
-            dolarBlue: {}
+            dolarBlue: {},
         };
     },
     components: { layout },
@@ -238,7 +530,7 @@ export default {
         setNews() {
             let eskeletor = document.getElementById("esqueleto");
             eskeletor.removeAttribute("hidden");
-            axios.get("api/news").then(response => {
+            axios.get("api/news").then((response) => {
                 eskeletor.setAttribute("hidden", true);
                 this.news = response.data.articles;
             });
@@ -250,9 +542,9 @@ export default {
             this.news = null;
             axios
                 .post("api/newsCategory", {
-                    category: category
+                    category: category,
                 })
-                .then(response => {
+                .then((response) => {
                     setTimeout(() => {
                         eskeletor.setAttribute("hidden", true);
                         this.news = response.data.articles;
@@ -273,17 +565,17 @@ export default {
         },
 
         setDolarOficial() {
-            axios.get("api/dolar-oficial").then(response => {
+            axios.get("api/dolar-oficial").then((response) => {
                 this.dolarOficial = response.data;
             });
         },
 
         setDolarBlue() {
-            axios.get("api/dolar-blue").then(response => {
+            axios.get("api/dolar-blue").then((response) => {
                 this.dolarBlue = response.data;
             });
-        }
-    }
+        },
+    },
 };
 </script>
 

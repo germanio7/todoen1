@@ -5,10 +5,21 @@
                 <section class="mx-auto">
                     <div class="container px-5 mx-auto lg:px-24">
                         <div
-                            class="flex flex-col w-full mb-6 text-left lg:text-center"
+                            class="
+                                flex flex-col
+                                w-full
+                                mb-6
+                                text-left
+                                lg:text-center
+                            "
                         >
                             <h1
-                                class="text-2xl text-center font-semibold text-blue-800 title-font"
+                                class="
+                                    text-2xl text-center
+                                    font-semibold
+                                    text-blue-800
+                                    title-font
+                                "
                             >
                                 Tecnologías
                                 <br class="md:hidden" />
@@ -22,7 +33,22 @@
                             <div v-for="item in tecnos" :key="item.id">
                                 <div
                                     @click="setRadio(item)"
-                                    class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                                    class="
+                                        cursor-pointer
+                                        hover:bg-gray-700
+                                        inline-flex
+                                        items-center
+                                        px-4
+                                        py-3
+                                        mb-2
+                                        mr-2
+                                        transition-colors
+                                        duration-200
+                                        ease-in
+                                        bg-gray-500
+                                        rounded-sm
+                                        shadow
+                                    "
                                 >
                                     <img
                                         :src="
@@ -34,7 +60,14 @@
                                         alt=""
                                     />
                                     <p
-                                        class="font-body ml-2 text-sm leading-none text-white capitalize"
+                                        class="
+                                            font-body
+                                            ml-2
+                                            text-sm
+                                            leading-none
+                                            text-white
+                                            capitalize
+                                        "
                                     >
                                         {{ item.name }}
                                     </p>
@@ -42,7 +75,22 @@
                             </div>
                             <div
                                 @click="setRadio(item)"
-                                class="cursor-pointer hover:bg-gray-700 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-500 rounded-sm shadow"
+                                class="
+                                    cursor-pointer
+                                    hover:bg-gray-700
+                                    inline-flex
+                                    items-center
+                                    px-4
+                                    py-3
+                                    mb-2
+                                    mr-2
+                                    transition-colors
+                                    duration-200
+                                    ease-in
+                                    bg-gray-500
+                                    rounded-sm
+                                    shadow
+                                "
                             >
                                 <svg
                                     aria-hidden="true"
@@ -58,7 +106,14 @@
                                     />
                                 </svg>
                                 <p
-                                    class="font-body ml-2 text-sm leading-none text-white capitalize"
+                                    class="
+                                        font-body
+                                        ml-2
+                                        text-sm
+                                        leading-none
+                                        text-white
+                                        capitalize
+                                    "
                                 >
                                     EmulatorJS
                                 </p>
@@ -68,10 +123,18 @@
                     </div>
                 </section>
                 <hr />
+
                 <p class="text-center text-gray-500 text-sm mt-4">
-                    &copy;2021
+                    &copy;2022
                     <a target="_blank" href="https://github.com/germanio7"
-                        >Germanio7</a
+                        >Github</a
+                    >
+                    |
+                    <a
+                        target="_blank"
+                        class="badge-base__link LI-simple-link"
+                        href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
+                        >Linkedin</a
                     >
                 </p>
             </div>
@@ -87,29 +150,27 @@ export default {
             tecnos: [
                 {
                     name: "Laravel",
-                    img: "https://laravel.com/img/logomark.min.svg"
+                    img: "https://laravel.com/img/logomark.min.svg",
                 },
                 {
                     name: "Tailwind CSS",
-                    img: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg"
+                    img: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg",
                 },
                 {
                     name: "VueJS",
-                    img: "https://vuejs.org/images/logo.png"
+                    img: "https://vuejs.org/images/logo.png",
                 },
                 {
                     name: "InertiaJS",
-                    img:
-                        "https://pbs.twimg.com/profile_images/1157690996823592960/TaroSwnp_400x400.jpg"
+                    img: "https://pbs.twimg.com/profile_images/1157690996823592960/TaroSwnp_400x400.jpg",
                 },
                 {
                     name: "Here Destination Weather",
-                    img:
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/HERE_logo.svg/1200px-HERE_logo.svg.png"
+                    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/HERE_logo.svg/1200px-HERE_logo.svg.png",
                 },
                 {
                     name: "News API",
-                    img: "https://newsapi.org/images/n-logo-border.png"
+                    img: "https://newsapi.org/images/n-logo-border.png",
                 },
                 // {
                 //     name: "The Sports DB",
@@ -122,9 +183,9 @@ export default {
                 // },
                 {
                     name: "RetroGames",
-                    img: "https://www.retrogames.cc/images/logo.png?v=20180731"
-                }
-            ]
+                    img: "https://www.retrogames.cc/images/logo.png?v=20180731",
+                },
+            ],
         };
     },
     props: ["visitas"],
@@ -146,7 +207,7 @@ export default {
             window.open(
                 "https://www.facebook.com/sharer/sharer.php?u=https://todoen1.herokuapp.com"
             );
-        }
-    }
+        },
+    },
 };
 </script>

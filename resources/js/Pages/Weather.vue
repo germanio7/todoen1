@@ -3,32 +3,79 @@
         <layout>
             <div class="flex flex-col w-full mb-2 text-left lg:text-center">
                 <h1
-                    class=" text-2xl text-center font-semibold text-blue-800 title-font"
+                    class="
+                        text-2xl text-center
+                        font-semibold
+                        text-blue-800
+                        title-font
+                    "
                 >
                     Clima
                 </h1>
             </div>
             <hr />
-            <div class="flex justify-center items-center ">
+            <div class="flex justify-center items-center">
                 <div
-                    class="flex-wrap bg-white rounded overflow-hidden shadow-lg m-4 p-4"
+                    class="
+                        flex-wrap
+                        bg-white
+                        rounded
+                        overflow-hidden
+                        shadow-lg
+                        m-4
+                        p-4
+                    "
                 >
                     <form
                         class="w-full max-w-sm"
                         @submit.prevent="searchCity()"
                     >
                         <div
-                            class="flex w-full items-center border-b border-gray-900 py-2"
+                            class="
+                                flex
+                                w-full
+                                items-center
+                                border-b border-gray-900
+                                py-2
+                            "
                         >
                             <input
                                 v-model="city"
-                                class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                class="
+                                    appearance-none
+                                    bg-transparent
+                                    border-none
+                                    w-full
+                                    text-gray-700
+                                    mr-3
+                                    py-1
+                                    px-2
+                                    leading-tight
+                                    focus:outline-none
+                                "
                                 type="text"
                                 placeholder="Ingresar cuidad..."
                                 @keydown="limpiar()"
                             />
                             <button
-                                class="flex-shrink-0 bg-gray-900 hover:bg-gray-700 border-gray-900 hover:border-gray-700 text-sm border-4 text-white py-1 px-2 rounded transition duration-900 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                                class="
+                                    flex-shrink-0
+                                    bg-gray-900
+                                    hover:bg-gray-700
+                                    border-gray-900
+                                    hover:border-gray-700
+                                    text-sm
+                                    border-4
+                                    text-white
+                                    py-1
+                                    px-2
+                                    rounded
+                                    transition
+                                    duration-900
+                                    ease-in-out
+                                    transform
+                                    hover:-translate-y-1 hover:scale-110
+                                "
                                 type="submit"
                             >
                                 <svg
@@ -84,7 +131,15 @@
             <div
                 id="animacion"
                 v-if="selected || resAux"
-                class="flex-wrap justify-center rounded overflow-hidden  m-4 p-4 relative"
+                class="
+                    flex-wrap
+                    justify-center
+                    rounded
+                    overflow-hidden
+                    m-4
+                    p-4
+                    relative
+                "
             >
                 <div class="block lg:flex justify-center">
                     <div v-if="resAux">
@@ -101,9 +156,16 @@
 
             <hr />
             <p class="text-center text-gray-500 text-sm mt-4">
-                &copy;2021
+                &copy;2022
                 <a target="_blank" href="https://github.com/germanio7"
-                    >Germanio7</a
+                    >Github</a
+                >
+                |
+                <a
+                    target="_blank"
+                    class="badge-base__link LI-simple-link"
+                    href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
+                    >Linkedin</a
                 >
             </p>
         </layout>
@@ -127,7 +189,7 @@ export default {
             days: null,
             latitude: -27.57383,
             longitude: -60.71526,
-            image: null
+            image: null,
         };
     },
     components: { layout, CardWeather, CardWeatherAux },
@@ -139,7 +201,7 @@ export default {
     methods: {
         auxiliar() {
             document.getElementById("auxi").classList.add("animate-spin");
-            axios.post("api/auxiliar", { city: this.city }).then(response => {
+            axios.post("api/auxiliar", { city: this.city }).then((response) => {
                 this.resAux = response.data;
 
                 document
@@ -151,7 +213,7 @@ export default {
             document.getElementById("auxi").classList.add("animate-spin");
             axios
                 .post("api/default-city", { city: this.city })
-                .then(response => {
+                .then((response) => {
                     this.selected =
                         response.data.observations.location[0].observation[0];
                     this.latitude =
@@ -172,7 +234,7 @@ export default {
             document.getElementById("auxi").classList.add("animate-spin");
             axios
                 .post("api/search-city", { city: this.city })
-                .then(response => {
+                .then((response) => {
                     this.res = response.data.observations.location;
                     this.resAux = null;
                     document
@@ -187,9 +249,9 @@ export default {
             axios
                 .post("api/seven-days", {
                     latitude: this.selected.latitude,
-                    longitude: this.selected.longitude
+                    longitude: this.selected.longitude,
                 })
-                .then(response => {
+                .then((response) => {
                     this.days =
                         response.data.dailyForecasts.forecastLocation.forecast;
                 });
@@ -197,7 +259,7 @@ export default {
         limpiar() {
             this.res = null;
             this.resAux = null;
-        }
-    }
+        },
+    },
 };
 </script>

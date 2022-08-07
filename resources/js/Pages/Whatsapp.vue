@@ -81,7 +81,9 @@
                             :href="
                                 !phone
                                     ? 'javascript:void(0)'
-                                    : 'https://wa.me/send?phone=' + phone
+                                    : 'https://api.whatsapp.com/send/?phone=' +
+                                      phone +
+                                      '&text&type=phone_number&app_absent=0'
                             "
                         >
                             <svg

@@ -63,4 +63,6 @@ Route::get('/test', function () {
     // return Inertia::render('Scores');
 });
 
-// Route::resource('/users', 'UserController');
+Route::get('/whatsapp', function () {
+    return Inertia::render('Whatsapp');
+});

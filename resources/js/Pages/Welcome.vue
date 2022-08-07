@@ -26,7 +26,7 @@
                                     title-font
                                 "
                             >
-                                Bienvenid@
+                                Welcome
                             </h1>
                         </div>
                     </div>
@@ -176,66 +176,6 @@
                     "
                 >
                     <inertia-link
-                        href="/juegos"
-                        class="block mt-4 lg:inline-block lg:mt-0"
-                    >
-                        <svg
-                            aria-hidden="true"
-                            data-prefix="fas"
-                            data-icon="gamepad"
-                            class="
-                                object-cover object-center
-                                text-purple-700
-                                w-full
-                                h-40
-                                mb-6
-                                rounded
-                            "
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 640 512"
-                        >
-                            <path
-                                fill="currentColor"
-                                d="M480.07 96H160a160 160 0 10114.24 272h91.52A160 160 0 10480.07 96zM248 268a12 12 0 01-12 12h-52v52a12 12 0 01-12 12h-24a12 12 0 01-12-12v-52H84a12 12 0 01-12-12v-24a12 12 0 0112-12h52v-52a12 12 0 0112-12h24a12 12 0 0112 12v52h52a12 12 0 0112 12zm216 76a40 40 0 1140-40 40 40 0 01-40 40zm64-96a40 40 0 1140-40 40 40 0 01-40 40z"
-                            />
-                        </svg>
-                        <div class="flex items-center mb-3">
-                            <span
-                                class="
-                                    inline-flex
-                                    items-center
-                                    px-3
-                                    py-0.5
-                                    rounded-full
-                                    text-xs
-                                    font-bold
-                                    leading-5
-                                    text-white
-                                    font-display
-                                    mr-2
-                                    capitalize
-                                    bg-brand-500
-                                "
-                                style="background-color: #5f41b2"
-                            >
-                                Juegos
-                            </span>
-                        </div>
-                    </inertia-link>
-                </li>
-                <li
-                    class="
-                        card
-                        group
-                        col-span-12
-                        text-purple-700
-                        sm:col-span-6
-                        lg:col-span-3
-                        group-link-underline
-                        p-2
-                    "
-                >
-                    <inertia-link
                         href="/weather"
                         class="block mt-4 lg:inline-block lg:mt-0"
                     >
@@ -279,6 +219,127 @@
                                 style="background-color: #5f41b2"
                             >
                                 Clima
+                            </span>
+                        </div>
+                    </inertia-link>
+                </li>
+                <li
+                    class="
+                        card
+                        group
+                        col-span-12
+                        text-purple-700
+                        sm:col-span-6
+                        lg:col-span-3
+                        group-link-underline
+                        p-2
+                    "
+                >
+                    <inertia-link
+                        href="/whatsapp"
+                        class="block mt-4 lg:inline-block lg:mt-0"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="
+                                object-cover object-center
+                                text-purple-700
+                                w-full
+                                h-40
+                                mb-6
+                                rounded
+                            "
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                            />
+                        </svg>
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="
+                                    inline-flex
+                                    items-center
+                                    px-3
+                                    py-0.5
+                                    rounded-full
+                                    text-xs
+                                    font-bold
+                                    leading-5
+                                    text-white
+                                    font-display
+                                    mr-2
+                                    capitalize
+                                    bg-brand-500
+                                "
+                                style="background-color: #5f41b2"
+                            >
+                                Enviar WhatsApp
+                            </span>
+                        </div>
+                    </inertia-link>
+                </li>
+                <li
+                    class="
+                        card
+                        group
+                        col-span-12
+                        text-purple-700
+                        sm:col-span-6
+                        lg:col-span-3
+                        group-link-underline
+                        p-2
+                    "
+                >
+                    <inertia-link
+                        href="/juegos"
+                        class="block mt-4 lg:inline-block lg:mt-0"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            data-prefix="fas"
+                            data-icon="gamepad"
+                            class="
+                                object-cover object-center
+                                text-purple-700
+                                w-full
+                                h-40
+                                mb-6
+                                rounded
+                            "
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M480.07 96H160a160 160 0 10114.24 272h91.52A160 160 0 10480.07 96zM248 268a12 12 0 01-12 12h-52v52a12 12 0 01-12 12h-24a12 12 0 01-12-12v-52H84a12 12 0 01-12-12v-24a12 12 0 0112-12h52v-52a12 12 0 0112-12h24a12 12 0 0112 12v52h52a12 12 0 0112 12zm216 76a40 40 0 1140-40 40 40 0 01-40 40zm64-96a40 40 0 1140-40 40 40 0 01-40 40z"
+                            />
+                        </svg>
+                        <div class="flex items-center mb-3">
+                            <span
+                                class="
+                                    inline-flex
+                                    items-center
+                                    px-3
+                                    py-0.5
+                                    rounded-full
+                                    text-xs
+                                    font-bold
+                                    leading-5
+                                    text-white
+                                    font-display
+                                    mr-2
+                                    capitalize
+                                    bg-brand-500
+                                "
+                                style="background-color: #5f41b2"
+                            >
+                                Juegos
                             </span>
                         </div>
                     </inertia-link>

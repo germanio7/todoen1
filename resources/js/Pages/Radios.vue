@@ -111,6 +111,11 @@ export default {
                     img: "https://cdn-profiles.tunein.com/s6984/images/logog.jpg?t=636247",
                 },
                 {
+                    name: "La Mega",
+                    url: "https://radiomega.fm/",
+                    img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/MEGA983.jpg",
+                },
+                {
                     name: "Radio La Red",
                     url: "https://tunein.com/embed/player/s13680/",
                     img: "https://cdn-radiotime-logos.tunein.com/s13680q.png",

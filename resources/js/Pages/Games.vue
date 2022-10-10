@@ -1,97 +1,96 @@
 <template>
     <div>
-        <layout>
-            <div class="flex flex-col w-full mb-4 text-left lg:text-center">
-                <h1
+        <div class="flex flex-col w-full mb-4 text-left lg:text-center">
+            <h1
+                class="
+                    text-2xl text-center
+                    font-semibold
+                    text-blue-800
+                    title-font
+                "
+            >
+                Juegos
+            </h1>
+        </div>
+        <hr />
+        <div class="flex flex-wrap">
+            <div v-for="item in games" :key="item.id">
+                <div
+                    @click="setGame(item.url)"
                     class="
-                        text-2xl text-center
-                        font-semibold
-                        text-blue-800
-                        title-font
+                        cursor-pointer
+                        hover:bg-gray-700
+                        inline-flex
+                        items-center
+                        px-4
+                        py-3
+                        mb-2
+                        mr-2
+                        transition-colors
+                        duration-200
+                        ease-in
+                        bg-gray-500
+                        rounded-sm
+                        shadow
                     "
                 >
-                    Juegos
-                </h1>
-            </div>
-            <hr />
-            <div class="flex flex-wrap">
-                <div v-for="item in games" :key="item.id">
-                    <div
-                        @click="setGame(item.url)"
+                    <img
+                        :src="item.image ? item.image : './noimage.png'"
+                        class="h-16"
+                        alt=""
+                    />
+                    <p
                         class="
-                            cursor-pointer
-                            hover:bg-gray-700
-                            inline-flex
-                            items-center
-                            px-4
-                            py-3
-                            mb-2
-                            mr-2
-                            transition-colors
-                            duration-200
-                            ease-in
-                            bg-gray-500
-                            rounded-sm
-                            shadow
+                            font-body
+                            ml-2
+                            text-sm
+                            leading-none
+                            text-white
+                            capitalize
                         "
                     >
-                        <img
-                            :src="item.image ? item.image : './noimage.png'"
-                            class="h-16"
-                            alt=""
-                        />
-                        <p
-                            class="
-                                font-body
-                                ml-2
-                                text-sm
-                                leading-none
-                                text-white
-                                capitalize
-                            "
-                        >
-                            {{ item.game }}
-                        </p>
-                    </div>
+                        {{ item.game }}
+                    </p>
                 </div>
             </div>
-            <hr />
-            <div class="flex justify-center mt-4 relative z-20">
-                <iframe
-                    id="juego"
-                    src=""
-                    width="800"
-                    height="500"
-                    frameborder="no"
-                    allowfullscreen="true"
-                    webkitallowfullscreen="true"
-                    mozallowfullscreen="true"
-                    scrolling="no"
-                ></iframe>
-            </div>
-            <br />
+        </div>
+        <hr />
+        <div class="flex justify-center mt-4 relative z-20">
+            <iframe
+                id="juego"
+                src=""
+                width="800"
+                height="500"
+                frameborder="no"
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                scrolling="no"
+            ></iframe>
+        </div>
+        <br />
 
-            <hr />
-            <p class="text-center text-gray-500 text-sm mt-4">
-                &copy;2022
-                <a target="_blank" href="https://github.com/germanio7"
-                    >Github</a
-                >
-                |
-                <a
-                    target="_blank"
-                    class="badge-base__link LI-simple-link"
-                    href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
-                    >Linkedin</a
-                >
-            </p>
-        </layout>
+        <hr />
+        <p class="text-center text-gray-500 text-sm mt-4">
+            &copy;2022
+            <a target="_blank" href="https://github.com/germanio7">Github</a>
+            |
+            <a
+                target="_blank"
+                class="badge-base__link LI-simple-link"
+                href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
+                >Linkedin</a
+            >
+        </p>
     </div>
 </template>
 
 <script>
-import layout from "./Shared/Layout";
+import Layout from "./Shared/Layout";
+
 export default {
+    layout: Layout,
+
     data() {
         return {
             games: [
@@ -348,7 +347,7 @@ export default {
             ],
         };
     },
-    components: { layout },
+
     methods: {
         setGame(game) {
             let aux = document.getElementById("juego");

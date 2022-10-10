@@ -1,97 +1,87 @@
 <template>
     <div>
-        <layout>
-            <section class="mx-auto">
-                <div class="container px-5 mx-auto lg:px-24">
-                    <div
+        <section class="mx-auto">
+            <div class="container px-5 mx-auto lg:px-24">
+                <div class="flex flex-col w-full mb-2 text-left lg:text-center">
+                    <h1
                         class="
-                            flex flex-col
-                            w-full
-                            mb-2
-                            text-left
-                            lg:text-center
+                            text-2xl text-center
+                            font-semibold
+                            text-blue-800
+                            title-font
                         "
                     >
-                        <h1
+                        Radios
+                    </h1>
+                </div>
+                <hr />
+                <br />
+                <div class="flex flex-wrap">
+                    <div v-for="item in radios" :key="item.id">
+                        <div
+                            @click="setRadio(item)"
                             class="
-                                text-2xl text-center
-                                font-semibold
-                                text-blue-800
-                                title-font
+                                cursor-pointer
+                                hover:bg-gray-700
+                                inline-flex
+                                items-center
+                                px-4
+                                py-3
+                                mb-2
+                                mr-2
+                                transition-colors
+                                duration-200
+                                ease-in
+                                bg-gray-500
+                                rounded-sm
+                                shadow
                             "
                         >
-                            Radios
-                        </h1>
-                    </div>
-                    <hr />
-                    <br />
-                    <div class="flex flex-wrap">
-                        <div v-for="item in radios" :key="item.id">
-                            <div
-                                @click="setRadio(item)"
+                            <img
+                                :src="item.img ? item.img : './noimage.png'"
+                                class="h-16"
+                                alt=""
+                            />
+                            <p
                                 class="
-                                    cursor-pointer
-                                    hover:bg-gray-700
-                                    inline-flex
-                                    items-center
-                                    px-4
-                                    py-3
-                                    mb-2
-                                    mr-2
-                                    transition-colors
-                                    duration-200
-                                    ease-in
-                                    bg-gray-500
-                                    rounded-sm
-                                    shadow
+                                    font-body
+                                    ml-2
+                                    text-sm
+                                    leading-none
+                                    text-white
+                                    capitalize
                                 "
                             >
-                                <img
-                                    :src="item.img ? item.img : './noimage.png'"
-                                    class="h-16"
-                                    alt=""
-                                />
-                                <p
-                                    class="
-                                        font-body
-                                        ml-2
-                                        text-sm
-                                        leading-none
-                                        text-white
-                                        capitalize
-                                    "
-                                >
-                                    {{ item.name }}
-                                </p>
-                            </div>
+                                {{ item.name }}
+                            </p>
                         </div>
                     </div>
-                    <br />
                 </div>
-            </section>
-            <hr />
-            <p class="text-center text-gray-500 text-sm mt-4">
-                &copy;2022
-                <a target="_blank" href="https://github.com/germanio7"
-                    >Github</a
-                >
-                |
-                <a
-                    target="_blank"
-                    class="badge-base__link LI-simple-link"
-                    href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
-                    >Linkedin</a
-                >
-            </p>
-        </layout>
+                <br />
+            </div>
+        </section>
+        <hr />
+        <p class="text-center text-gray-500 text-sm mt-4">
+            &copy;2022
+            <a target="_blank" href="https://github.com/germanio7">Github</a>
+            |
+            <a
+                target="_blank"
+                class="badge-base__link LI-simple-link"
+                href="https://ar.linkedin.com/in/germanio7?trk=profile-badge"
+                >Linkedin</a
+            >
+        </p>
     </div>
 </template>
 
 <script>
-import layout from "./Shared/Layout";
+import Layout from "./Shared/Layout";
 import newAlert from "./Shared/NewAlert";
 
 export default {
+    layout: Layout,
+
     data() {
         return {
             radios: [
@@ -168,7 +158,7 @@ export default {
             ],
         };
     },
-    components: { layout, newAlert },
+    components: { newAlert },
     methods: {
         setRadio(radio) {
             var ifm = document.getElementById("myIFrame");

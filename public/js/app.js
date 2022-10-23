@@ -5057,11 +5057,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -46179,11 +46174,6 @@ var render = function () {
                     staticClass:
                       "\n                        block\n                        mt-4\n                        lg:inline-block lg:mt-0\n                        text-white\n                        hover:text-white\n                        mr-4\n                        transition\n                        duration-500\n                        ease-in-out\n                        transform\n                        hover:-translate-y-1 hover:scale-110\n                    ",
                     attrs: { href: "/noticias" },
-                    on: {
-                      click: function ($event) {
-                        return _vm.mostrar()
-                      },
-                    },
                   },
                   [_vm._v("Noticias")]
                 ),
@@ -46201,11 +46191,6 @@ var render = function () {
                     staticClass:
                       "\n                        block\n                        mt-4\n                        lg:inline-block lg:mt-0\n                        text-white\n                        hover:text-white\n                        mr-4\n                        transition\n                        duration-500\n                        ease-in-out\n                        transform\n                        hover:-translate-y-1 hover:scale-110\n                    ",
                     attrs: { href: "/radios" },
-                    on: {
-                      click: function ($event) {
-                        return _vm.mostrar()
-                      },
-                    },
                   },
                   [_vm._v("Radios")]
                 ),
@@ -46223,11 +46208,6 @@ var render = function () {
                     staticClass:
                       "\n                        block\n                        mt-4\n                        lg:inline-block lg:mt-0\n                        text-white\n                        hover:text-white\n                        mr-4\n                        transition\n                        duration-500\n                        ease-in-out\n                        transform\n                        hover:-translate-y-1 hover:scale-110\n                    ",
                     attrs: { href: "/weather" },
-                    on: {
-                      click: function ($event) {
-                        return _vm.mostrar()
-                      },
-                    },
                   },
                   [_vm._v("Clima")]
                 ),
@@ -46245,11 +46225,6 @@ var render = function () {
                     staticClass:
                       "\n                        block\n                        mt-4\n                        lg:inline-block lg:mt-0\n                        text-white\n                        hover:text-white\n                        mr-4\n                        transition\n                        duration-500\n                        ease-in-out\n                        transform\n                        hover:-translate-y-1 hover:scale-110\n                    ",
                     attrs: { href: "/whatsapp" },
-                    on: {
-                      click: function ($event) {
-                        return _vm.mostrar()
-                      },
-                    },
                   },
                   [_vm._v("Enviar WhatsApp")]
                 ),
@@ -46267,11 +46242,6 @@ var render = function () {
                     staticClass:
                       "\n                        block\n                        mt-4\n                        lg:inline-block lg:mt-0\n                        text-white\n                        hover:text-white\n                        mr-4\n                        transition\n                        duration-500\n                        ease-in-out\n                        transform\n                        hover:-translate-y-1 hover:scale-110\n                    ",
                     attrs: { href: "/juegos" },
-                    on: {
-                      click: function ($event) {
-                        return _vm.mostrar()
-                      },
-                    },
                   },
                   [_vm._v("Juegos\n                ")]
                 ),

@@ -54,7 +54,6 @@
             >
                 <div class="text-sm">
                     <inertia-link
-                        @click="mostrar()"
                         href="/noticias"
                         class="
                             block
@@ -74,7 +73,6 @@
                 </div>
                 <div class="text-sm">
                     <inertia-link
-                        @click="mostrar()"
                         href="/radios"
                         class="
                             block
@@ -94,7 +92,6 @@
                 </div>
                 <div class="text-sm">
                     <inertia-link
-                        @click="mostrar()"
                         href="/weather"
                         class="
                             block
@@ -114,7 +111,6 @@
                 </div>
                 <div class="text-sm">
                     <inertia-link
-                        @click="mostrar()"
                         href="/whatsapp"
                         class="
                             block
@@ -134,7 +130,6 @@
                 </div>
                 <div class="text-sm">
                     <inertia-link
-                        @click="mostrar()"
                         href="/juegos"
                         class="
                             block
